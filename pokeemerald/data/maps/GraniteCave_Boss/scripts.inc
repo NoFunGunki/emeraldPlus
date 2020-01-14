@@ -1,37 +1,52 @@
 GraniteCave_Boss_MapScripts::
 	.byte 0
 
+//Main Boss Script
+
 GraniteCave_EventScript_Boss::
 	lock
 	faceplayer
-	goto_if_set FLAG_GRANITE_CAVE_GIVEHERACROSS, GraniteCave_EventScript_PostBoss
-	goto_if_set FLAG_GRANITE_CAVE_BOSS, GraniteCave_EventScript_GiveHeracross
+	goto_if_set FLAG_GRANITE_CAVE_GIVEHERACROSS, GraniteCave_EventScript_PostBoss //Check if we beat boss and got Heracross
+	goto_if_set FLAG_GRANITE_CAVE_BOSS, GraniteCave_EventScript_GiveHeracross //Check if we beat boss, but don't have Heracross
 	msgbox GraniteCave_Text_BossYesNo, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq GraniteCave_EventScript_PlayerNo
 	msgbox GraniteCave_Text_PlayerYes, MSGBOX_DEFAULT
-	trainerbattle_double TRAINER_GRANITE_CAVE_BOSS, GraniteCave_Text_BossIntro, GraniteCave_Text_BossDefeated, Doubles_Text_NotEnoughMons
-	setflag FLAG_GRANITE_CAVE_BOSS
-	goto GraniteCave_EventScript_GiveHeracross
+	trainerbattle_double TRAINER_GRANITE_CAVE_BOSS, GraniteCave_Text_BossIntro, GraniteCave_Text_BossDefeated, Doubles_Text_NotEnoughMons, GraniteCave_EventScript_BossDefeated
 	release
 	end
 
-GraniteCave_EventScript_PlayerNo::
+//Boss Defeated
+
+GraniteCave_EventScript_BossDefeated::
+	setflag FLAG_GRANITE_CAVE_BOSS 
+	msgbox GraniteCave_Text_BossSurprised
+	goto_if_set FLAG_GRANITE_CAVE_BOSS, GraniteCave_EventScript_GiveHeracross 
+	release
+	end
+
+//Player refuses fight
+
+GraniteCave_EventScript_PlayerNo::  
 	msgbox GraniteCave_Text_PlayerPussiedOut
 	release
 	end
 	
+//Whenever we talk to Boss after the fight	
+
 GraniteCave_EventScript_PostBoss::
 	msgbox GraniteCave_Text_BossPostBattle, MSGBOX_DEFAULT
 	release
 	end
+
+//Heracross given
 
 GraniteCave_EventScript_GiveHeracross::
 	msgbox GraniteCave_Text_TakeHeracross, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq GraniteCave_EventScript_FullParty
-	givemon SPECIES_HERACROSS, 15, ITEM_NONE
+	givemon SPECIES_HERACROSS, 16, ITEM_NONE
 	playfanfare MUS_FANFA4
 	msgbox GraniteCave_Text_ReceivedHeracross, MSGBOX_DEFAULT
 	waitfanfare
@@ -40,10 +55,14 @@ GraniteCave_EventScript_GiveHeracross::
 	release
 	end
 	
+//Party too full to accept	
+
 GraniteCave_EventScript_FullParty::
 	msgbox GraniteCave_Text_FullParty, MSGBOX_DEFAULT
 	release
 	end
+	
+//Strings
 	
 GraniteCave_Text_TakeHeracross::
 	.string "Please, take this Heracross in\n"
@@ -93,4 +112,7 @@ GraniteCave_Text_PlayerYes::
 	
 GraniteCave_Text_BossPostBattle::
 	.string "Keep training, keep growing.$"
+	
+GraniteCave_Text_BossSurprised::
+	.string "I can't believe it...$"
 
