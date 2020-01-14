@@ -8251,7 +8251,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LittleBoy1[] = {
     },
     {
     .iv = 0,
-    .lvl = 3,
+    .lvl = 5,
     .species = SPECIES_FLETCHLING,
     }
 };
@@ -12583,30 +12583,32 @@ static const struct TrainerMonNoItemDefaultMoves sParty_HikerRaul[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_HikerGabriel[] = {
+static const struct TrainerMonNoItemCustomMovesMoves sParty_HikerGabriel[] = {
     {
     .iv = 0,
     .lvl = 13,
     .species = SPECIES_HIPPOPOTAS,
+	.moves = MOVE_SAND_TOMB, MOVE_YAWN, MOVE_BITE, MOVE_SAND_ATTACK
     },
     {
     .iv = 0,
     .lvl = 14,
     .species = SPECIES_DRILBUR,
+	.moves = MOVE_ROCK_TOMB, MOVE_MUD_SLAP, MOVE_FURY_SWIPES, MOVE_HONE_CLAWS
     }
 };
 
 static const struct TrainerMonItemCustomMoves sParty_GraniteCaveBoss[] = {
     {
     .iv = 100,
-    .lvl = 16,
+    .lvl = 18,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
 	.moves = MOVE_BRICK_BREAK, MOVE_BULLET_SEED, MOVE_KNOCK_OFF, MOVE_AERIAL_ACE
     },
     {
     .iv = 100,
-    .lvl = 16,
+    .lvl = 18,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
 	.moves = MOVE_HORN_ATTACK, MOVE_ARM_THRUST, MOVE_SMACK_DOWN, MOVE_BULK_UP
