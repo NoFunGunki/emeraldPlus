@@ -57,7 +57,16 @@ GraniteCave_Text_ReceivedHeracross::
 	.string "{PLAYER} received a Heracross!$"
 	
 GraniteCave_Text_BossFarewell::
-	.string "Take good care of Heracross.$"
+	.string "Take good care of Heracross.\n"
+	.string "They'll be a great help against\l"
+	.string "the Gym Leader, Brawly.\p"
+	.string "A little bit more training and\n"
+	.string "Heracross will learn BRICK BREAK!\p"
+	.string "That move will shatter Brawly's\n"
+	.string "protective shields and Heracross\l"
+	.string "is more than capable of taking a\l"
+	.string "few hits from Fighting-types.\p"
+	.string "Good luck.$"
 
 GraniteCave_Text_BossYesNo::
 	.string "I've trained here for a long\n"
