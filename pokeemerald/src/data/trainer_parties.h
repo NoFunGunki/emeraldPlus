@@ -12601,14 +12601,14 @@ static const struct TrainerMonNoItemCustomMoves sParty_HikerGabriel[] = {
 static const struct TrainerMonItemCustomMoves sParty_GraniteCaveBoss[] = {
     {
     .iv = 100,
-    .lvl = 18,
+    .lvl = 16,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
 	.moves = MOVE_BRICK_BREAK, MOVE_BULLET_SEED, MOVE_KNOCK_OFF, MOVE_AERIAL_ACE
     },
     {
     .iv = 100,
-    .lvl = 18,
+    .lvl = 16,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
 	.moves = MOVE_HORN_ATTACK, MOVE_ARM_THRUST, MOVE_SMACK_DOWN, MOVE_BULK_UP
