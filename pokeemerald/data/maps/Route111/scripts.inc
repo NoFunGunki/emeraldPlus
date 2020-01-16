@@ -565,7 +565,7 @@ Route111_EventScript_Tyron:: @ 81F13F9
 	end
 
 Route111_EventScript_Celina:: @ 81F1410
-	trainerbattle_single TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat
+	trainerbattle_double TRAINER_CELINA, Route111_Text_CelinaIntro, Route111_Text_CelinaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_CelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

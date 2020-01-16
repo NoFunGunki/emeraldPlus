@@ -9664,6 +9664,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tyron[] = {
     .iv = 0,
     .lvl = 19,
     .species = SPECIES_SANDSHREW,
+    },
+	{
+    .iv = 0,
+    .lvl = 19,
+    .species = SPECIES_CUBONE,
     }
 };
 
@@ -9672,6 +9677,11 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Celina[] = {
     .iv = 0,
     .lvl = 18,
     .species = SPECIES_ROSELIA,
+    },
+	{
+    .iv = 0,
+    .lvl = 18,
+    .species = SPECIES_PETILIL,
     }
 };
 
