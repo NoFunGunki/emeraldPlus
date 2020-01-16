@@ -6452,7 +6452,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Edmond[] = {
 	{
     .iv = 0,
     .lvl = 13,
-    .species = SPECIES_DUCKLET,
+    .species = SPECIES_DUCKLETT,
     }
 };
 

@@ -1,5 +1,32 @@
 SlateportCity_OceanicMuseum_1F_MapScripts:: @ 820AD95
+	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_OceanicMuseum_1F_OnTransition
 	.byte 0
+
+SlateportCity_OceanicMuseum_1F_OnTransition::
+	lock
+	msgbox Text_BeCareful, MSGBOX_DEFAULT
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq Script_NotEnoughMons
+	msgbox Text_HealParty, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+    waitfieldeffect FLDEFF_POKECENTER_HEAL
+	special HealPlayerParty
+	msgbox Text_EnjoyYourStay, MSGBOX_DEFAULT
+	release
+	end
+
+
+Script_NotEnoughMons::
+	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
+	applymovement EVENT_OBJ_ID_PLAYER, Movement_exit
+	waitmovement 0
+	release
+	end
+	
+Movement_exit::
+	walk_down
+	step_end
 
 SlateportCity_OceanicMuseum_1F_EventScript_EntranceAttendant:: @ 820AD96
 	msgbox SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself, MSGBOX_NPC
@@ -382,4 +409,22 @@ SlateportCity_OceanicMuseum_1F_Text_DepthMeasuringMachine: @ 820BA9C
 	.string "a glass dome.\p"
 	.string "Maybe it's for measuring the depth\n"
 	.string "of something…$"
+
+Text_BeCareful::
+	.string "There's been dangerous groups running\n"
+	.string "around.\p"
+	.string "For your own safety, you must have at\n"
+	.string "least 2 POKéMON with you.$"
+
+Text_HealParty::
+	.string "As a complementary service, let me\n"
+	.string "heal your POKéMON for you!$"
+	
+Text_NotEnoughMons::
+	.string "Sorry, you don't have enough POKéMON.$"
+	
+Text_EnjoyYourStay::
+	.string "Please enjoy your visit!$"
+	
+
 
