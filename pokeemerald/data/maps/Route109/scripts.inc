@@ -384,17 +384,17 @@ Route109_EventScript_Alice:: @ 81EEA54
 	end
 
 Route109_EventScript_Huey:: @ 81EEA6B
-	trainerbattle_single TRAINER_HUEY, Route109_Text_HueyIntro, Route109_Text_HueyDefeated
+	trainerbattle_double TRAINER_HUEY, Route109_Text_HueyIntro, Route109_Text_HueyDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_HueyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Edmond:: @ 81EEA82
-	trainerbattle_single TRAINER_EDMOND, Route109_Text_EdmondIntro, Route109_Text_EdmondDefeated
+	trainerbattle_double TRAINER_EDMOND, Route109_Text_EdmondIntro, Route109_Text_EdmondDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_EdmondPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Ricky:: @ 81EEA99
-	trainerbattle_single TRAINER_RICKY_1, Route109_Text_RickyIntro, Route109_Text_RickyDefeated, Route109_EventScript_RickyRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_RICKY_1, Route109_Text_RickyIntro, Route109_Text_RickyDefeated, Doubles_Text_NotEnoughMons, Route109_EventScript_RickyRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route109_EventScript_RickyRematch
@@ -416,7 +416,7 @@ Route109_EventScript_RickyRematch:: @ 81EEAE4
 	end
 
 Route109_EventScript_Lola:: @ 81EEAFB
-	trainerbattle_single TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated, Route109_EventScript_LolaRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_LOLA_1, Route109_Text_LolaIntro, Route109_Text_LolaDefeated, Doubles_Text_NotEnoughMons, Route109_EventScript_LolaRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route109_EventScript_LolaRematch
@@ -463,17 +463,17 @@ Route109_EventScript_Mel:: @ 81EEBBD
 	end
 
 Route109_EventScript_Chandler:: @ 81EEBD8
-	trainerbattle_single TRAINER_CHANDLER, Route109_Text_ChandlerIntro, Route109_Text_ChandlerDefeated
+	trainerbattle_double TRAINER_CHANDLER, Route109_Text_ChandlerIntro, Route109_Text_ChandlerDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_ChandlerPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Hailey:: @ 81EEBEF
-	trainerbattle_single TRAINER_HAILEY, Route109_Text_HaileyIntro, Route109_Text_HaileyDefeated
+	trainerbattle_double TRAINER_HAILEY, Route109_Text_HaileyIntro, Route109_Text_HaileyDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_HaileyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Elijah:: @ 81EEC06
-	trainerbattle_single TRAINER_ELIJAH, Route109_Text_ElijahIntro, Route109_Text_ElijahDefeated
+	trainerbattle_double TRAINER_ELIJAH, Route109_Text_ElijahIntro, Route109_Text_ElijahDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_ElijahPostBattle, MSGBOX_AUTOCLOSE
 	end
 

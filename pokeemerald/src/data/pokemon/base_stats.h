@@ -4709,8 +4709,8 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_WATER_1,
         .eggGroup2 = EGG_GROUP_WATER_1,
-        .abilities = {ABILITY_WATER_ABSORB, ABILITY_DAMP},
-        .abilityHidden = ABILITY_DRIZZLE,
+        .abilities = {ABILITY_DRIZZLE, ABILITY_WATER_ABSORB},
+        .abilityHidden = ABILITY_DAMP,
         .bodyColor = BODY_COLOR_GREEN,
     },
 
