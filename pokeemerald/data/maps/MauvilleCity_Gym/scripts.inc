@@ -74,7 +74,7 @@ MauvilleCity_Gym_EventScript_DeactivatePuzzle:: @ 820DEE7
 	end
 
 MauvilleCity_Gym_EventScript_Wattson:: @ 820DEEB
-	trainerbattle_single TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreBattle, MauvilleCity_Gym_Text_WattsonDefeat, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_WATTSON_1, MauvilleCity_Gym_Text_WattsonPreBattle, MauvilleCity_Gym_Text_WattsonDefeat, Doubles_Text_NotEnoughMons, MauvilleCity_Gym_EventScript_WattsonDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq MauvilleCity_Gym_EventScript_WattsonRematch
@@ -206,27 +206,27 @@ MauvilleCity_Gym_EventScript_ClearBarriersAltState:: @ 820E0B4
 	end
 
 MauvilleCity_Gym_EventScript_Kirk:: @ 820E0B9
-	trainerbattle_single TRAINER_KIRK, MauvilleCity_Gym_Text_KirkPreBattle, MauvilleCity_Gym_Text_KirkDefeat
+	trainerbattle_double TRAINER_KIRK, MauvilleCity_Gym_Text_KirkPreBattle, MauvilleCity_Gym_Text_KirkDefeat, Doubles_Text_NotEnoughMons
 	msgbox MauvilleCity_Gym_Text_KirkPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Shawn:: @ 820E0D0
-	trainerbattle_single TRAINER_SHAWN, MauvilleCity_Gym_Text_ShawnPreBattle, MauvilleCity_Gym_Text_ShawnDefeat
+	trainerbattle_double TRAINER_SHAWN, MauvilleCity_Gym_Text_ShawnPreBattle, MauvilleCity_Gym_Text_ShawnDefeat, Doubles_Text_NotEnoughMons
 	msgbox MauvilleCity_Gym_Text_ShawnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Ben:: @ 820E0E7
-	trainerbattle_single TRAINER_BEN, MauvilleCity_Gym_Text_BenPreBattle, MauvilleCity_Gym_Text_BenDefeat
+	trainerbattle_double TRAINER_BEN, MauvilleCity_Gym_Text_BenPreBattle, MauvilleCity_Gym_Text_BenDefeat, Doubles_Text_NotEnoughMons
 	msgbox MauvilleCity_Gym_Text_BenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Vivian:: @ 820E0FE
-	trainerbattle_single TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianPreBattle, MauvilleCity_Gym_Text_VivianDefeat
+	trainerbattle_double TRAINER_VIVIAN, MauvilleCity_Gym_Text_VivianPreBattle, MauvilleCity_Gym_Text_VivianDefeat, Doubles_Text_NotEnoughMons
 	msgbox MauvilleCity_Gym_Text_VivianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MauvilleCity_Gym_EventScript_Angelo:: @ 820E115
-	trainerbattle_single TRAINER_ANGELO, MauvilleCity_Gym_Text_AngeloPreBattle, MauvilleCity_Gym_Text_AngeloDefeat
+	trainerbattle_double TRAINER_ANGELO, MauvilleCity_Gym_Text_AngeloPreBattle, MauvilleCity_Gym_Text_AngeloDefeat, Doubles_Text_NotEnoughMons
 	msgbox MauvilleCity_Gym_Text_AngeloPostBattle, MSGBOX_AUTOCLOSE
 	end
 
