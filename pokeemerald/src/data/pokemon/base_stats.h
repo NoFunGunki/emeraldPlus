@@ -14801,7 +14801,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_SLOW,
         .eggGroup1 = EGG_GROUP_AMORPHOUS,
         .eggGroup2 = EGG_GROUP_AMORPHOUS,
-        .abilities = {ABILITY_OVERCOAT, ABILITY_MAGIC_GUARD},
+        .abilities = {ABILITY_MAGIC_GUARD, ABILITY_OVERCOAT},
         .abilityHidden = ABILITY_REGENERATOR,
         .bodyColor = BODY_COLOR_GREEN,
     },

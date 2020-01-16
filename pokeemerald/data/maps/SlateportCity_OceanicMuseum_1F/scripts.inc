@@ -1,9 +1,7 @@
 SlateportCity_OceanicMuseum_1F_MapScripts:: @ 820AD95
-	map_script MAP_SCRIPT_ON_TRANSITION, SlateportCity_OceanicMuseum_1F_OnTransition
 	.byte 0
 
-SlateportCity_OceanicMuseum_1F_OnTransition::
-	lock
+SlateportCity_OceanicMuseum_1F_CheckPartySize::
 	msgbox Text_BeCareful, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, 1
@@ -13,21 +11,22 @@ SlateportCity_OceanicMuseum_1F_OnTransition::
     waitfieldeffect FLDEFF_POKECENTER_HEAL
 	special HealPlayerParty
 	msgbox Text_EnjoyYourStay, MSGBOX_DEFAULT
-	release
+	goto_if_eq SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee
+	closemessage
+	hidemoneybox
+	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
+	waitmovement 0
+	releaseall
 	end
 
 
 Script_NotEnoughMons::
 	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
-	applymovement EVENT_OBJ_ID_PLAYER, Movement_exit
+	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
 	waitmovement 0
-	release
+	releaseall
 	end
 	
-Movement_exit::
-	walk_down
-	step_end
-
 SlateportCity_OceanicMuseum_1F_EventScript_EntranceAttendant:: @ 820AD96
 	msgbox SlateportCity_OceanicMuseum_1F_Text_PleaseEnjoyYourself, MSGBOX_NPC
 	end
@@ -50,11 +49,7 @@ SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee:: @ 820ADC1
 	showmoneybox 0, 0, 0
 	msgbox SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee
-	closemessage
-	hidemoneybox
-	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
-	waitmovement 0
+	goto_if_eq SlateportCity_OceanicMuseum_1F_CheckPartySize
 	releaseall
 	end
 
@@ -424,7 +419,7 @@ Text_NotEnoughMons::
 	.string "Sorry, you don't have enough POKéMON.$"
 	
 Text_EnjoyYourStay::
-	.string "Please enjoy your visit!$"
+	.string "Your POKéMON are healed up!$"
 	
 
 

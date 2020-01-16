@@ -165,7 +165,7 @@ Route110_EventScript_PlayerRidingAcroBike:: @ 81EF3E8
 	end
 
 Route110_EventScript_Edward:: @ 81EF3F2
-	trainerbattle_single TRAINER_EDWARD, Route110_Text_EdwardIntro, Route110_Text_EdwardDefeated
+	trainerbattle_double TRAINER_EDWARD, Route110_Text_EdwardIntro, Route110_Text_EdwardDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_EdwardPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -175,7 +175,7 @@ Route110_EventScript_Jaclyn:: @ 81EF409
 	end
 
 Route110_EventScript_Edwin:: @ 81EF420
-	trainerbattle_single TRAINER_EDWIN_1, Route110_Text_EdwinIntro, Route110_Text_EdwinDefeated, Route110_EventScript_EdwinRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_EDWIN_1, Route110_Text_EdwinIntro, Route110_Text_EdwinDefeated, Doubles_Text_NotEnoughMons, Route110_EventScript_EdwinRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_EdwinRematch
@@ -197,22 +197,22 @@ Route110_EventScript_EdwinRematch:: @ 81EF46B
 	end
 
 Route110_EventScript_Dale:: @ 81EF482
-	trainerbattle_single TRAINER_DALE, Route110_Text_DaleIntro, Route110_Text_DaleDefeated
+	trainerbattle_double TRAINER_DALE, Route110_Text_DaleIntro, Route110_Text_DaleDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_DalePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Jacob:: @ 81EF499
-	trainerbattle_single TRAINER_JACOB, Route110_Text_JacobIntro, Route110_Text_JacobDefeated
+	trainerbattle_double TRAINER_JACOB, Route110_Text_JacobIntro, Route110_Text_JacobDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_JacobPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Anthony:: @ 81EF4B0
-	trainerbattle_single TRAINER_ANTHONY, Route110_Text_AnthonyIntro, Route110_Text_AnthonyDefeated
+	trainerbattle_double TRAINER_ANTHONY, Route110_Text_AnthonyIntro, Route110_Text_AnthonyDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_AnthonyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Benjamin:: @ 81EF4C7
-	trainerbattle_single TRAINER_BENJAMIN_1, Route110_Text_BenjaminIntro, Route110_Text_BenjaminDefeated, Route110_EventScript_BenjaminRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_BENJAMIN_1, Route110_Text_BenjaminIntro, Route110_Text_BenjaminDefeated, Doubles_Text_NotEnoughMons, Route110_EventScript_BenjaminRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_BenjaminRematch
@@ -234,12 +234,12 @@ Route110_EventScript_BenjaminRematch:: @ 81EF512
 	end
 
 Route110_EventScript_Jasmine:: @ 81EF529
-	trainerbattle_single TRAINER_JASMINE, Route110_Text_JasmineIntro, Route110_Text_JasmineDefeated
+	trainerbattle_double TRAINER_JASMINE, Route110_Text_JasmineIntro, Route110_Text_JasmineDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_JasminePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Abigail:: @ 81EF540
-	trainerbattle_single TRAINER_ABIGAIL_1, Route110_Text_AbigailIntro, Route110_Text_AbigailDefeated, Route110_EventScript_AbigailRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_ABIGAIL_1, Route110_Text_AbigailIntro, Route110_Text_AbigailDefeated, Doubles_Text_NotEnoughMons, Route110_EventScript_AbigailRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_AbigailRematch
@@ -261,7 +261,7 @@ Route110_EventScript_AbigailRematch:: @ 81EF58B
 	end
 
 Route110_EventScript_Isabel:: @ 81EF5A2
-	trainerbattle_single TRAINER_ISABEL_1, Route110_Text_IsabelIntro, Route110_Text_IsabelDefeated, Route110_EventScript_IsabelRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_ISABEL_1, Route110_Text_IsabelIntro, Route110_Text_IsabelDefeated, Doubles_Text_NotEnoughMons, Route110_EventScript_IsabelRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route110_EventScript_IsabelRematch
@@ -283,7 +283,7 @@ Route110_EventScript_IsabelRematch:: @ 81EF5ED
 	end
 
 Route110_EventScript_Timmy:: @ 81EF604
-	trainerbattle_single TRAINER_TIMMY, Route110_Text_TimmyIntro, Route110_Text_TimmyDefeated
+	trainerbattle_double TRAINER_TIMMY, Route110_Text_TimmyIntro, Route110_Text_TimmyDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_TimmyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -291,17 +291,17 @@ Route110_EventScript_Unused:: @ 81EF61B
 	end
 
 Route110_EventScript_Kaleb:: @ 81EF61C
-	trainerbattle_single TRAINER_KALEB, Route110_Text_KalebIntro, Route110_Text_KalebDefeated
+	trainerbattle_double TRAINER_KALEB, Route110_Text_KalebIntro, Route110_Text_KalebDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_KalebPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Joseph:: @ 81EF633
-	trainerbattle_single TRAINER_JOSEPH, Route110_Text_JosephIntro, Route110_Text_JosephDefeated
+	trainerbattle_double TRAINER_JOSEPH, Route110_Text_JosephIntro, Route110_Text_JosephDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_JosephPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route110_EventScript_Alyssa:: @ 81EF64A
-	trainerbattle_single TRAINER_ALYSSA, Route110_Text_AlyssaIntro, Route110_Text_AlyssaDefeated
+	trainerbattle_double TRAINER_ALYSSA, Route110_Text_AlyssaIntro, Route110_Text_AlyssaDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_AlyssaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -378,6 +378,7 @@ Route110_EventScript_RivalTrigger3:: @ 81EF763
 
 Route110_EventScript_RivalScene:: @ 81EF76E
 	lockall
+	special HealPlayerParty
 	checkplayergender
 	compare VAR_RESULT, MALE
 	call_if_eq Route110_EventScript_PlayMayMusic

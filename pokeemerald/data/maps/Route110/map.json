@@ -643,9 +643,9 @@
             "movement_range_y": 0,
             "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
             "script": "Route110_EventScript_Isabel",
-            "trainer_sight_or_berry_tree_id": "2",
+            "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
-            "x": 10,
+            "x": 11,
             "y": 76
         },
         {
@@ -656,7 +656,7 @@
             "movement_range_y": 1,
             "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
             "script": "Route110_EventScript_Kaleb",
-            "trainer_sight_or_berry_tree_id": "2",
+            "trainer_sight_or_berry_tree_id": "3",
             "trainer_type": "1",
             "x": 7,
             "y": 76
