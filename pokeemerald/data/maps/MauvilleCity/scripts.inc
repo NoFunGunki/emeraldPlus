@@ -18,6 +18,216 @@ MauvilleCity_EventScript_MoveWattsonBackToGym:: @ 81DF3A9
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	return
 
+
+EventScript_StoneTrigger1::
+	setvar VAR_MAUVILLE_GIVESTONE, 1
+	goto EventScript_GiveStoneToPlayer
+	end
+	
+EventScript_StoneTrigger2::
+	setvar VAR_MAUVILLE_GIVESTONE, 2
+	goto EventScript_GiveStoneToPlayer
+	end
+	
+EventScript_StoneTrigger3::
+	setvar VAR_MAUVILLE_GIVESTONE, 3
+	goto EventScript_GiveStoneToPlayer
+	end
+	
+EventScript_StoneTrigger4::
+	setvar VAR_MAUVILLE_GIVESTONE, 4
+	goto EventScript_GiveStoneToPlayer
+	end
+	
+EventScript_GiveStoneToPlayer::
+	lockall
+	msgbox Text_HelloStone, MSGBOX_DEFAULT
+	compare VAR_MAUVILLE_GIVESTONE, 1
+	call_if_eq EventScript_GiveStoneApproach1
+	compare VAR_MAUVILLE_GIVESTONE, 2
+	call_if_eq EventScript_GiveStoneApproach2
+	compare VAR_MAUVILLE_GIVESTONE, 3
+	call_if_eq EventScript_GiveStoneApproach3
+	compare VAR_MAUVILLE_GIVESTONE, 4
+	call_if_eq EventScript_GiveStoneApproach4
+	msgbox Text_ExplainStone, MSGBOX_DEFAULT
+	goto EventScript_MultichoiceStones
+	end
+	
+EventScript_MultichoiceStones::	
+	lockall
+	msgbox Text_WhichStone, MSGBOX_DEFAULT
+	multichoice 21, 8, MULTI_MAUVILLE_GIVESTONE, 1
+	switch VAR_RESULT
+	case 0, EventScript_Fire
+	case 1, EventScript_Water
+	case 2, EventScript_Thunder
+	case 3, EventScript_Sun
+	case 4, EventScript_Moon
+	case 5, EventScript_Leaf
+	case 6, EventScript_Ice
+	case 7, EventScript_Shiny
+	end
+	
+EventScript_Fire::
+	msgbox Text_WantFire, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_FIRE_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+
+
+EventScript_Water::
+	msgbox Text_WantWater, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_WATER_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_Thunder::
+	msgbox Text_WantThunder, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_THUNDER_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_Sun::
+	msgbox Text_WantSun, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_SUN_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+	
+EventScript_Moon::
+	msgbox Text_WantMoon, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_MOON_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_Leaf::
+	msgbox Text_WantLeaf, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_LEAF_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_Ice::
+	msgbox Text_WantIce, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_ICE_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_Shiny::
+	msgbox Text_WantShiny, MSGBOX_YESNO
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_MultichoiceStones
+	giveitem_std ITEM_SHINY_STONE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq EventScript_BagIsFull
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	fadescreen 1
+	setflag FLAG_MAUVILLE_GIVESTONE
+	fadescreen 0
+	releaseall
+	end
+	
+EventScript_BagIsFull::
+	msgbox Text_BagIsFull, MSGBOX_DEFAULT
+	releaseall
+	end
+	
+EventScript_GiveStoneApproach1::
+	applymovement 12, Movement_approach1
+	waitmovement 0
+	return
+
+EventScript_GiveStoneApproach2::
+	applymovement 12, Movement_approach2
+	waitmovement 0
+	return
+
+EventScript_GiveStoneApproach3::
+	applymovement 12, Movement_approach3
+	waitmovement 0
+	return
+
+EventScript_GiveStoneApproach4::
+	applymovement 12, Movement_approach4
+	waitmovement 0
+	return
+	
+Movement_approach1::
+	walk_left
+	walk_down
+	step_end
+	
+Movement_approach2::
+	walk_down
+	step_end
+
+Movement_approach3::
+	walk_right
+	walk_down
+	step_end
+	
+Movement_approach4::
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
 MauvilleCity_EventScript_Boy:: @ 81DF3B3
 	msgbox MauvilleCity_Text_NurseHurtMonBackToHealth, MSGBOX_NPC
 	end
@@ -669,3 +879,70 @@ MauvilleCity_Text_ExplainTV: @ 81E056A
 
 MauvilleCity_Text_BeenCheckingOutTV: @ 81E0699
 	.string "Hi, have you been checking out TVs?$"
+	
+Text_HelloStone::
+	.string "Hey there!$"
+	
+Text_ExplainStone::
+	.string "The city of Mauville is giving\n"
+	.string "out free Evolution Stones!\p"
+	.string "They can be used to evolve special\n"
+	.string "POKéMON immediately.$"
+
+Text_WhichStone::
+	.string "Which stone would you like?$"
+	
+Text_EnjoyStone::
+	.string "Enjoy your complementary stone!$"
+	
+Text_WantFire::
+	.string "Are you sure you want to receive\n"
+	.string "a Fire Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Flareon!$"
+	
+Text_WantWater::
+	.string "Are you sure you want to receive\n"
+	.string "a Water Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Vaporeon!$"	
+
+Text_WantThunder::
+	.string "Are you sure you want to receive\n"
+	.string "a Thunder Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Jolteon!$"
+	
+Text_WantSun::
+	.string "Are you sure you want to receive\n"
+	.string "a Sun Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into an Espeon!$"
+	
+Text_WantMoon::
+	.string "Are you sure you want to receive\n"
+	.string "a Moon Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into an Umbreon!$"
+	
+Text_WantLeaf::
+	.string "Are you sure you want to receive\n"
+	.string "a Leaf Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Leafeon!$"
+	
+Text_WantIce::
+	.string "Are you sure you want to receive\n"
+	.string "an Ice Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Glaceon!$"
+	
+Text_WantShiny::
+	.string "Are you sure you want to receive\n"
+	.string "a Shiny Stone?\p"
+	.string "It can be used to evolve an Eevee\n"
+	.string "into a Sylveon!$"
+	
+Text_BagIsFull::
+	.string "Your bag is full!\p"
+	.string "Come back when you have space.$"

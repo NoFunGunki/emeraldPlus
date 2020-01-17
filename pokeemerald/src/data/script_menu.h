@@ -60,6 +60,18 @@ static const struct MenuAction MultichoiceList_Bike[] =
     {gText_Acro},
 };
 
+static const struct MenuAction MultichoiceList_MauvilleStone[] =
+{
+    {gText_Fire},
+    {gText_Water},
+	{gText_Thunder},
+	{gText_Sun},
+	{gText_Moon},
+	{gText_Leaf},
+	{gText_Ice},
+	{gText_Shiny},
+};
+
 static const struct MenuAction MultichoiceList_StatusInfo[] =
 {
     {gText_Psn},
@@ -898,6 +910,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_SLATEPORT_TENT_RULES]       = MULTICHOICE(MultichoiceList_SlateportTentRules),
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
+	[MULTI_MAUVILLE_GIVESTONE]         = MULTICHOICE(MultichoiceList_MauvilleStone),
 };
 
 const u8 *const gStdStrings[] =
