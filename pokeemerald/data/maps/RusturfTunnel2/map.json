@@ -25,7 +25,7 @@
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 12,
-            "y": 24
+            "y": 8
         },
         {
             "elevation": 3,
@@ -38,7 +38,7 @@
             "trainer_sight_or_berry_tree_id": "0",
             "trainer_type": "0",
             "x": 20,
-            "y": 7
+            "y": 8
         },
         {
             "elevation": 3,
@@ -46,12 +46,12 @@
             "graphics_id": "EVENT_OBJ_GFX_HIKER",
             "movement_range_x": 0,
             "movement_range_y": 0,
-            "movement_type": "MOVEMENT_TYPE_FACE_UP_AND_RIGHT",
+            "movement_type": "MOVEMENT_TYPE_FACE_DOWN_AND_RIGHT",
             "script": "RusturfTunnel2_EventScript_HikerTed",
             "trainer_sight_or_berry_tree_id": "4",
             "trainer_type": "1",
             "x": 1,
-            "y": 19
+            "y": 21
         },
         {
             "elevation": 3,

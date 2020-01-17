@@ -3416,14 +3416,14 @@ static const struct TrainerMonItemCustomMoves sParty_Roxanne1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
     {
     .iv = 100,
-    .lvl = 17,
+    .lvl = 16,
     .species = SPECIES_CROAGUNK,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FAINT_ATTACK, MOVE_POISON_STING, MOVE_TAUNT, MOVE_WORK_UP
     },
     {
     .iv = 100,
-    .lvl = 18,
+    .lvl = 17,
     .species = SPECIES_MEDITITE,
     .heldItem = ITEM_LIGHT_CLAY,
     .moves = MOVE_FOCUS_PUNCH, MOVE_LIGHT_SCREEN, MOVE_REFLECT, MOVE_BULK_UP
@@ -4259,7 +4259,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Billy[] = {
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 7,
     .species = SPECIES_SEEDOT,
     }
 };
@@ -8106,12 +8106,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Haley1[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 8,
     .species = SPECIES_LOTAD,
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 7,
     .species = SPECIES_SEWADDLE,
     }
 };
@@ -8280,12 +8280,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_LittleBoy1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Lyle[] = {
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 8,
     .species = SPECIES_SEWADDLE,
     },
     {
     .iv = 0,
-    .lvl = 6,
+    .lvl = 7,
     .species = SPECIES_WURMPLE,
     },
 };
@@ -8353,12 +8353,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Jane[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_James1[] = {
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 8,
     .species = SPECIES_NINCADA,
     },
     {
     .iv = 0,
-    .lvl = 7,
+    .lvl = 9,
     .species = SPECIES_NINCADA,
     }
 };
@@ -12650,14 +12650,14 @@ static const struct TrainerMonItemCustomMoves sParty_GraniteCaveBoss[] = {
     .lvl = 16,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
-	.moves = MOVE_BRICK_BREAK, MOVE_BULLET_SEED, MOVE_KNOCK_OFF, MOVE_AERIAL_ACE
+	.moves = MOVE_LOW_KICK, MOVE_SMACK_DOWN, MOVE_FEINT, MOVE_AERIAL_ACE
     },
     {
     .iv = 100,
     .lvl = 16,
     .species = SPECIES_HERACROSS,
 	.heldItem = ITEM_NONE,
-	.moves = MOVE_HORN_ATTACK, MOVE_ARM_THRUST, MOVE_SMACK_DOWN, MOVE_BULK_UP
+	.moves = MOVE_PURSUIT, MOVE_ROCK_SMASH, MOVE_TACKLE, MOVE_BULK_UP
     }
 };
 
