@@ -1,4 +1,3 @@
-#include "list_menu.h"
 #include "global.h"
 #include "main.h"
 #include "event_data.h"
