@@ -54,8 +54,9 @@ EventScript_GiveStoneToPlayer::
 	goto EventScript_MultichoiceStones
 	end
 	
-EventScript_MultichoiceStones::	
+EventScript_MultichoiceStones::
 	lockall
+	goto_if_set FLAG_MAUVILLE_GIVESTONE, EventScript_StoneGiven
 	msgbox Text_WhichStone, MSGBOX_DEFAULT
 	multichoice 21, 8, MULTI_MAUVILLE_GIVESTONE, 1
 	switch VAR_RESULT
@@ -67,6 +68,12 @@ EventScript_MultichoiceStones::
 	case 5, EventScript_Leaf
 	case 6, EventScript_Ice
 	case 7, EventScript_Shiny
+	end
+	
+EventScript_StoneGiven::
+	lock
+	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
+	release
 	end
 	
 EventScript_Fire::

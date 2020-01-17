@@ -1092,6 +1092,14 @@ extern const u8 gTrickHouse_Mechadoll_Eight[];
 extern const u8 gTrickHouse_Mechadoll_Six2[];
 extern const u8 gTrickHouse_Mechadoll_Seven2[];
 extern const u8 gTrickHouse_Mechadoll_Eight2[];
+extern const u8 gText_FireStone[];
+extern const u8 gText_WaterStone[];
+extern const u8 gText_ThunderStone[];
+extern const u8 gText_SunStone[];
+extern const u8 gText_MoonStone[];
+extern const u8 gText_LeafStone[];
+extern const u8 gText_IceStone[];
+extern const u8 gText_ShinyStone[];
 
 // Pokedex strings
 extern const u8 gText_SearchForPkmnBasedOnParameters[];

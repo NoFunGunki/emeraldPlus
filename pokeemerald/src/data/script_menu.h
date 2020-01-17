@@ -62,14 +62,14 @@ static const struct MenuAction MultichoiceList_Bike[] =
 
 static const struct MenuAction MultichoiceList_MauvilleStone[] =
 {
-    {gText_Fire},
-    {gText_Water},
-	{gText_Thunder},
-	{gText_Sun},
-	{gText_Moon},
-	{gText_Leaf},
-	{gText_Ice},
-	{gText_Shiny},
+    {gText_FireStone},
+    {gText_WaterStone},
+	{gText_ThunderStone},
+	{gText_SunStone},
+	{gText_MoonStone},
+	{gText_LeafStone},
+	{gText_IceStone},
+	{gText_ShinyStone},
 };
 
 static const struct MenuAction MultichoiceList_StatusInfo[] =
