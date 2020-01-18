@@ -202,7 +202,7 @@ Route103_EventScript_RouteSign:: @ 81EC5EB
 	end
 
 Route103_EventScript_Daisy:: @ 81EC5F4
-	trainerbattle_single TRAINER_DAISY, Route103_Text_DaisyIntro, Route103_Text_DaisyDefeated
+	trainerbattle_double TRAINER_DAISY, Route103_Text_DaisyIntro, Route103_Text_DaisyDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_DaisyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -245,12 +245,12 @@ Route102_EventScript_LivRematch:: @ 81EC6B6
 	end
 
 Route103_EventScript_Andrew:: @ 81EC6D1
-	trainerbattle_single TRAINER_ANDREW, Route103_Text_AndrewIntro, Route103_Text_AndrewDefeated
+	trainerbattle_double TRAINER_ANDREW, Route103_Text_AndrewIntro, Route103_Text_AndrewDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_AndrewPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route103_EventScript_Miguel:: @ 81EC6E8
-	trainerbattle_single TRAINER_MIGUEL_1, Route103_Text_MiguelIntro, Route103_Text_MiguelDefeated, Route102_EventScript_MiguelRegisterMatchCallAfterBattle
+	trainerbattle_double TRAINER_MIGUEL_1, Route103_Text_MiguelIntro, Route103_Text_MiguelDefeated, Doubles_Text_NotEnoughMons, Route102_EventScript_MiguelRegisterMatchCallAfterBattle
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route103_EventScript_MiguelRematch
@@ -272,12 +272,12 @@ Route103_EventScript_MiguelRematch:: @ 81EC733
 	end
 
 Route103_EventScript_Marcos:: @ 81EC74A
-	trainerbattle_single TRAINER_MARCOS, Route103_Text_MarcosIntro, Route103_Text_MarcosDefeated
+	trainerbattle_double TRAINER_MARCOS, Route103_Text_MarcosIntro, Route103_Text_MarcosDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route103_EventScript_Rhett:: @ 81EC761
-	trainerbattle_single TRAINER_RHETT, Route103_Text_RhettIntro, Route103_Text_RhettDefeated
+	trainerbattle_double TRAINER_RHETT, Route103_Text_RhettIntro, Route103_Text_RhettDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_RhettPostBattle, MSGBOX_AUTOCLOSE
 	end
 
