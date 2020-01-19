@@ -61,12 +61,12 @@ Route112_EventScript_Hiker:: @ 81F1E61
 	end
 
 Route112_EventScript_Brice:: @ 81F1E6A
-	trainerbattle_single TRAINER_BRICE, Route112_Text_BriceIntro, Route112_Text_BriceDefeat
+	trainerbattle_double TRAINER_BRICE, Route112_Text_BriceIntro, Route112_Text_BriceDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route112_Text_BricePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route112_EventScript_Trent:: @ 81F1E81
-	trainerbattle_single TRAINER_TRENT_1, Route112_Text_TrentIntro, Route112_Text_TrentDefeat, Route112_EventScript_RegisterTrent
+	trainerbattle_double TRAINER_TRENT_1, Route112_Text_TrentIntro, Route112_Text_TrentDefeat, Doubles_Text_NotEnoughMons, Route112_EventScript_RegisterTrent
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route112_EventScript_RematchTrent
@@ -88,22 +88,22 @@ Route112_EventScript_RematchTrent:: @ 81F1ECC
 	end
 
 Route112_EventScript_Larry:: @ 81F1EE3
-	trainerbattle_single TRAINER_LARRY, Route112_Text_LarryIntro, Route112_Text_LarryDefeat
+	trainerbattle_double TRAINER_LARRY, Route112_Text_LarryIntro, Route112_Text_LarryDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route112_Text_LarryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route112_EventScript_Carol:: @ 81F1EFA
-	trainerbattle_single TRAINER_CAROL, Route112_Text_CarolIntro, Route112_Text_CarolDefeat
+	trainerbattle_double TRAINER_CAROL, Route112_Text_CarolIntro, Route112_Text_CarolDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route112_Text_CarolPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route112_EventScript_Bryant:: @ 81F1F11
-	trainerbattle_single TRAINER_BRYANT, Route112_Text_BryantIntro, Route112_Text_BryantDefeat
+	trainerbattle_double TRAINER_BRYANT, Route112_Text_BryantIntro, Route112_Text_BryantDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route112_Text_BryantPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route112_EventScript_Shayla:: @ 81F1F28
-	trainerbattle_single TRAINER_SHAYLA, Route112_Text_ShaylaIntro, Route112_Text_ShaylaDefeat
+	trainerbattle_double TRAINER_SHAYLA, Route112_Text_ShaylaIntro, Route112_Text_ShaylaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route112_Text_ShaylaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
