@@ -186,7 +186,7 @@ Route118_Movement_StevenExit2: @ 81F3F7E
 	step_end
 
 Route118_EventScript_Rose:: @ 81F3F87
-	trainerbattle_single TRAINER_ROSE_1, Route118_Text_RoseIntro, Route118_Text_RoseDefeat, Route118_EventScript_RegisterRose
+	trainerbattle_double TRAINER_ROSE_1, Route118_Text_RoseIntro, Route118_Text_RoseDefeat, Doubles_Text_NotEnoughMons, Route118_EventScript_RegisterRose
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route118_EventScript_RematchRose
@@ -213,12 +213,12 @@ Route118_EventScript_Barny:: @ 81F3FE9
 	end
 
 Route118_EventScript_Wade:: @ 81F4000
-	trainerbattle_single TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat
+	trainerbattle_double TRAINER_WADE, Route118_Text_WadeIntro, Route118_Text_WadeDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route118_Text_WadePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route118_EventScript_Dalton:: @ 81F4017
-	trainerbattle_single TRAINER_DALTON_1, Route118_Text_DaltonIntro, Route118_Text_DaltonDefeat, Route118_EventScript_RegisterDalton
+	trainerbattle_double TRAINER_DALTON_1, Route118_Text_DaltonIntro, Route118_Text_DaltonDefeat, Doubles_Text_NotEnoughMons, Route118_EventScript_RegisterDalton
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route118_EventScript_RematchDalton
@@ -250,7 +250,7 @@ Route118_EventScript_Chester:: @ 81F4090
 	end
 
 Route118_EventScript_Deandre:: @ 81F40A7
-	trainerbattle_single TRAINER_DEANDRE, Route118_Text_DeandreIntro, Route118_Text_DeandreDefeat
+	trainerbattle_double TRAINER_DEANDRE, Route118_Text_DeandreIntro, Route118_Text_DeandreDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route118_Text_DeandrePostBattle, MSGBOX_AUTOCLOSE
 	end
 
