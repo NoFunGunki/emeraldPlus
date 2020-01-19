@@ -277,10 +277,19 @@ Route111_EventScript_Victor:: @ 81F0FC5
 	lock
 	faceplayer
 	setflag FLAG_LANDMARK_WINSTRATE_FAMILY
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_NotEnoughMons
+	special HealPlayerParty
 	msgbox Route111_Text_BattleOurFamily, MSGBOX_YESNO
 	compare VAR_RESULT, YES
 	goto_if_eq Route111_EventScript_BattleWinstrates
 	msgbox Route111_Text_IsThatSo, MSGBOX_DEFAULT
+	release
+	end
+	
+EventScript_NotEnoughMons::
+	msgbox Text_WinstrateNotEnoughMons, MSGBOX_DEFAULT
 	release
 	end
 
@@ -304,6 +313,7 @@ Route111_EventScript_BattleWinstrates:: @ 81F0FE7
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VictoriaIntro, MSGBOX_DEFAULT
+	Special HealPlayerParty
 	trainerbattle_no_intro TRAINER_VICTORIA, Route111_Text_VictoriaDefeat
 	applymovement 2, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
@@ -322,6 +332,7 @@ Route111_EventScript_BattleWinstrates:: @ 81F0FE7
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_ViviIntro, MSGBOX_DEFAULT
+	Special HealPlayerParty
 	trainerbattle_no_intro TRAINER_VIVI, Route111_Text_ViviDefeat
 	applymovement 3, Common_Movement_WalkInPlaceFastestUp
 	waitmovement 0
@@ -340,6 +351,7 @@ Route111_EventScript_BattleWinstrates:: @ 81F0FE7
 	waitmovement 0
 	call Route111_EventScript_CloseWinstrateDoor
 	msgbox Route111_Text_VickyIntro, MSGBOX_DEFAULT
+	Special HealPlayerParty
 	trainerbattle_no_intro TRAINER_VICKY, Route111_Text_VickyDefeat
 	msgbox Route111_Text_VickyPostBattle, MSGBOX_DEFAULT
 	closemessage
@@ -449,27 +461,27 @@ Route111_EventScript_RockSmashTipFatMan:: @ 81F11E4
 	end
 
 Route111_EventScript_Drew:: @ 81F1204
-	trainerbattle_single TRAINER_DREW, Route111_Text_DrewIntro, Route111_Text_DrewDefeat
+	trainerbattle_double TRAINER_DREW, Route111_Text_DrewIntro, Route111_Text_DrewDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_DrewPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Heidi:: @ 81F121B
-	trainerbattle_single TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat
+	trainerbattle_double TRAINER_HEIDI, Route111_Text_HeidiIntro, Route111_Text_HeidiDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_HeidiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Beau:: @ 81F1232
-	trainerbattle_single TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat
+	trainerbattle_double TRAINER_BEAU, Route111_Text_BeauIntro, Route111_Text_BeauDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_BeauPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Becky:: @ 81F1249
-	trainerbattle_single TRAINER_BECKY, Route111_Text_BeckyIntro, Route111_Text_BeckyDefeat
+	trainerbattle_double TRAINER_BECKY, Route111_Text_BeckyIntro, Route111_Text_BeckyDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_BeckyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Dusty:: @ 81F1260
-	trainerbattle_single TRAINER_DUSTY_1, Route111_Text_DustyIntro, Route111_Text_DustyDefeat, Route111_EventScript_RegisterDusty
+	trainerbattle_double TRAINER_DUSTY_1, Route111_Text_DustyIntro, Route111_Text_DustyDefeat, Doubles_Text_NotEnoughMons, Route111_EventScript_RegisterDusty
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route111_EventScript_RematchDusty
@@ -491,12 +503,12 @@ Route111_EventScript_RematchDusty:: @ 81F12AB
 	end
 
 Route111_EventScript_Travis:: @ 81F12C2
-	trainerbattle_single TRAINER_TRAVIS, Route111_Text_TravisIntro, Route111_Text_TravisDefeat
+	trainerbattle_double TRAINER_TRAVIS, Route111_Text_TravisIntro, Route111_Text_TravisDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_TravisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Irene:: @ 81F12D9
-	trainerbattle_single TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat
+	trainerbattle_double TRAINER_IRENE, Route111_Text_IreneIntro, Route111_Text_IreneDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_IrenePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -506,7 +518,7 @@ Route111_EventScript_Daisuke:: @ 81F12F0
 	end
 
 Route111_EventScript_Wilton:: @ 81F1307
-	trainerbattle_single TRAINER_WILTON_1, Route111_Text_WiltonIntro, Route111_Text_WiltonDefeat, Route111_EventScript_RegisterWilton
+	trainerbattle_double TRAINER_WILTON_1, Route111_Text_WiltonIntro, Route111_Text_WiltonDefeat, Doubles_Text_NotEnoughMons, Route111_EventScript_RegisterWilton
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route111_EventScript_RematchWilton
@@ -528,7 +540,7 @@ Route111_EventScript_RematchWilton:: @ 81F1352
 	end
 
 Route111_EventScript_Brooke:: @ 81F1369
-	trainerbattle_single TRAINER_BROOKE_1, Route111_Text_BrookeIntro, Route111_Text_BrookeDefeat, Route111_EventScript_RegisterBrooke
+	trainerbattle_double TRAINER_BROOKE_1, Route111_Text_BrookeIntro, Route111_Text_BrookeDefeat, Doubles_Text_NotEnoughMons, Route111_EventScript_RegisterBrooke
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route111_EventScript_RematchBrooke
@@ -550,12 +562,12 @@ Route111_EventScript_RematchBrooke:: @ 81F13B4
 	end
 
 Route111_EventScript_Hayden:: @ 81F13CB
-	trainerbattle_single TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat
+	trainerbattle_double TRAINER_HAYDEN, Route111_Text_HaydenIntro, Route111_Text_HaydenDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_HaydenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Bianca:: @ 81F13E2
-	trainerbattle_single TRAINER_BIANCA, Route111_Text_BiancaIntro, Route111_Text_BiancaDefeat
+	trainerbattle_double TRAINER_BIANCA, Route111_Text_BiancaIntro, Route111_Text_BiancaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_BiancaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -570,17 +582,17 @@ Route111_EventScript_Celina:: @ 81F1410
 	end
 
 Route111_EventScript_Celia:: @ 81F1427
-	trainerbattle_single TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat
+	trainerbattle_double TRAINER_CELIA, Route111_Text_CeliaIntro, Route111_Text_CeliaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_CeliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Bryan:: @ 81F143E
-	trainerbattle_single TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat
+	trainerbattle_double TRAINER_BRYAN, Route111_Text_BryanIntro, Route111_Text_BryanDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_BryanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route111_EventScript_Branden:: @ 81F1455
-	trainerbattle_single TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat
+	trainerbattle_double TRAINER_BRANDEN, Route111_Text_BrandenIntro, Route111_Text_BrandenDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_BrandenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -741,4 +753,8 @@ Route111_Text_TrainerHillSign: @ 81F1D61
 	.string "{RIGHT_ARROW} TRAINER HILL ENTRANCE\p"
 	.string "“Scale the heights, you hot-blooded\n"
 	.string "TRAINERS!”$"
-
+	
+Text_WinstrateNotEnoughMons::
+	.string "Oh, seems like you don't have enough\n"
+	.string "POKéMON to battle. Come back with more.$"
+	
