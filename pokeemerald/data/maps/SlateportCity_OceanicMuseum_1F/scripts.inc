@@ -1,25 +1,6 @@
 SlateportCity_OceanicMuseum_1F_MapScripts:: @ 820AD95
 	.byte 0
 
-SlateportCity_OceanicMuseum_1F_CheckPartySize::
-	msgbox Text_BeCareful, MSGBOX_DEFAULT
-	getpartysize
-	compare VAR_RESULT, 1
-	goto_if_eq Script_NotEnoughMons
-	msgbox Text_HealParty, MSGBOX_DEFAULT
-	dofieldeffect FLDEFF_POKECENTER_HEAL
-    waitfieldeffect FLDEFF_POKECENTER_HEAL
-	special HealPlayerParty
-	msgbox Text_EnjoyYourStay, MSGBOX_DEFAULT
-	goto_if_eq SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee
-	closemessage
-	hidemoneybox
-	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
-	waitmovement 0
-	releaseall
-	end
-
-
 Script_NotEnoughMons::
 	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
 	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
@@ -47,9 +28,22 @@ SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFeeRight:: @ 820ADB0
 
 SlateportCity_OceanicMuseum_1F_EventScript_PayEntranceFee:: @ 820ADC1
 	showmoneybox 0, 0, 0
+	msgbox Text_BeCareful, MSGBOX_DEFAULT
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq Script_NotEnoughMons
+	msgbox Text_HealParty, MSGBOX_DEFAULT
+	dofieldeffect FLDEFF_POKECENTER_HEAL
+    waitfieldeffect FLDEFF_POKECENTER_HEAL
+	special HealPlayerParty
+	msgbox Text_EnjoyYourStay, MSGBOX_DEFAULT
 	msgbox SlateportCity_OceanicMuseum_1F_Text_WouldYouLikeToEnter, MSGBOX_YESNO
 	compare VAR_RESULT, YES
-	goto_if_eq SlateportCity_OceanicMuseum_1F_CheckPartySize
+	goto_if_eq SlateportCity_OceanicMuseum_1F_EventScript_CheckMoneyForFee
+	closemessage
+	hidemoneybox
+	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
+	waitmovement 0
 	releaseall
 	end
 

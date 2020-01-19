@@ -56,9 +56,10 @@ EventScript_GiveStoneToPlayer::
 	
 EventScript_MultichoiceStones::
 	lockall
+	faceplayer
 	goto_if_set FLAG_MAUVILLE_GIVESTONE, EventScript_StoneGiven
 	msgbox Text_WhichStone, MSGBOX_DEFAULT
-	multichoice 21, 8, MULTI_MAUVILLE_GIVESTONE, 1
+	multichoice 21, 1, MULTI_MAUVILLE_GIVESTONE, 1
 	switch VAR_RESULT
 	case 0, EventScript_Fire
 	case 1, EventScript_Water
@@ -68,6 +69,7 @@ EventScript_MultichoiceStones::
 	case 5, EventScript_Leaf
 	case 6, EventScript_Ice
 	case 7, EventScript_Shiny
+	releaseall
 	end
 	
 EventScript_StoneGiven::
@@ -84,9 +86,7 @@ EventScript_Fire::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
 	releaseall
 	end
 
@@ -99,9 +99,9 @@ EventScript_Water::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -113,9 +113,9 @@ EventScript_Thunder::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -127,9 +127,9 @@ EventScript_Sun::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -142,9 +142,9 @@ EventScript_Moon::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -156,9 +156,9 @@ EventScript_Leaf::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -170,9 +170,9 @@ EventScript_Ice::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
@@ -184,9 +184,9 @@ EventScript_Shiny::
 	compare VAR_RESULT, 0
 	goto_if_eq EventScript_BagIsFull
 	msgbox Text_EnjoyStone, MSGBOX_DEFAULT
-	fadescreen 1
+	
 	setflag FLAG_MAUVILLE_GIVESTONE
-	fadescreen 0
+	
 	releaseall
 	end
 	
