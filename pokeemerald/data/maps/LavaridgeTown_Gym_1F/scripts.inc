@@ -52,7 +52,7 @@ LavaridgeTown_Gym_1F_EventScript_EndCheckHideTrainers:: @ 81FE78B
 	return
 
 LavaridgeTown_Gym_1F_EventScript_Flannery:: @ 81FE78C
-	trainerbattle_single TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreBattle, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_FLANNERY_1, LavaridgeTown_Gym_1F_Text_FlanneryPreBattle, LavaridgeTown_Gym_1F_Text_FlanneryDefeat, Doubles_Text_NotEnoughMons, LavaridgeTown_Gym_1F_EventScript_FlanneryDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, 1
 	goto_if_eq LavaridgeTown_Gym_1F_EventScript_FlanneryRematch

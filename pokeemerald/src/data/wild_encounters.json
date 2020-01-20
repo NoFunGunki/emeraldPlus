@@ -6602,49 +6602,49 @@
                                 "species": "SPECIES_ODDISH"
                             },
                             {
-                                "max_level": 14,
-                                "min_level": 14,
-                                "species": "SPECIES_POOCHYENA"
+                                "max_level": 15,
+                                "min_level": 15,
+                                "species": "SPECIES_HERDIER"
                             },
                             {
-                                "max_level": 14,
-                                "min_level": 14,
+                                "max_level": 15,
+                                "min_level": 15,
+                                "species": "SPECIES_BIBAREL"
+                            },
+                            {
+                                "max_level": 13,
+                                "min_level": 13,
+                                "species": "SPECIES_STARLY"
+                            },
+                            {
+                                "max_level": 13,
+                                "min_level": 13,
                                 "species": "SPECIES_ODDISH"
                             },
                             {
                                 "max_level": 13,
                                 "min_level": 13,
-                                "species": "SPECIES_MARILL"
+                                "species": "SPECIES_SEWADDLE"
                             },
                             {
                                 "max_level": 13,
                                 "min_level": 13,
-                                "species": "SPECIES_ODDISH"
-                            },
-                            {
-                                "max_level": 13,
-                                "min_level": 13,
-                                "species": "SPECIES_ILLUMISE"
-                            },
-                            {
-                                "max_level": 13,
-                                "min_level": 13,
-                                "species": "SPECIES_ILLUMISE"
+                                "species": "SPECIES_FLETCHLING"
                             },
                             {
                                 "max_level": 14,
                                 "min_level": 14,
-                                "species": "SPECIES_ILLUMISE"
-                            },
-                            {
-                                "max_level": 14,
-                                "min_level": 14,
-                                "species": "SPECIES_ILLUMISE"
-                            },
-                            {
-                                "max_level": 13,
-                                "min_level": 13,
                                 "species": "SPECIES_VOLBEAT"
+                            },
+                            {
+                                "max_level": 14,
+                                "min_level": 14,
+                                "species": "SPECIES_ILLUMISE"
+                            },
+                            {
+                                "max_level": 17,
+                                "min_level": 17,
+                                "species": "SPECIES_FLETCHINDER"
                             },
                             {
                                 "max_level": 13,

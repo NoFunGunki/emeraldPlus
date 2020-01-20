@@ -2,7 +2,7 @@ SlateportCity_OceanicMuseum_1F_MapScripts:: @ 820AD95
 	.byte 0
 
 Script_NotEnoughMons::
-	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
+	msgbox Text_EntranceNotEnoughMons, MSGBOX_DEFAULT
 	applymovement EVENT_OBJ_ID_PLAYER, SlateportCity_OceanicMuseum_1F_Movement_PushPlayerBackFromCounter
 	waitmovement 0
 	releaseall
@@ -409,7 +409,7 @@ Text_HealParty::
 	.string "As a complementary service, let me\n"
 	.string "heal your POKéMON for you!$"
 	
-Text_NotEnoughMons::
+Text_EntranceNotEnoughMons::
 	.string "Sorry, you don't have enough POKéMON.$"
 	
 Text_EnjoyYourStay::

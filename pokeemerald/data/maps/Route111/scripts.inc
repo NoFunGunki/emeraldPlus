@@ -279,7 +279,7 @@ Route111_EventScript_Victor:: @ 81F0FC5
 	setflag FLAG_LANDMARK_WINSTRATE_FAMILY
 	getpartysize
 	compare VAR_RESULT, 1
-	goto_if_eq EventScript_NotEnoughMons
+	goto_if_eq EventScript_WinstrateNotEnoughMons
 	special HealPlayerParty
 	msgbox Route111_Text_BattleOurFamily, MSGBOX_YESNO
 	compare VAR_RESULT, YES
@@ -288,7 +288,7 @@ Route111_EventScript_Victor:: @ 81F0FC5
 	release
 	end
 	
-EventScript_NotEnoughMons::
+EventScript_WinstrateNotEnoughMons::
 	msgbox Text_WinstrateNotEnoughMons, MSGBOX_DEFAULT
 	release
 	end

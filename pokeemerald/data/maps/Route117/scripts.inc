@@ -37,7 +37,7 @@ Route117_EventScript_DayCareSign:: @ 81F39C7
 	end
 
 Route117_EventScript_Isaac:: @ 81F39D0
-	trainerbattle_single TRAINER_ISAAC_1, Route117_Text_IsaacIntro, Route117_Text_IsaacDefeat, Route117_EventScript_RegisterIsaac
+	trainerbattle_double TRAINER_ISAAC_1, Route117_Text_IsaacIntro, Route117_Text_IsaacDefeat, Doubles_Text_NotEnoughMons, Route117_EventScript_RegisterIsaac
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route117_EventScript_RematchIsaac
@@ -59,7 +59,7 @@ Route117_EventScript_RematchIsaac:: @ 81F3A1B
 	end
 
 Route117_EventScript_Lydia:: @ 81F3A32
-	trainerbattle_single TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat, Route117_EventScript_RegisterLydia
+	trainerbattle_double TRAINER_LYDIA_1, Route117_Text_LydiaIntro, Route117_Text_LydiaDefeat, Doubles_Text_NotEnoughMons, Route117_EventScript_RegisterLydia
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route117_EventScript_RematchLydia
@@ -81,7 +81,7 @@ Route117_EventScript_RematchLydia:: @ 81F3A7D
 	end
 
 Route117_EventScript_Dylan:: @ 81F3A94
-	trainerbattle_single TRAINER_DYLAN_1, Route117_Text_DylanIntro, Route117_Text_DylanDefeat, Route117_EventScript_RegisterDylan
+	trainerbattle_double TRAINER_DYLAN_1, Route117_Text_DylanIntro, Route117_Text_DylanDefeat, Doubles_Text_NotEnoughMons, Route117_EventScript_RegisterDylan
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route117_EventScript_RematchDylan
@@ -103,7 +103,7 @@ Route117_EventScript_RematchDylan:: @ 81F3ADF
 	end
 
 Route117_EventScript_Maria:: @ 81F3AF6
-	trainerbattle_single TRAINER_MARIA_1, Route117_Text_MariaIntro, Route117_Text_MariaDefeat, Route117_EventScript_RegisterMaria
+	trainerbattle_double TRAINER_MARIA_1, Route117_Text_MariaIntro, Route117_Text_MariaDefeat, Doubles_Text_NotEnoughMons, Route117_EventScript_RegisterMaria
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route117_EventScript_RematchMaria
@@ -125,7 +125,7 @@ Route117_EventScript_RematchMaria:: @ 81F3B41
 	end
 
 Route117_EventScript_Derek:: @ 81F3B58
-	trainerbattle_single TRAINER_DEREK, Route117_Text_DerekIntro, Route117_Text_DerekDefeat
+	trainerbattle_double TRAINER_DEREK, Route117_Text_DerekIntro, Route117_Text_DerekDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route117_Text_DerekPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -170,17 +170,17 @@ Route117_EventScript_RematchMeg:: @ 81F3C1C
 	end
 
 Route117_EventScript_Melina:: @ 81F3C37
-	trainerbattle_single TRAINER_MELINA, Route117_Text_MelinaIntro, Route117_Text_MelinaDefeat
+	trainerbattle_double TRAINER_MELINA, Route117_Text_MelinaIntro, Route117_Text_MelinaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route117_Text_MelinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route117_EventScript_Brandi:: @ 81F3C4E
-	trainerbattle_single TRAINER_BRANDI, Route117_Text_BrandiIntro, Route117_Text_BrandiDefeat
+	trainerbattle_double TRAINER_BRANDI, Route117_Text_BrandiIntro, Route117_Text_BrandiDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route117_Text_BrandiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route117_EventScript_Aisha:: @ 81F3C65
-	trainerbattle_single TRAINER_AISHA, Route117_Text_AishaIntro, Route117_Text_AishaDefeat
+	trainerbattle_double TRAINER_AISHA, Route117_Text_AishaIntro, Route117_Text_AishaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route117_Text_AishaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

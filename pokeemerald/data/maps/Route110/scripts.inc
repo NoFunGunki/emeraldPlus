@@ -529,6 +529,7 @@ Route110_EventScript_RivalExit:: @ 81EF8EC
 	call_if_eq Route110_EventScript_RivalExit3
 	removeobject 29
 	setvar VAR_ROUTE110_STATE, 1
+	setvar VAR_ROUTE110_CHECKDOUBLES, 1
 	savebgm MUS_DUMMY
 	fadedefaultbgm
 	releaseall
