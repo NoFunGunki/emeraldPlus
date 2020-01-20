@@ -6980,17 +6980,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Mudkip[] 
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Mudkip[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 20,
+    .species = SPECIES_RUFFLET,
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 20,
+    .species = SPECIES_SALANDIT,
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_GROVYLE,
     }
 };
@@ -7024,17 +7024,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Treecko[]
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Treecko[] = {
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_WINGULL,
+    .lvl = 20,
+    .species = SPECIES_RUFFLET,
     },
     {
     .iv = 50,
-    .lvl = 18,
+    .lvl = 20,
     .species = SPECIES_LOMBRE,
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_COMBUSKEN,
     }
 };
@@ -7068,17 +7068,17 @@ static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute103Torchic[]
 static const struct TrainerMonNoItemDefaultMoves sParty_BrendanRoute110Torchic[] = {
     {
     .iv = 50,
-    .lvl = 18,
+    .lvl = 20,
     .species = SPECIES_LOMBRE,
     },
     {
     .iv = 50,
-    .lvl = 18,
-    .species = SPECIES_SLUGMA,
+    .lvl = 20,
+    .species = SPECIES_SALANDIT,
     },
     {
     .iv = 100,
-    .lvl = 20,
+    .lvl = 22,
     .species = SPECIES_MARSHTOMP,
     }
 };
