@@ -246,6 +246,11 @@ PetalburgWoods_EventScript_Boy2:: @ 822E219
 	msgbox PetalburgWoods_Text_HiddenItemsExplanation, MSGBOX_NPC
 	end
 
+PetalburgWoods_EventScript_GirlBattle::
+	trainerbattle_double TRAINER_JANE, PetalburgWoods_Text_JaneIntro, PetalburgWoods_Text_JaneDefeat, Doubles_Text_NotEnoughMons, PetalburgWoods_EventScript_Girl
+	goto_if_set FLAG_RECEIVED_MIRACLE_SEED, PetalburgWoods_EventScript_ExplainMiracleSeed
+	end
+
 PetalburgWoods_EventScript_Girl:: @ 822E222
 	lock
 	faceplayer
@@ -255,7 +260,6 @@ PetalburgWoods_EventScript_Girl:: @ 822E222
 	compare VAR_RESULT, 0
 	goto_if_eq Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_MIRACLE_SEED
-	trainerbattle_double TRAINER_JANE, PetalburgWoods_Text_JaneIntro, PetalburgWoods_Text_JaneDefeat, Doubles_Text_NotEnoughMons
 	release
 	end
 
@@ -447,7 +451,6 @@ PetalburgWoods_Text_HiddenItemsExplanation: @ 822EA8B
 PetalburgWoods_Text_TryUsingThisItem: @ 822EAFE
 	.string "Oh, neat!\n"
 	.string "That's the BADGE from RUSTBORO GYM!\p"
-	.string "You must be a TRAINER.\n"
 	.string "You should try using this item.$"
 
 PetalburgWoods_Text_MiracleSeedExplanation: @ 822EB63
@@ -477,7 +480,7 @@ PetalburgWoods_Text_TrainerTipsPP: @ 822ED07
 	.string "taken to a POKéMON CENTER.$"
 
 PetalburgWoods_Text_JaneIntro:
-	.string "Now lets see how strong you actually are!$"
+	.string "Now lets see how strong you actually are.$"
 
 PetalburgWoods_Text_JaneDefeat:
 	.string "Guess you do deserve this neat item.$"

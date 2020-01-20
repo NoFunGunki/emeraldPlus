@@ -1,18 +1,6 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Welcome to my ROM Hack Demo 2!\p"
-	.string "So far, we have POKéMON from\n"
-	.string "different generations to catch,\l"
-	.string "updated battle engine, updated\l"
-	.string "moves, updated abilities, a new\l"
-	.string "boss to fight in Granite Cave and\l"
-	.string "a new mini-dungeon in Rusturf\l"
-	.string "Tunnel to explore.\p"
-	.string "The demo is completed up to the\n"
-	.string "second gym in Dewford Town.\p"
-	.string "Please tell me what you think or\n"
-	.string "about any bugs you find. Thanks!\p"
-	.string "I'm not sure how to skip the intro\n"
-	.string "completely yet, so deal with it.\p"
+	.string "Demo 3 goes all the way up to\n"
+	.string "the 4th gym in Lavaridge\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB

@@ -3686,12 +3686,12 @@ static const struct TrainerMonItemCustomMoves sParty_Juan1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Jerry1[] = {
     {
     .iv = 10,
-    .lvl = 11,
+    .lvl = 13,
     .species = SPECIES_RALTS,
     },
 	{
     .iv = 10,
-    .lvl = 10,
+    .lvl = 12,
     .species = SPECIES_FLETCHLING,
     }
 };
@@ -8183,12 +8183,12 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Haley1[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_Janice[] = {
     {
     .iv = 0,
-    .lvl = 9,
+    .lvl = 12,
     .species = SPECIES_MARILL,
     },
 	{
     .iv = 0,
-    .lvl = 10,
+    .lvl = 12,
     .species = SPECIES_WINGULL,
     }
 };
