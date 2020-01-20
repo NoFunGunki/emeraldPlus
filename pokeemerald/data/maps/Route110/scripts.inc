@@ -16,25 +16,30 @@ Route110_OnTransition: @ 81EF27D
 	end
 
 EventScript_Trigger1::
+	lockall
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_eq EventScript_NotEnoughMons
+	releaseall
 	end
 	
 EventScript_Trigger2::
+	lockall
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_eq EventScript_NotEnoughMons
+	releaseall
 	end
 	
 EventScript_Trigger3::
+	lockall
 	getpartysize
 	compare VAR_RESULT, 1
 	goto_if_eq EventScript_NotEnoughMons
+	releaseall
 	end
 	
 EventScript_NotEnoughMons::
-	lockall
 	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
 	applymovement EVENT_OBJ_ID_PLAYER, Movement_PushBackPlayer
 	waitmovement 0
