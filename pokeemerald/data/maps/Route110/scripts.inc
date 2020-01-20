@@ -1048,3 +1048,8 @@ Route110_Text_KeepAnEyeOutForRival: @ 81F0C33
 	.string "Well, I had better get going.\n"
 	.string "See you again, {PLAYER}{KUN}!$"
 
+Text_NotEnoughMons::
+	.string "Something is telling you that you\n"
+	.string "might need to bring more POKéMON\l"
+	.string "along with you...$"
+	
