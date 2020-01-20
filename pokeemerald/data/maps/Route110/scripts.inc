@@ -15,6 +15,37 @@ Route110_OnTransition: @ 81EF27D
 	call_if_eq Route110_EventScript_SaveCyclingMusic
 	end
 
+EventScript_Trigger1::
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_NotEnoughMons
+	end
+	
+EventScript_Trigger2::
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_NotEnoughMons
+	end
+	
+EventScript_Trigger3::
+	getpartysize
+	compare VAR_RESULT, 1
+	goto_if_eq EventScript_NotEnoughMons
+	end
+	
+EventScript_NotEnoughMons::
+	lockall
+	msgbox Text_NotEnoughMons, MSGBOX_DEFAULT
+	applymovement EVENT_OBJ_ID_PLAYER, Movement_PushBackPlayer
+	waitmovement 0
+	releaseall
+	end
+	
+Movement_PushBackPlayer::
+	walk_down
+	step_end
+	
+
 Route110_EventScript_SaveCyclingMusic:: @ 81EF293
 	savebgm MUS_CYCLING
 	return
@@ -170,7 +201,7 @@ Route110_EventScript_Edward:: @ 81EF3F2
 	end
 
 Route110_EventScript_Jaclyn:: @ 81EF409
-	trainerbattle_single TRAINER_JACLYN, Route110_Text_JaclynIntro, Route110_Text_JaclynDefeated
+	trainerbattle_double TRAINER_JACLYN, Route110_Text_JaclynIntro, Route110_Text_JaclynDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route110_Text_JaclynPostBattle, MSGBOX_AUTOCLOSE
 	end
 

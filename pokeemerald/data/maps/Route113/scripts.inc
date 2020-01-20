@@ -49,17 +49,17 @@ Route113_EventScript_TrainerTipsRegisterKeyItems:: @ 81F21B7
 	end
 
 Route113_EventScript_Jaylen:: @ 81F21C0
-	trainerbattle_single TRAINER_JAYLEN, Route113_Text_JaylenIntro, Route113_Text_JaylenDefeat
+	trainerbattle_double TRAINER_JAYLEN, Route113_Text_JaylenIntro, Route113_Text_JaylenDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_JaylenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Dillon:: @ 81F21D7
-	trainerbattle_single TRAINER_DILLON, Route113_Text_DillonIntro, Route113_Text_DillonDefeat
+	trainerbattle_double TRAINER_DILLON, Route113_Text_DillonIntro, Route113_Text_DillonDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_DillonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Madeline:: @ 81F21EE
-	trainerbattle_single TRAINER_MADELINE_1, Route113_Text_MadelineIntro, Route113_Text_MadelineDefeat, Route113_EventScript_RegisterMadeline
+	trainerbattle_double TRAINER_MADELINE_1, Route113_Text_MadelineIntro, Route113_Text_MadelineDefeat, Doubles_Text_NotEnoughMons, Route113_EventScript_RegisterMadeline
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route113_EventScript_RematchMadeline
@@ -81,7 +81,7 @@ Route113_EventScript_RematchMadeline:: @ 81F2239
 	end
 
 Route113_EventScript_Lao:: @ 81F2250
-	trainerbattle_single TRAINER_LAO_1, Route113_Text_LaoIntro, Route113_Text_LaoDefeat, Route113_EventScript_RegisterLao
+	trainerbattle_double TRAINER_LAO_1, Route113_Text_LaoIntro, Route113_Text_LaoDefeat, Doubles_Text_NotEnoughMons, Route113_EventScript_RegisterLao
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route113_EventScript_RematchLao
@@ -103,7 +103,7 @@ Route113_EventScript_RematchLao:: @ 81F229B
 	end
 
 Route113_EventScript_Lung:: @ 81F22B2
-	trainerbattle_single TRAINER_LUNG, Route113_Text_LungIntro, Route113_Text_LungDefeat
+	trainerbattle_double TRAINER_LUNG, Route113_Text_LungIntro, Route113_Text_LungDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_LungPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -118,22 +118,22 @@ Route113_EventScript_Tia:: @ 81F22E4
 	end
 
 Route113_EventScript_Sophie:: @ 81F22FF
-	trainerbattle_single TRAINER_SOPHIE, Route113_Text_SophieIntro, Route113_Text_SophieDefeat
+	trainerbattle_double TRAINER_SOPHIE, Route113_Text_SophieIntro, Route113_Text_SophieDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_SophiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Coby:: @ 81F2316
-	trainerbattle_single TRAINER_COBY, Route113_Text_CobyIntro, Route113_Text_CobyDefeat
+	trainerbattle_double TRAINER_COBY, Route113_Text_CobyIntro, Route113_Text_CobyDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_CobyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Lawrence:: @ 81F232D
-	trainerbattle_single TRAINER_LAWRENCE, Route113_Text_LawrenceIntro, Route113_Text_LawrenceDefeat
+	trainerbattle_double TRAINER_LAWRENCE, Route113_Text_LawrenceIntro, Route113_Text_LawrenceDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_LawrencePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route113_EventScript_Wyatt:: @ 81F2344
-	trainerbattle_single TRAINER_WYATT, Route113_Text_WyattIntro, Route113_Text_WyattDefeat
+	trainerbattle_double TRAINER_WYATT, Route113_Text_WyattIntro, Route113_Text_WyattDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route113_Text_WyattPostBattle, MSGBOX_AUTOCLOSE
 	end
 

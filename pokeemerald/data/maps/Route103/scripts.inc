@@ -282,12 +282,12 @@ Route103_EventScript_Rhett:: @ 81EC761
 	end
 
 Route103_EventScript_Pete:: @ 81EC778
-	trainerbattle_single TRAINER_PETE, Route103_Text_PeteIntro, Route103_Text_PeteDefeated
+	trainerbattle_double TRAINER_PETE, Route103_Text_PeteIntro, Route103_Text_PeteDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_PetePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route103_EventScript_Isabelle:: @ 81EC78F
-	trainerbattle_single TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated
+	trainerbattle_double TRAINER_ISABELLE, Route103_Text_IsabelleIntro, Route103_Text_IsabelleDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route103_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
 
