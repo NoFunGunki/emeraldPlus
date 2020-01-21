@@ -3486,28 +3486,28 @@ static const struct TrainerMonItemCustomMoves sParty_Brawly1[] = {
 static const struct TrainerMonItemCustomMoves sParty_Wattson1[] = {
     {
     .iv = 200,
-    .lvl = 22,
+    .lvl = 21,
     .species = SPECIES_STUNFISK,
     .heldItem = ITEM_NONE,
     .moves = MOVE_ELECTRIC_TERRAIN, MOVE_THUNDER_SHOCK, MOVE_NONE, MOVE_NONE
     },
     {
     .iv = 200,
-    .lvl = 22,
+    .lvl = 20,
     .species = SPECIES_ALOLAN_RAICHU,
     .heldItem = ITEM_NONE,
     .moves = MOVE_ELECTRO_BALL, MOVE_ELECTRIC_TERRAIN, MOVE_DISARMING_VOICE, MOVE_SWIFT
     },
     {
     .iv = 220,
-    .lvl = 23,
+    .lvl = 21,
     .species = SPECIES_MAGNETON,
     .heldItem = ITEM_NONE,
     .moves = MOVE_SUPERSONIC, MOVE_SHOCK_WAVE, MOVE_THUNDER_WAVE, MOVE_SONIC_BOOM
     },
     {
     .iv = 250,
-    .lvl = 26,
+    .lvl = 24,
     .species = SPECIES_MANECTRIC,
     .heldItem = ITEM_SITRUS_BERRY,
     .moves = MOVE_BITE, MOVE_FIRE_FANG, MOVE_THUNDER_FANG, MOVE_ELECTRIC_TERRAIN
