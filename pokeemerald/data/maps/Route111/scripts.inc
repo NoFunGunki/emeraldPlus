@@ -572,7 +572,7 @@ Route111_EventScript_Bianca:: @ 81F13E2
 	end
 
 Route111_EventScript_Tyron:: @ 81F13F9
-	trainerbattle_single TRAINER_TYRON, Route111_Text_TyronIntro, Route111_Text_TyronDefeat
+	trainerbattle_double TRAINER_TYRON, Route111_Text_TyronIntro, Route111_Text_TyronDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_TyronPostBattle, MSGBOX_AUTOCLOSE
 	end
 
