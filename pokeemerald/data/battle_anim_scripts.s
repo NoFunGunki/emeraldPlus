@@ -4376,10 +4376,6 @@ Move_TOPSY_TURVY:
 	
 Move_DRAINING_KISS:
 	loadspritegfx ANIM_TAG_PINK_HEART
-	loadspritegfx ANIM_TAG_DEVIL
-	createsprite gDevilSpriteTemplate, ANIM_TARGET, 2, 0, -24
-	playsewithpan SE_W060B, SOUND_PAN_TARGET
-	waitforvisualfinish
 	playsewithpan SE_W213, SOUND_PAN_TARGET
 	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, -256, -42
 	createsprite gPinkHeartSpriteTemplate, ANIM_TARGET, 3, 128, -14
