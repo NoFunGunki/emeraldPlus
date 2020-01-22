@@ -2668,7 +2668,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Shane[] = {
     },
     {
     .iv = 0,
-    .lvl = 18,
+    .lvl = 24,
     .species = SPECIES_GLISCOR,
     }
 };
