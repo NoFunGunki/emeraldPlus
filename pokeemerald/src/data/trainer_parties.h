@@ -3528,27 +3528,27 @@ static const struct TrainerMonItemCustomMoves sParty_Flannery1[] = {
     {
     .iv = 200,
     .lvl = 27,
-    .species = SPECIES_LITLEO,
+    .species = SPECIES_ARCANINE,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_FIRE_FANG, MOVE_NOBLE_ROAR, MOVE_TAKE_DOWN, MOVE_WORK_UP
+    .moves = MOVE_FIRE_FANG, MOVE_BITE, MOVE_THUNDER_FANG, MOVE_DOUBLE_KICK
     },
     {
     .iv = 200,
-    .lvl = 26,
+    .lvl = 27,
     .species = SPECIES_NINETALES,
     .heldItem = ITEM_NONE,
     .moves = MOVE_FIRE_SPIN, MOVE_WILL_O_WISP, MOVE_HEX, MOVE_ROAR
     },
     {
     .iv = 250,
-    .lvl = 29,
-    .species = SPECIES_LEAVANNY,
+    .lvl = 30,
+    .species = SPECIES_EXEGGUTOR,
     .heldItem = ITEM_NONE,
-    .moves = MOVE_FELL_STINGER, MOVE_RAZOR_LEAF, MOVE_SLASH, MOVE_GRASSY_TERRAIN
+    .moves = MOVE_SEED_BOMB, MOVE_PSYSHOCK, MOVE_LOW_KICK, MOVE_SYNTHESIS
     },
     {
     .iv = 250,
-    .lvl = 30,
+    .lvl = 31,
     .species = SPECIES_TORKOAL,
     .heldItem = ITEM_WHITE_HERB,
     .moves = MOVE_OVERHEAT, MOVE_SMOG, MOVE_FLAME_WHEEL, MOVE_WITHDRAW

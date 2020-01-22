@@ -5786,7 +5786,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_EARLY_BIRD, ABILITY_FLASH_FIRE},
+        .abilities = {ABILITY_FLASH_FIRE, ABILITY_EARLY_BIRD},
         .abilityHidden = ABILITY_UNNERVE,
         .bodyColor = BODY_COLOR_BLACK,
     },
