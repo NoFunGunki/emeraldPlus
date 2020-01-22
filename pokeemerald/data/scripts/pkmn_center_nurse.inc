@@ -10,11 +10,17 @@ Common_EventScript_PkmnCenterNurse:: @ 827191E
     goto_if_eq EventScript_PkmnCenterNurse_HealPkmn
     compare VAR_RESULT, NO
     goto_if_eq EventScript_PkmnCenterNurse_Goodbye
+//	applymovement EVENT_OBJ_ID_PLAYER, PkmnCenterNurse_Movement_Pushback
+//	waitmovement 0
     end
 
 EventScript_PkmnCenterNurse_Goodbye:: @ 8271954
     message gText_WeHopeToSeeYouAgain
     return
+
+//PkmnCenterNurse_Movement_Pushback::
+//	walk_down
+//	step_end
 
 @ VAR_0x8004 is 1 when player has Gold Card; jumps are identical
 EventScript_PkmnCenterNurse_HealPkmn:: @ 827195A

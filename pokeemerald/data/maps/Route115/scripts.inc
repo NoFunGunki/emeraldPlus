@@ -64,7 +64,7 @@ Route115_EventScript_Koichi:: @ 81F29F0
 	end
 
 Route115_EventScript_Nob:: @ 81F2A07
-	trainerbattle_single TRAINER_NOB_1, Route115_Text_NobIntro, Route115_Text_NobDefeat, Route115_EventScript_RegisterNob
+	trainerbattle_double TRAINER_NOB_1, Route115_Text_NobIntro, Route115_Text_NobDefeat, Doubles_Text_NotEnoughMons, Route115_EventScript_RegisterNob
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route115_EventScript_RematchNob
@@ -86,7 +86,7 @@ Route115_EventScript_RematchNob:: @ 81F2A52
 	end
 
 Route115_EventScript_Cyndy:: @ 81F2A69
-	trainerbattle_single TRAINER_CYNDY_1, Route115_Text_CyndyIntro, Route115_Text_CyndyDefeat, Route115_EventScript_RegisterCyndy
+	trainerbattle_double TRAINER_CYNDY_1, Route115_Text_CyndyIntro, Route115_Text_CyndyDefeat, Doubles_Text_NotEnoughMons, Route115_EventScript_RegisterCyndy
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route115_EventScript_RematchCyndy
@@ -108,7 +108,7 @@ Route115_EventScript_RematchCyndy:: @ 81F2AB4
 	end
 
 Route115_EventScript_Hector:: @ 81F2ACB
-	trainerbattle_single TRAINER_HECTOR, Route115_Text_HectorIntro, Route115_Text_HectorDefeat
+	trainerbattle_double TRAINER_HECTOR, Route115_Text_HectorIntro, Route115_Text_HectorDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_HectorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -133,7 +133,7 @@ Route115_EventScript_Helene:: @ 81F2B27
 	end
 
 Route115_EventScript_Marlene:: @ 81F2B3E
-	trainerbattle_single TRAINER_MARLENE, Route115_Text_MarleneIntro, Route115_Text_MarleneDefeat
+	trainerbattle_double TRAINER_MARLENE, Route115_Text_MarleneIntro, Route115_Text_MarleneDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_MarlenePostBattle, MSGBOX_AUTOCLOSE
 	end
 

@@ -13,6 +13,7 @@ MeteorFalls_1F_1R_EventScript_OpenStevensCave:: @ 822BD3A
 	setmetatile 5, 2, METATILE_MeteorFalls_CaveEntrance_Right, 1
 	return
 
+
 MeteorFalls_1F_1R_EventScript_MagmaStealsMeteoriteScene:: @ 822BD5F
 	lockall
 	playbgm MUS_MGM0, 0
