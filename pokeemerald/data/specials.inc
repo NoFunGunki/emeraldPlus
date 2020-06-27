@@ -547,3 +547,4 @@ gSpecials:: @ 81DBA64
 	def_special SetSpdIvs
 	def_special SetSpAtkIvs
 	def_special SetSpDefIvs
+	

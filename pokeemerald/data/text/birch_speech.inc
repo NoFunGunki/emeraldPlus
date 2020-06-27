@@ -1,6 +1,6 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Demo 3 goes all the way up to\n"
-	.string "the 4th gym in Lavaridge\p"
+	.string "Demo 4 goes all the way up to\n"
+	.string "the 5th gym in Petalburg\p"
 	.string "$"
 
 gText_Birch_Pokemon:: @ 82C89FB
