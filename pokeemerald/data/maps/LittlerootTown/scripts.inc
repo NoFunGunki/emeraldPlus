@@ -1021,16 +1021,20 @@ LittlerootTown_Text_GoodbyeMom:
 	.string "Please be careful out there, {PLAYER}.$"
 
 LittlerootTown_Text_CanUsePCToStoreItems: @ 81E8ACF
-	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
-	.string "The power of science is staggering!$"
+	.string "Nowadays, you can change your POKéMON's\n"
+	.string "Nickname anywhere just my entering the\l"
+	.string "menu and selecting the option!\p"
+	.string "Gone are the days of having to find the\n"
+	.string "the 'Name Rater' just to change text.\p"
+	.string "Poor guy's is out of a job I guess...\n"
+	.string "Sad, but hopefully he finds something new.$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab: @ 81E8B25
-	.string "PROF. BIRCH spends days in his LAB\n"
-	.string "studying, then he'll suddenly go out in\l"
-	.string "the wild to do more research…\p"
-	.string "When does PROF. BIRCH spend time\n"
-	.string "at home?$"
+	.string "They say there's a mysterious trainer\n"
+	.string "who has several mythical POKéMON\l"
+	.string "travelling through Hoenn, challenging\l"
+	.string "only the best trainers around.\p"
+	.string "I wish I could see them in action!$"
 
 LittlerootTown_Text_IfYouGoInGrassPokemonWillJumpOut: @ 81E8BB8
 	.string "Um, um, um!\p"

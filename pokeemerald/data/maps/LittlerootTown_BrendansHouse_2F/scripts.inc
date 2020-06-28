@@ -283,6 +283,21 @@ PlayersHouse_2F_EventScript_Notebook:: @ 81F8656
 PlayersHouse_2F_EventScript_GameCube:: @ 81F865F
 	msgbox PlayersHouse_2F_Text_ItsAGameCube, MSGBOX_SIGN
 	end
+	
+PlayersHouse_2F_EventScript_TheFirstWord::
+	msgbox PlayersHouse_2F_Text_TheFirstWord, MSGBOX_DEFAULT
+	releaseall
+	end
+	
+PlayersHouse_2F_Text_TheFirstWord:
+	.string "A doll of a POKéMON.\p"
+	.string "I don't think it's mine...\n"
+	.string "There's a note on the doll that reads:\p"
+	.string "'The First Word is GOLDEN.\p"
+	.string "Once you have proven yourself as a\n"
+	.string "trainer, search for the next Word at\l"
+	.string "a city of stones.'\p"
+	.string "The note is signed by 'J'$" 
 
 PlayersHouse_2F_Text_ClockIsStopped: @ 81F8668
 	.string "The clock is stopped…\p"

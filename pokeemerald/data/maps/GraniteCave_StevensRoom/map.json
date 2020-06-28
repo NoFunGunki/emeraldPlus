@@ -38,6 +38,13 @@
             "elevation": 3,
             "x": 7,
             "y": 3
+        },
+        {
+            "dest_map": "MAP_GRANITE_CAVE_BOSS",
+            "dest_warp_id": 0,
+            "elevation": 0,
+            "x": 4,
+            "y": 7
         }
     ],
     "weather": "WEATHER_NONE"
