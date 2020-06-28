@@ -37,7 +37,7 @@ Route115_EventScript_MeteorFallsSign:: @ 81F2985
 	end
 
 Route115_EventScript_Timothy:: @ 81F298E
-	trainerbattle_single TRAINER_TIMOTHY_1, Route115_Text_TimothyIntro, Route115_Text_TimothyDefeat, Route115_EventScript_RegisterTimothy
+	trainerbattle_double TRAINER_TIMOTHY_1, Route115_Text_TimothyIntro, Route115_Text_TimothyDefeat, Doubles_Text_NotEnoughMons, Route115_EventScript_RegisterTimothy
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route115_EventScript_RematchTimothy
@@ -59,7 +59,7 @@ Route115_EventScript_RematchTimothy:: @ 81F29D9
 	end
 
 Route115_EventScript_Koichi:: @ 81F29F0
-	trainerbattle_single TRAINER_KOICHI, Route115_Text_KoichiIntro, Route115_Text_KoichiDefeat
+	trainerbattle_double TRAINER_KOICHI, Route115_Text_KoichiIntro, Route115_Text_KoichiDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_KoichiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -113,22 +113,22 @@ Route115_EventScript_Hector:: @ 81F2ACB
 	end
 
 Route115_EventScript_Kyra:: @ 81F2AE2
-	trainerbattle_single TRAINER_KYRA, Route115_Text_KyraIntro, Route115_Text_KyraDefeat
+	trainerbattle_double TRAINER_KYRA, Route115_Text_KyraIntro, Route115_Text_KyraDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_KyraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route115_EventScript_Jaiden:: @ 81F2AF9
-	trainerbattle_single TRAINER_JAIDEN, Route115_Text_JaidenIntro, Route115_Text_JaidenDefeat
+	trainerbattle_double TRAINER_JAIDEN, Route115_Text_JaidenIntro, Route115_Text_JaidenDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_JaidenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route115_EventScript_Alix:: @ 81F2B10
-	trainerbattle_single TRAINER_ALIX, Route115_Text_AlixIntro, Route115_Text_AlixDefeat
+	trainerbattle_double TRAINER_ALIX, Route115_Text_AlixIntro, Route115_Text_AlixDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_AlixPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route115_EventScript_Helene:: @ 81F2B27
-	trainerbattle_single TRAINER_HELENE, Route115_Text_HeleneIntro, Route115_Text_HeleneDefeat
+	trainerbattle_double TRAINER_HELENE, Route115_Text_HeleneIntro, Route115_Text_HeleneDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route115_Text_HelenePostBattle, MSGBOX_AUTOCLOSE
 	end
 
