@@ -411,7 +411,7 @@ PetalburgCity_Gym_EventScript_GiveEnigmaBerry:: @ 8204E1D
 	end
 
 PetalburgCity_Gym_EventScript_NormanBattle:: @ 8204E3B
-	msgbox PetalburgCity_Gym_Text_NormanPreBattle, MSGBOX_DEFAULT
+	// msgbox PetalburgCity_Gym_Text_NormanPreBattle, MSGBOX_DEFAULT
 	trainerbattle_double TRAINER_NORMAN_1, PetalburgCity_Gym_Text_NormanPreBattle, PetalburgCity_Gym_Text_NormanDefeat, Doubles_Text_NotEnoughMons
 	message PetalburgCity_Gym_Text_ReceivedBalanceBadge
 	waitmessage
@@ -959,7 +959,7 @@ PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor:: @ 8205387
 	end
 
 PetalburgCity_Gym_EventScript_Randall:: @ 82053BA
-	trainerbattle_single TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallPreBattle, PetalburgCity_Gym_Text_RandallDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors
+	trainerbattle_double TRAINER_RANDALL, PetalburgCity_Gym_Text_RandallPreBattle, PetalburgCity_Gym_Text_RandallDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenSpeedRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_RandallPostBadge
 	msgbox PetalburgCity_Gym_Text_RandallPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -976,7 +976,7 @@ PetalburgCity_Gym_EventScript_RandallPostBadge:: @ 82053ED
 	end
 
 PetalburgCity_Gym_EventScript_Parker:: @ 82053F6
-	trainerbattle_single TRAINER_PARKER, PetalburgCity_Gym_Text_ParkerPreBattle, PetalburgCity_Gym_Text_ParkerDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors
+	trainerbattle_double TRAINER_PARKER, PetalburgCity_Gym_Text_ParkerPreBattle, PetalburgCity_Gym_Text_ParkerDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenConfusionRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_ParkerPostBadge
 	msgbox PetalburgCity_Gym_Text_ParkerPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -993,7 +993,7 @@ PetalburgCity_Gym_EventScript_ParkerPostBadge:: @ 8205429
 	end
 
 PetalburgCity_Gym_EventScript_George:: @ 8205432
-	trainerbattle_single TRAINER_GEORGE, PetalburgCity_Gym_Text_GeorgePreBattle, PetalburgCity_Gym_Text_GeorgeDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors
+	trainerbattle_double TRAINER_GEORGE, PetalburgCity_Gym_Text_GeorgePreBattle, PetalburgCity_Gym_Text_GeorgeDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenRecoveryRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_GeorgePostBadge
 	msgbox PetalburgCity_Gym_Text_GeorgePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1010,7 +1010,7 @@ PetalburgCity_Gym_EventScript_GeorgePostBadge:: @ 8205465
 	end
 
 PetalburgCity_Gym_EventScript_Berke:: @ 820546E
-	trainerbattle_single TRAINER_BERKE, PetalburgCity_Gym_Text_BerkePreBattle, PetalburgCity_Gym_Text_BerkeDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors
+	trainerbattle_double TRAINER_BERKE, PetalburgCity_Gym_Text_BerkePreBattle, PetalburgCity_Gym_Text_BerkeDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenOHKORoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_BerkePostBadge
 	msgbox PetalburgCity_Gym_Text_BerkePostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1027,7 +1027,7 @@ PetalburgCity_Gym_EventScript_BerkePostBadge:: @ 82054A1
 	end
 
 PetalburgCity_Gym_EventScript_Mary:: @ 82054AA
-	trainerbattle_single TRAINER_MARY, PetalburgCity_Gym_Text_MaryPreBattle, PetalburgCity_Gym_Text_MaryDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenAccuracyRoomDoors
+	trainerbattle_double TRAINER_MARY, PetalburgCity_Gym_Text_MaryPreBattle, PetalburgCity_Gym_Text_MaryDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenAccuracyRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_MaryPostBadge
 	msgbox PetalburgCity_Gym_Text_MaryPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1044,7 +1044,7 @@ PetalburgCity_Gym_EventScript_MaryPostBadge:: @ 82054DD
 	end
 
 PetalburgCity_Gym_EventScript_Alexia:: @ 82054E6
-	trainerbattle_single TRAINER_ALEXIA, PetalburgCity_Gym_Text_AlexiaPreBattle, PetalburgCity_Gym_Text_AlexiaDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors
+	trainerbattle_double TRAINER_ALEXIA, PetalburgCity_Gym_Text_AlexiaPreBattle, PetalburgCity_Gym_Text_AlexiaDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenDefenseRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_AlexiaPostBadge
 	msgbox PetalburgCity_Gym_Text_AlexiaPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1061,7 +1061,7 @@ PetalburgCity_Gym_EventScript_AlexiaPostBadge:: @ 8205519
 	end
 
 PetalburgCity_Gym_EventScript_Jody:: @ 8205522
-	trainerbattle_single TRAINER_JODY, PetalburgCity_Gym_Text_JodyPreBattle, PetalburgCity_Gym_Text_JodyDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenStrengthRoomDoors
+	trainerbattle_double TRAINER_JODY, PetalburgCity_Gym_Text_JodyPreBattle, PetalburgCity_Gym_Text_JodyDefeat, Doubles_Text_NotEnoughMons, PetalburgCity_Gym_EventScript_SlideOpenStrengthRoomDoors
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, PetalburgCity_Gym_EventScript_JodyPostBadge
 	msgbox PetalburgCity_Gym_Text_JodyPostBattle, MSGBOX_AUTOCLOSE
 	end
@@ -1515,7 +1515,7 @@ PetalburgCity_Gym_Text_GeorgePostBattle: @ 8206AE9
 	.string "earned only through effort.\p"
 	.string "I lost because my own efforts\n"
 	.string "weren't enough.\p"
-	.string "Go on! The SPECIAL ATK ROOM is next.$"
+	.string "Go on! The POWER ROOM is next.$"
 
 PetalburgCity_Gym_Text_GeorgePostBadge: @ 8206BB1
 	.string "I'm going to keep training at GYMS.\n"
@@ -1524,7 +1524,7 @@ PetalburgCity_Gym_Text_GeorgePostBadge: @ 8206BB1
 PetalburgCity_Gym_Text_BerkePreBattle: @ 8206BF4
 	.string "I'm not going to take it easy just\n"
 	.string "because you're our LEADER's kid.\p"
-	.string "I'll show you how far pure STRENGTH\n"
+	.string "I'll show you how far pure POWER\n"
 	.string "can take you!$"
 
 PetalburgCity_Gym_Text_BerkeDefeat: @ 8206C7D
@@ -1580,7 +1580,7 @@ PetalburgCity_Gym_Text_AlexiaPostBattle: @ 8206F9F
 	.string "Now, go on! The left door goes to\n"
 	.string "the STRENGTH ROOM.\p"
 	.string "The right door opens to\n"
-	.string "the SPECIAL ATK ROOM.\p"
+	.string "the POWER ROOM.\p"
 	.string "Both of them have TRAINERS who are\n"
 	.string "skilled at offense.$"
 
@@ -1643,7 +1643,7 @@ PetalburgCity_Gym_Text_EnterStrengthRoom: @ 820736C
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterOHKORoom: @ 82073A7
-	.string "“SPECIAL ATK ROOM,” the sign says.\p"
+	.string "“POWER ROOM,” the sign says.\p"
 	.string "Do you want to go through?$"
 
 PetalburgCity_Gym_Text_EnterGymLeadersRoom: @ 82073E4

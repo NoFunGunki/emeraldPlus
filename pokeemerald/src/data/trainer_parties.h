@@ -863,9 +863,9 @@ static const struct TrainerMonItemCustomMoves sParty_Parker[] = {
     .lvl = 28,
     .species = SPECIES_CROBAT,
     .heldItem = ITEM_NONE,
-	.evs = {25, 0, 0, 0, 0, 25},
+	.evs = {0, 0, 0, 0, 0, 50},
 	.abilityNums = 0, //ABILITY_INNER_FOCUS,
-    .moves = MOVE_CONFUSE_RAY, MOVE_AIR_CUTTER, MOVE_TAILWIND, MOVE_BITE
+    .moves = MOVE_CONFUSE_RAY, MOVE_AIR_CUTTER, MOVE_SUPER_FANG, MOVE_BITE
     }
 };
 
@@ -1213,7 +1213,7 @@ static const struct TrainerMonItemCustomMoves sParty_Jody[] = {
     .heldItem = ITEM_NONE,
 	.evs = {0, 0, 0, 0, 50, 0},
 	.abilityNums = 0, //ABILITY_LEVITATE,
-    .moves = MOVE_BUG_BUZZ, MOVE_THUNDERBOLT, MOVE_ENERGY_BALL, MOVE_FOCUS_BLAST
+    .moves = MOVE_SIGNAL_BEAM, MOVE_THUNDERBOLT, MOVE_CHARGE, MOVE_LASER_FOCUS
     },
 	{
     .iv = 255,
@@ -3755,7 +3755,7 @@ static const struct TrainerMonItemCustomMoves sParty_Norman1[] = {
     .heldItem = ITEM_SITRUS_BERRY,
 	.evs = {50, 50, 0, 0, 0, 0},
 	.abilityNums = 0, //ABILITY_TRUANT,
-    .moves = MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_GIGA_IMPACT, MOVE_REVERSAL
+    .moves = MOVE_EARTHQUAKE, MOVE_BRICK_BREAK, MOVE_BODY_SLAM, MOVE_PURSUIT
     }
 };
 
