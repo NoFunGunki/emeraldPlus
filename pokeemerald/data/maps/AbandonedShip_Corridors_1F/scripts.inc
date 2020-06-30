@@ -6,7 +6,7 @@ AbandonedShip_Corridors_1F_EventScript_Youngster:: @ 82379A5
 	end
 
 AbandonedShip_Corridors_1F_EventScript_Charlie:: @ 82379AE
-	trainerbattle_single TRAINER_CHARLIE, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat
+	trainerbattle_double TRAINER_CHARLIE, AbandonedShip_Corridors_1F_Text_CharlieIntro, AbandonedShip_Corridors_1F_Text_CharlieDefeat, Doubles_Text_NotEnoughMons
 	msgbox AbandonedShip_Corridors_1F_Text_CharliePostBattle, MSGBOX_AUTOCLOSE
 	end
 

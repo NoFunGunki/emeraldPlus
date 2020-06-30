@@ -374,12 +374,12 @@ Route109_EventScript_TrainerTipsSign:: @ 81EEA34
 	end
 
 Route109_EventScript_David:: @ 81EEA3D
-	trainerbattle_single TRAINER_DAVID, Route109_Text_DavidIntro, Route109_Text_DavidDefeated
+	trainerbattle_double TRAINER_DAVID, Route109_Text_DavidIntro, Route109_Text_DavidDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Alice:: @ 81EEA54
-	trainerbattle_single TRAINER_ALICE, Route109_Text_AliceIntro, Route109_Text_AliceDefeated
+	trainerbattle_double TRAINER_ALICE, Route109_Text_AliceIntro, Route109_Text_AliceDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_AlicePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -438,17 +438,17 @@ Route109_EventScript_LolaRematch:: @ 81EEB46
 	end
 
 Route109_EventScript_Austina:: @ 81EEB5D
-	trainerbattle_single TRAINER_AUSTINA, Route109_Text_AustinaIntro, Route109_Text_AustinaDefeated
+	trainerbattle_double TRAINER_AUSTINA, Route109_Text_AustinaIntro, Route109_Text_AustinaDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_AustinaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Gwen:: @ 81EEB74
-	trainerbattle_single TRAINER_GWEN, Route109_Text_GwenIntro, Route109_Text_GwenDefeated
+	trainerbattle_double TRAINER_GWEN, Route109_Text_GwenIntro, Route109_Text_GwenDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_GwenPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route109_EventScript_Carter:: @ 81EEB8B
-	trainerbattle_single TRAINER_CARTER, Route109_Text_CarterIntro, Route109_Text_CarterDefeated
+	trainerbattle_double TRAINER_CARTER, Route109_Text_CarterIntro, Route109_Text_CarterDefeated, Doubles_Text_NotEnoughMons
 	msgbox Route109_Text_CarterPostBattle, MSGBOX_AUTOCLOSE
 	end
 
