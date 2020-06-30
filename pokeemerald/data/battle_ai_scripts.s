@@ -44,6 +44,7 @@ gBattleAI_ScriptsTable:: @ 82DBEF8
 	.4byte AI_Roaming
 	.4byte AI_Safari
 	.4byte AI_FirstBattle
+	
 
 AI_CheckBadMove:
 	if_target_is_ally AI_Ret
