@@ -4463,3 +4463,5 @@ void SetSpDefIvs(void)
     SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_SPDEF_IV, &SpDefIv);
     CalculateMonStats(&gPlayerParty[gSpecialVar_0x8004]);
 }
+
+

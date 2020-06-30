@@ -72,6 +72,24 @@
             "var_value": "0",
             "x": 27,
             "y": 23
+        },
+        {
+            "elevation": 0,
+            "script": "PetalburgWoods_Trigger_CheckPlayerParty",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONS_PETALBURGWOODS",
+            "var_value": "0",
+            "x": 26,
+            "y": 24
+        },
+        {
+            "elevation": 0,
+            "script": "PetalburgWoods_Trigger_CheckPlayerParty",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONS_PETALBURGWOODS",
+            "var_value": "0",
+            "x": 27,
+            "y": 24
         }
     ],
     "id": "MAP_PETALBURG_WOODS",

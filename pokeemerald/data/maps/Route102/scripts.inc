@@ -1,6 +1,7 @@
 Route102_MapScripts:: @ 81EC0E0
 	.byte 0
 
+
 Route102_EventScript_LittleBoy:: @ 81EC0E1
 	trainerbattle_double TRAINER_LITTLE_BOY_1, Route102_Text_LittleBoy1Intro, Route102_Text_LittleBoy1Defeated, Doubles_Text_NotEnoughMons
 	msgbox Route102_Text_LittleBoy1PostBattle, MSGBOX_AUTOCLOSE

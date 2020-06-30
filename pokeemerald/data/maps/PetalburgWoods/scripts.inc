@@ -1,5 +1,12 @@
 PetalburgWoods_MapScripts:: @ 822DFD6
 	.byte 0
+	
+PetalburgWoods_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end		
 
 PetalburgWoods_EventScript_DevonResearcherLeft:: @ 822DFD7
 	lockall
@@ -27,6 +34,7 @@ PetalburgWoods_EventScript_DevonResearcherLeft:: @ 822DFD7
 	waitmovement 0
 	msgbox PetalburgWoods_Text_NoOneCrossesTeamAqua, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_GRUNT_PETALBURG_WOODS, PetalburgWoods_Text_YoureKiddingMe
+	setvar VAR_NOTENOUGHMONS_PETALBURGWOODS, 1
 	applymovement 3, PetalburgWoods_Movement_AquaBackOff
 	waitmovement 0
 	call PetalburgWoods_EventScript_DevonResearcherPostBattle

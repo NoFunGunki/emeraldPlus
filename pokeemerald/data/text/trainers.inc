@@ -4797,7 +4797,15 @@ Route134_Text_HudsonPostBattle: @ 82A4AD8
 	.string "worried about him.$"
 	
 Doubles_Text_NotEnoughMons:
-	.string "You don't have enough POKéMON\p"
-	.string "to battle! Come back with at\n"
-	.string "least 2 POKéMON.$"
+	.string "You don't have enough POKéMON\n"
+	.string "to battle!\p" 
+	.string "Come back with at least two\n"
+	.string "healthy POKéMON in your party.$"
+	
+Doubles_Text_NotEnoughMonsDanger:
+	.string "You have a feeling like there's\n"
+	.string "something dangerous nearby.\p"
+	.string "Maybe it's best to retreat and\n"
+	.string "come back with at least two\l"
+	.string "healthy POKéMON in the party.$"
 
