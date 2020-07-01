@@ -1101,6 +1101,14 @@ extern const u8 gText_MoonStone[];
 extern const u8 gText_LeafStone[];
 extern const u8 gText_IceStone[];
 extern const u8 gText_ShinyStone[];
+extern const u8 gText_Coffin[];
+extern const u8 gText_Creation[];
+extern const u8 gText_Word[];
+extern const u8 gText_Zebra[];
+extern const u8 gText_End[];
+extern const u8 gText_Beginning[];
+extern const u8 gText_GiveUp[];
+extern const u8 gText_Repeat[];
 
 // Pokedex strings
 extern const u8 gText_SearchForPkmnBasedOnParameters[];

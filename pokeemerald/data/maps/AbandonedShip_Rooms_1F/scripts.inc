@@ -1,6 +1,14 @@
 AbandonedShip_Rooms_1F_MapScripts:: @ 8237A92
 	.byte 0
 
+AbandonedShip_Rooms_1F_EventScript_DuskullDoll::
+	msgbox AbandonedShip_Rooms_1F_Text_DuskullDoll_1, MSGBOX_NPC
+	addvar VAR_ABANDONEDSHIP_DUSKULLDOLL, 1
+	fadescreen 1
+	setflag FLAG_DUSKULLDOLL_1
+	fadescreen 0
+	end
+
 AbandonedShip_Rooms_1F_EventScript_Gentleman:: @ 8237A93
 	msgbox AbandonedShip_Rooms_1F_Text_TakingALookAround, MSGBOX_NPC
 	end
@@ -76,3 +84,6 @@ AbandonedShip_Rooms_1F_Text_DemetriusPostBattle: @ 8237D41
 	.string "I'm in trouble with my mom, so I ran.\n"
 	.string "Keep it a secret where I am!$"
 
+AbandonedShip_Rooms_1F_Text_DuskullDoll_1:
+	.string "Hehehe...find all the dolls\n"
+	.string "for a surprise...$"

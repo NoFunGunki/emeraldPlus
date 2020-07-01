@@ -3,6 +3,15 @@ AbandonedShip_Corridors_B1F_MapScripts:: @ 8237D84
 	map_script MAP_SCRIPT_ON_LOAD, AbandonedShip_Corridors_B1F_OnLoad
 	.byte 0
 
+
+AbandonedShip_Corridors_B1F_EventScript_DuskullDoll::
+	msgbox AbandonedShip_Corridors_B1F_Text_DuskullDoll_4, MSGBOX_NPC
+	addvar VAR_ABANDONEDSHIP_DUSKULLDOLL, 1
+	fadescreen 1
+	setflag FLAG_DUSKULLDOLL_4
+	fadescreen 0
+	end
+
 AbandonedShip_Corridors_B1F_OnResume: @ 8237D8F
 	setdivewarp MAP_ABANDONED_SHIP_UNDERWATER1, 255, 5, 4
 	end
@@ -85,3 +94,6 @@ AbandonedShip_Corridors_B1F_Text_InsertedStorageKey: @ 8237F4B
 AbandonedShip_Text_TheDoorIsOpen: @ 8237FA5
 	.string "The door is open.$"
 
+AbandonedShip_Corridors_B1F_Text_DuskullDoll_4:
+	.string "It's no fun being in these dolls.\p"
+	.string "Find us all quick so we can play...$"

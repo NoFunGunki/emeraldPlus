@@ -72,6 +72,18 @@ static const struct MenuAction MultichoiceList_MauvilleStone[] =
 	{gText_ShinyStone},
 };
 
+static const struct MenuAction MultichoiceList_DhelmiseRiddle[] =
+{
+    {gText_Coffin},
+    {gText_Creation},
+	{gText_Word},
+	{gText_Zebra},
+	{gText_End},
+	{gText_Beginning},
+	{gText_GiveUp},
+	{gText_Repeat},
+};
+
 static const struct MenuAction MultichoiceList_StatusInfo[] =
 {
     {gText_Psn},
@@ -911,6 +923,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
 	[MULTI_MAUVILLE_GIVESTONE]         = MULTICHOICE(MultichoiceList_MauvilleStone),
+	[MULTI_DHELMISERIDDLE]             = MULTICHOICE(MultichoiceList_DhelmiseRiddle),             
 };
 
 const u8 *const gStdStrings[] =
