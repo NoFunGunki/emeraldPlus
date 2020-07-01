@@ -13456,5 +13456,25 @@ static const struct TrainerMonItemCustomMoves sParty_GraniteCaveBoss[] = {
 	.abilityNums = 0, //ABILITY_SWARM,
 	.moves = MOVE_PURSUIT, MOVE_ROCK_SMASH, MOVE_TACKLE, MOVE_BULK_UP
     }
+};	
+static const struct TrainerMonItemCustomMoves sParty_InvisDhelmiseBoss[] = {
+    {
+    .iv = 100,
+    .lvl = 40,
+    .species = SPECIES_DHELMISE,
+	.heldItem = ITEM_NONE,
+	.evs = {0, 0, 0, 0, 0, 0},
+	.abilityNums = 0, //ABILITY_SWARM,
+	.moves = MOVE_POWER_WHIP, MOVE_ANCHOR_SHOT, MOVE_KNOCK_OFF, MOVE_GROWTH
+    },
+    {
+    .iv = 100,
+    .lvl = 35,
+    .species = SPECIES_DUSCLOPS,
+	.heldItem = ITEM_NONE,
+	.evs = {0, 0, 0, 0, 0, 0},
+	.abilityNums = 0, //ABILITY_SWARM,
+	.moves = MOVE_CURSE, MOVE_PAIN_SPLIT, MOVE_WILL_O_WISP, MOVE_SHADOW_PUNCH
+    }
 };
 

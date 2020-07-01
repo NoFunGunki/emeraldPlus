@@ -12067,4 +12067,18 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_GraniteCaveBoss),
         .party = {.ItemCustomMoves = sParty_GraniteCaveBoss},
     },
+	
+	[TRAINER_INVIS_DHELMISE] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_INVIS,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_INTENSE,
+        .trainerPic = TRAINER_PIC_INVIS,
+        .trainerName = _(""),
+        .items = {ITEM_SUPER_POTION, ITEM_SUPER_POTION, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_InvisDhelmiseBoss),
+        .party = {.ItemCustomMoves = sParty_InvisDhelmiseBoss},
+    },
 };

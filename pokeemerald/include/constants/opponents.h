@@ -863,7 +863,8 @@
 #define TRAINER_HIKER_RAUL                  859
 #define TRAINER_HIKER_GABRIEL               860
 #define TRAINER_GRANITE_CAVE_BOSS           861
+#define TRAINER_INVIS_DHELMISE              862
 
-#define TRAINERS_COUNT                      861
+#define TRAINERS_COUNT                      863
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

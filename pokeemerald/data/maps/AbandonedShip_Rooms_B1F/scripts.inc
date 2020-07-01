@@ -15,6 +15,9 @@ AbandonedShip_Rooms_B1F_DhelmiseAppears::
 
 AbandonedShip_Rooms_B1F_DhelmiseRiddleYesNo::
 	lockall
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsUpDanger
 	msgbox AbandonedShip_Text_DoYouWantToPlay, MSGBOX_YESNO
 	compare VAR_RESULT, 0
 	goto_if_eq AbandonedShip_EventScript_RunAway
@@ -33,8 +36,7 @@ AbandonedShip_Rooms_B1F_DhelmiseRiddleYesNo::
 	end
 	
 AbandonedShip_EventScript_Coffin::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, 6
@@ -50,9 +52,7 @@ AbandonedShip_EventScript_Coffin::
 	end
 	
 AbandonedShip_EventScript_Creation::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -67,9 +67,7 @@ AbandonedShip_EventScript_Creation::
 	end	
 
 AbandonedShip_EventScript_Word::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -99,9 +97,7 @@ AbandonedShip_EventScript_Zebra::
 	end	
 
 AbandonedShip_EventScript_End::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -116,9 +112,7 @@ AbandonedShip_EventScript_End::
 	end
 	
 AbandonedShip_EventScript_Beginning::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -133,9 +127,7 @@ AbandonedShip_EventScript_Beginning::
 	end	
 
 AbandonedShip_EventScript_GiveUp::
-	msgbox AbandonedShip_Text_WrongAnswer, MSGBOX_DEFAULT
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_GiveUp, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -152,21 +144,6 @@ AbandonedShip_EventScript_GiveUp::
 AbandonedShip_EventScript_Repeat::
 	goto AbandonedShip_Rooms_B1F_DhelmiseRiddleYesNo
 	
-AbandonedShip_EventScript_DhelmiseFight::
-	setwildbattle SPECIES_DHELMISE, 50, ITEM_NONE
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
-	getpartysize
-	compare VAR_RESULT, 6
-	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
-	givemon SPECIES_DHELMISE, 30, ITEM_RARE_CANDY
-	playfanfare MUS_FANFA4
-	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
-	waitfanfare
-	fadescreen 1
-	setflag FLAG_DUSKULLDOLL_5
-	fadescreen 0
-	releaseall
-	end
 	
 AbandonedShip_EventScript_PlayerHasFullParty::
 	msgbox AbandonedShip_Text_PlayerHasFullParty, MSGBOX_DEFAULT
@@ -236,6 +213,11 @@ AbandonedShip_Text_PlayerHasFullParty:
 	
 AbandonedShip_Text_ReceivedDhelmise:
 	.string "{PLAYER} received a Dhelmise!$"
+	
+AbandonedShip_Text_GiveUp:
+	.string "Giving up?!\p"
+	.string "Don't think you'll be able to\n"
+	.string "escape from us just like that!\p"
 	
 AbandonedShip_Text_RunAway:
 	.string "Scared, {PLAYER}?\p"
