@@ -7041,12 +7041,12 @@
                             {
                                 "max_level": 40,
                                 "min_level": 35,
-                                "species": "SPECIES_BARBOACH"
+                                "species": "SPECIES_WHISCASH"
                             },
                             {
                                 "max_level": 45,
                                 "min_level": 40,
-                                "species": "SPECIES_BARBOACH"
+                                "species": "SPECIES_WHISCASH"
                             }
                         ]
                     },
@@ -7054,64 +7054,64 @@
                         "encounter_rate": 20,
                         "mons": [
                             {
-                                "max_level": 25,
+                                "max_level": 30,
                                 "min_level": 25,
-                                "species": "SPECIES_POOCHYENA"
+                                "species": "SPECIES_LINOONE"
                             },
                             {
-                                "max_level": 25,
+                                "max_level": 30,
                                 "min_level": 25,
                                 "species": "SPECIES_MIGHTYENA"
                             },
                             {
-                                "max_level": 27,
+                                "max_level": 32,
                                 "min_level": 27,
-                                "species": "SPECIES_MIGHTYENA"
+                                "species": "SPECIES_SCYTHER"
                             },
                             {
-                                "max_level": 25,
+                                "max_level": 30,
                                 "min_level": 25,
-                                "species": "SPECIES_ODDISH"
+                                "species": "SPECIES_PANCHAM"
                             },
                             {
-                                "max_level": 25,
+                                "max_level": 30,
                                 "min_level": 25,
-                                "species": "SPECIES_MARILL"
+                                "species": "SPECIES_AZUMARILL"
                             },
                             {
-                                "max_level": 26,
+                                "max_level": 31,
                                 "min_level": 26,
-                                "species": "SPECIES_ODDISH"
+                                "species": "SPECIES_YANMA"
                             },
                             {
-                                "max_level": 27,
+                                "max_level": 32,
                                 "min_level": 27,
-                                "species": "SPECIES_ODDISH"
+                                "species": "SPECIES_NUZLEAF"
                             },
                             {
-                                "max_level": 27,
+                                "max_level": 32,
                                 "min_level": 27,
-                                "species": "SPECIES_MARILL"
-                            },
-                            {
-                                "max_level": 25,
-                                "min_level": 25,
-                                "species": "SPECIES_ABSOL"
-                            },
-                            {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_ABSOL"
-                            },
-                            {
-                                "max_level": 25,
-                                "min_level": 25,
                                 "species": "SPECIES_KECLEON"
                             },
                             {
-                                "max_level": 25,
-                                "min_level": 25,
-                                "species": "SPECIES_SEEDOT"
+                                "max_level": 32,
+                                "min_level": 30,
+                                "species": "SPECIES_ABSOL"
+                            },
+                            {
+                                "max_level": 32,
+                                "min_level": 30,
+                                "species": "SPECIES_HAWLUCHA"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_HAWLUCHA"
+                            },
+                            {
+                                "max_level": 31,
+                                "min_level": 31,
+                                "species": "SPECIES_EMOLGA"
                             }
                         ]
                     },
@@ -7127,17 +7127,17 @@
                             {
                                 "max_level": 20,
                                 "min_level": 10,
-                                "species": "SPECIES_MARILL"
+                                "species": "SPECIES_STARYU"
                             },
                             {
                                 "max_level": 35,
                                 "min_level": 30,
-                                "species": "SPECIES_MARILL"
+                                "species": "SPECIES_WISHIWASHI"
                             },
                             {
-                                "max_level": 10,
-                                "min_level": 5,
-                                "species": "SPECIES_MARILL"
+                                "max_level": 30,
+                                "min_level": 25,
+                                "species": "SPECIES_BASCULIN"
                             },
                             {
                                 "max_level": 30,
