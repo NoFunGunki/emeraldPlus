@@ -16,7 +16,7 @@ FortreeCity_Gym_EventScript_InitRotatingGates:: @ 82165C4
 	end
 
 FortreeCity_Gym_EventScript_Winona:: @ 82165C8
-	trainerbattle_single TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreBattle, FortreeCity_Gym_Text_WinonaDefeat, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_WINONA_1, FortreeCity_Gym_Text_WinonaPreBattle, FortreeCity_Gym_Text_WinonaDefeat, Doubles_Text_NotEnoughMons, FortreeCity_Gym_EventScript_WinonaDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq FortreeCity_Gym_EventScript_WinonaRematch
@@ -71,32 +71,32 @@ FortreeCity_Gym_EventScript_WinonaRematch:: @ 821668D
 	end
 
 FortreeCity_Gym_EventScript_Jared:: @ 82166A8
-	trainerbattle_single TRAINER_JARED, FortreeCity_Gym_Text_JaredPreBattle, FortreeCity_Gym_Text_JaredDefeat
+	trainerbattle_double TRAINER_JARED, FortreeCity_Gym_Text_JaredPreBattle, FortreeCity_Gym_Text_JaredDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_JaredPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_Edwardo:: @ 82166BF
-	trainerbattle_single TRAINER_EDWARDO, FortreeCity_Gym_Text_EdwardoPreBattle, FortreeCity_Gym_Text_EdwardoDefeat
+	trainerbattle_double TRAINER_EDWARDO, FortreeCity_Gym_Text_EdwardoPreBattle, FortreeCity_Gym_Text_EdwardoDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_EdwardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_Flint:: @ 82166D6
-	trainerbattle_single TRAINER_FLINT, FortreeCity_Gym_Text_FlintPreBattle, FortreeCity_Gym_Text_FlintDefeat
+	trainerbattle_double TRAINER_FLINT, FortreeCity_Gym_Text_FlintPreBattle, FortreeCity_Gym_Text_FlintDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_FlintPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_Ashley:: @ 82166ED
-	trainerbattle_single TRAINER_ASHLEY, FortreeCity_Gym_Text_AshleyPreBattle, FortreeCity_Gym_Text_AshleyDefeat
+	trainerbattle_double TRAINER_ASHLEY, FortreeCity_Gym_Text_AshleyPreBattle, FortreeCity_Gym_Text_AshleyDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_AshleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_Humberto:: @ 8216704
-	trainerbattle_single TRAINER_HUMBERTO, FortreeCity_Gym_Text_HumbertoPreBattle, FortreeCity_Gym_Text_HumbertoDefeat
+	trainerbattle_double TRAINER_HUMBERTO, FortreeCity_Gym_Text_HumbertoPreBattle, FortreeCity_Gym_Text_HumbertoDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_HumbertoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 FortreeCity_Gym_EventScript_Darius:: @ 821671B
-	trainerbattle_single TRAINER_DARIUS, FortreeCity_Gym_Text_DariusPreBattle, FortreeCity_Gym_Text_DariusDefeat
+	trainerbattle_double TRAINER_DARIUS, FortreeCity_Gym_Text_DariusPreBattle, FortreeCity_Gym_Text_DariusDefeat, Doubles_Text_NotEnoughMons
 	msgbox FortreeCity_Gym_Text_DariusPostBattle, MSGBOX_AUTOCLOSE
 	end
 
