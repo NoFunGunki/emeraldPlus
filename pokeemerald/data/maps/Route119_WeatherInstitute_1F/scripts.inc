@@ -7,6 +7,11 @@ Route119_WeatherInstitute_1F_OnTransition: @ 826FA8C
 	call_if_eq Route119_WeatherInstitute_1F_EventScript_SetLittleBoyPos
 	end
 
+Route119_WeatherInstitute_1F_EventScript_InstituteWorker3:: 
+	msgbox Route119_WeatherInstitute_1F_Text_HealParty, MSGBOX_DEFAULT
+	release
+	end
+
 Route119_WeatherInstitute_1F_EventScript_SetLittleBoyPos:: @ 826FA98
 	setobjectxyperm 5, 0, 5
 	setobjectmovementtype 5, MOVEMENT_TYPE_FACE_RIGHT
@@ -62,12 +67,12 @@ Route119_WeatherInstitute_1F_EventScript_Bed:: @ 826FB18
 	end
 
 Route119_WeatherInstitute_1F_EventScript_Grunt1:: @ 826FB29
-	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_1, Route119_WeatherInstitute_1F_Text_Grunt1Intro, Route119_WeatherInstitute_1F_Text_Grunt1Defeat
+	trainerbattle_double TRAINER_GRUNT_WEATHER_INST_1, Route119_WeatherInstitute_1F_Text_Grunt1Intro, Route119_WeatherInstitute_1F_Text_Grunt1Defeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_WeatherInstitute_1F_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_WeatherInstitute_1F_EventScript_Grunt4:: @ 826FB40
-	trainerbattle_single TRAINER_GRUNT_WEATHER_INST_4, Route119_WeatherInstitute_1F_Text_Grunt4Intro, Route119_WeatherInstitute_1F_Text_Grunt4Defeat
+	trainerbattle_double TRAINER_GRUNT_WEATHER_INST_4, Route119_WeatherInstitute_1F_Text_Grunt4Intro, Route119_WeatherInstitute_1F_Text_Grunt4Defeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_WeatherInstitute_1F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -133,4 +138,9 @@ Route119_WeatherInstitute_1F_Text_WhatWereAquasUpTo: @ 826FE94
 Route119_WeatherInstitute_1F_Text_TakeRestInBed: @ 826FEFC
 	.string "There's a bed…\n"
 	.string "Let's take a rest.$"
+	
+Route119_WeatherInstitute_1F_Text_HealParty:
+	.string "Hey, you're here to help us, right?\p"
+	.string "There's a bed and a PC over there\n"
+	.string "if you need to heal up.\p"
 

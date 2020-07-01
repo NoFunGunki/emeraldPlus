@@ -329,6 +329,60 @@
             "weather": "COORD_EVENT_WEATHER_ROUTE119_CYCLE",
             "x": 34,
             "y": 13
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerLeft",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 24,
+            "y": 32
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerLeft",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 24,
+            "y": 33
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerDown",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 25,
+            "y": 33
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerDown",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 26,
+            "y": 33
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerRight",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 27,
+            "y": 33
+        },
+        {
+            "elevation": 0,
+            "script": "Route119_EventScript_BridgeTriggerRight",
+            "type": "trigger",
+            "var": "VAR_NOTENOUGHMONSR119",
+            "var_value": "0",
+            "x": 27,
+            "y": 32
         }
     ],
     "id": "MAP_ROUTE119",

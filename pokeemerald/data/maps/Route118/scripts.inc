@@ -208,7 +208,7 @@ Route118_EventScript_RematchRose:: @ 81F3FD2
 	end
 
 Route118_EventScript_Barny:: @ 81F3FE9
-	trainerbattle_single TRAINER_BARNY, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat
+	trainerbattle_double TRAINER_BARNY, Route118_Text_BarnyIntro, Route118_Text_BarnyDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route118_Text_BarnyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -240,12 +240,12 @@ Route118_EventScript_RematchDalton:: @ 81F4062
 	end
 
 Route118_EventScript_Perry:: @ 81F4079
-	trainerbattle_single TRAINER_PERRY, Route118_Text_PerryIntro, Route118_Text_PerryDefeat
+	trainerbattle_double TRAINER_PERRY, Route118_Text_PerryIntro, Route118_Text_PerryDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route118_Text_PerryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route118_EventScript_Chester:: @ 81F4090
-	trainerbattle_single TRAINER_CHESTER, Route118_Text_ChesterIntro, Route118_Text_ChesterDefeat
+	trainerbattle_double TRAINER_CHESTER, Route118_Text_ChesterIntro, Route118_Text_ChesterDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route118_Text_ChesterPostBattle, MSGBOX_AUTOCLOSE
 	end
 

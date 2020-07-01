@@ -28,6 +28,27 @@ Route119_EventScript_MoveInstituteWorkersDownstairs:: @ 81F4466
 	setvar VAR_WEATHER_INSTITUTE_STATE, 2
 	return
 
+Route119_EventScript_BridgeTriggerLeft::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsLeftDanger
+	release	
+	end
+	
+Route119_EventScript_BridgeTriggerDown::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	release	
+	end
+	
+Route119_EventScript_BridgeTriggerRight::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsRightDanger
+	release	
+	end	
+
 Route119_EventScript_RivalTrigger1:: @ 81F4472
 	setvar VAR_TEMP_1, 1
 	goto Route119_EventScript_RivalEncounter
@@ -336,37 +357,37 @@ Route119_EventScript_WeatherInstituteSign:: @ 81F477D
 	end
 
 Route119_EventScript_Brent:: @ 81F4786
-	trainerbattle_single TRAINER_BRENT, Route119_Text_BrentIntro, Route119_Text_BrentDefeat
+	trainerbattle_double TRAINER_BRENT, Route119_Text_BrentIntro, Route119_Text_BrentDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_BrentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Donald:: @ 81F479D
-	trainerbattle_single TRAINER_DONALD, Route119_Text_DonaldIntro, Route119_Text_DonaldDefeat
+	trainerbattle_double TRAINER_DONALD, Route119_Text_DonaldIntro, Route119_Text_DonaldDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_DonaldPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Taylor:: @ 81F47B4
-	trainerbattle_single TRAINER_TAYLOR, Route119_Text_TaylorIntro, Route119_Text_TaylorDefeat
+	trainerbattle_double TRAINER_TAYLOR, Route119_Text_TaylorIntro, Route119_Text_TaylorDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_TaylorPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Doug:: @ 81F47CB
-	trainerbattle_single TRAINER_DOUG, Route119_Text_DougIntro, Route119_Text_DougDefeat
+	trainerbattle_double TRAINER_DOUG, Route119_Text_DougIntro, Route119_Text_DougDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_DougPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Greg:: @ 81F47E2
-	trainerbattle_single TRAINER_GREG, Route119_Text_GregIntro, Route119_Text_GregDefeat
+	trainerbattle_double TRAINER_GREG, Route119_Text_GregIntro, Route119_Text_GregDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_GregPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Kent:: @ 81F47F9
-	trainerbattle_single TRAINER_KENT, Route119_Text_KentIntro, Route119_Text_KentDefeat
+	trainerbattle_double TRAINER_KENT, Route119_Text_KentIntro, Route119_Text_KentDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_KentPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Jackson:: @ 81F4810
-	trainerbattle_single TRAINER_JACKSON_1, Route119_Text_JacksonIntro, Route119_Text_JacksonDefeat, Route119_EventScript_RegisterJackson
+	trainerbattle_double TRAINER_JACKSON_1, Route119_Text_JacksonIntro, Route119_Text_JacksonDefeat, Doubles_Text_NotEnoughMons, Route119_EventScript_RegisterJackson
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route119_EventScript_RematchJackson
@@ -388,7 +409,7 @@ Route119_EventScript_RematchJackson:: @ 81F485B
 	end
 
 Route119_EventScript_Catherine:: @ 81F4872
-	trainerbattle_single TRAINER_CATHERINE_1, Route119_Text_CatherineIntro, Route119_Text_CatherineDefeat, Route119_EventScript_RegisterCatherine
+	trainerbattle_double TRAINER_CATHERINE_1, Route119_Text_CatherineIntro, Route119_Text_CatherineDefeat, Doubles_Text_NotEnoughMons, Route119_EventScript_RegisterCatherine
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route119_EventScript_RematchCatherine
@@ -410,47 +431,47 @@ Route119_EventScript_RematchCatherine:: @ 81F48BD
 	end
 
 Route119_EventScript_Hugh:: @ 81F48D4
-	trainerbattle_single TRAINER_HUGH, Route119_Text_HughIntro, Route119_Text_HughDefeat
+	trainerbattle_double TRAINER_HUGH, Route119_Text_HughIntro, Route119_Text_HughDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_HughPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Phil:: @ 81F48EB
-	trainerbattle_single TRAINER_PHIL, Route119_Text_PhilIntro, Route119_Text_PhilDefeat
+	trainerbattle_double TRAINER_PHIL, Route119_Text_PhilIntro, Route119_Text_PhilDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_PhilPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Yasu:: @ 81F4902
-	trainerbattle_single TRAINER_YASU, Route119_Text_YasuIntro, Route119_Text_YasuDefeat
+	trainerbattle_double TRAINER_YASU, Route119_Text_YasuIntro, Route119_Text_YasuDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_YasuPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Takashi:: @ 81F4919
-	trainerbattle_single TRAINER_TAKASHI, Route119_Text_TakashiIntro, Route119_Text_TakashiDefeat
+	trainerbattle_double TRAINER_TAKASHI, Route119_Text_TakashiIntro, Route119_Text_TakashiDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_TakashiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Hideo:: @ 81F4930
-	trainerbattle_single TRAINER_HIDEO, Route119_Text_HideoIntro, Route119_Text_HideoDefeat
+	trainerbattle_double TRAINER_HIDEO, Route119_Text_HideoIntro, Route119_Text_HideoDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_HideoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Chris:: @ 81F4947
-	trainerbattle_single TRAINER_CHRIS, Route119_Text_ChrisIntro, Route119_Text_ChrisDefeat
+	trainerbattle_double TRAINER_CHRIS, Route119_Text_ChrisIntro, Route119_Text_ChrisDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_ChrisPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Fabian:: @ 81F495E
-	trainerbattle_single TRAINER_FABIAN, Route119_Text_FabianIntro, Route119_Text_FabianDefeat
+	trainerbattle_double TRAINER_FABIAN, Route119_Text_FabianIntro, Route119_Text_FabianDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_FabianPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Dayton:: @ 81F4975
-	trainerbattle_single TRAINER_DAYTON, Route119_Text_DaytonIntro, Route119_Text_DaytonDefeat
+	trainerbattle_double TRAINER_DAYTON, Route119_Text_DaytonIntro, Route119_Text_DaytonDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_DaytonPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route119_EventScript_Rachel:: @ 81F498C
-	trainerbattle_single TRAINER_RACHEL, Route119_Text_RachelIntro, Route119_Text_RachelDefeat
+	trainerbattle_double TRAINER_RACHEL, Route119_Text_RachelIntro, Route119_Text_RachelDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route119_Text_RachelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
