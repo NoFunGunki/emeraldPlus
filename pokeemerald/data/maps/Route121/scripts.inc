@@ -66,12 +66,12 @@ Route121_Movement_Grunt3Exit: @ 81F5E6B
 	step_end
 
 Route121_EventScript_Vanessa:: @ 81F5E74
-	trainerbattle_single TRAINER_VANESSA, Route121_Text_VanessaIntro, Route121_Text_VanessaDefeat
+	trainerbattle_double TRAINER_VANESSA, Route121_Text_VanessaIntro, Route121_Text_VanessaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_VanessaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Walter:: @ 81F5E8B
-	trainerbattle_single TRAINER_WALTER_1, Route121_Text_WalterIntro, Route121_Text_WalterDefeat, Route121_EventScript_RegisterWalter
+	trainerbattle_double TRAINER_WALTER_1, Route121_Text_WalterIntro, Route121_Text_WalterDefeat, Doubles_Text_NotEnoughMons, Route121_EventScript_RegisterWalter
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route121_EventScript_RematchWalter
@@ -93,7 +93,7 @@ Route121_EventScript_RematchWalter:: @ 81F5ED6
 	end
 
 Route121_EventScript_Tammy:: @ 81F5EED
-	trainerbattle_single TRAINER_TAMMY, Route121_Text_TammyIntro, Route121_Text_TammyDefeat
+	trainerbattle_double TRAINER_TAMMY, Route121_Text_TammyIntro, Route121_Text_TammyDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_TammyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -108,7 +108,7 @@ Route121_EventScript_Joy:: @ 81F5F1F
 	end
 
 Route121_EventScript_Jessica:: @ 81F5F3A
-	trainerbattle_single TRAINER_JESSICA_1, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat, Route121_EventScript_RegisterJessica
+	trainerbattle_double TRAINER_JESSICA_1, Route121_Text_JessicaIntro, Route121_Text_JessicaDefeat, Doubles_Text_NotEnoughMons, Route121_EventScript_RegisterJessica
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route121_EventScript_RematchJessica
@@ -130,27 +130,27 @@ Route121_EventScript_RematchJessica:: @ 81F5F85
 	end
 
 Route121_EventScript_Cale:: @ 81F5F9C
-	trainerbattle_single TRAINER_CALE, Route121_Text_CaleIntro, Route121_Text_CaleDefeat
+	trainerbattle_double TRAINER_CALE, Route121_Text_CaleIntro, Route121_Text_CaleDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_CalePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Myles:: @ 81F5FB3
-	trainerbattle_single TRAINER_MYLES, Route121_Text_MylesIntro, Route121_Text_MylesDefeat
+	trainerbattle_double TRAINER_MYLES, Route121_Text_MylesIntro, Route121_Text_MylesDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_MylesPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Pat:: @ 81F5FCA
-	trainerbattle_single TRAINER_PAT, Route121_Text_PatIntro, Route121_Text_PatDefeat
+	trainerbattle_double TRAINER_PAT, Route121_Text_PatIntro, Route121_Text_PatDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_PatPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Marcel:: @ 81F5FE1
-	trainerbattle_single TRAINER_MARCEL, Route121_Text_MarcelIntro, Route121_Text_MarcelDefeat
+	trainerbattle_double TRAINER_MARCEL, Route121_Text_MarcelIntro, Route121_Text_MarcelDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route121_Text_MarcelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route121_EventScript_Cristin:: @ 81F5FF8
-	trainerbattle_single TRAINER_CRISTIN_1, Route121_Text_CristinIntro, Route121_Text_CristinDefeat, Route121_EventScript_RegisterCristin
+	trainerbattle_double TRAINER_CRISTIN_1, Route121_Text_CristinIntro, Route121_Text_CristinDefeat, Doubles_Text_NotEnoughMons, Route121_EventScript_RegisterCristin
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route121_EventScript_RematchCristin

@@ -1779,7 +1779,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_JESSICA_1] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_BEAUTY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_BEAUTY,
@@ -1788,7 +1788,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Jessica1),
-        .party = {.NoItemCustomMoves = sParty_Jessica1},
+        .party = {.NoItemDefaultMoves = sParty_Jessica1},
     },
 
     [TRAINER_CONNIE] =
