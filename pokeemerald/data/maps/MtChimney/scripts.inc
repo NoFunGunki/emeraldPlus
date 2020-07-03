@@ -11,6 +11,13 @@ MtChimney_OnResume: @ 822EDD2
 	setstepcallback STEP_CB_ASH
 	end
 
+MtChimney_Trigger_NotEnoughMons::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end	
+
 MtChimney_EventScript_Archie:: @ 822EDD5
 	lock
 	faceplayer
@@ -42,8 +49,8 @@ MtChimney_EventScript_Maxie:: @ 822EE0B
 	waitmovement 0
 	applymovement 2, Common_Movement_Delay48
 	waitmovement 0
-	msgbox MtChimney_Text_MaxieIntro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieDefeat
+	trainerbattle_double TRAINER_MAXIE_MT_CHIMNEY, MtChimney_Text_MaxieIntro, MtChimney_Text_MaxieDefeat, Doubles_Text_NotEnoughMons
+	setvar VAR_NOTENOUGHMONSMTCHIMNEY, 1
 	msgbox MtChimney_Text_MaxieYouHaventSeenLastOfMagma, MSGBOX_DEFAULT
 	closemessage
 	delay 30
@@ -415,12 +422,12 @@ MtChimney_EventScript_BusyAquaGrunt3:: @ 822F065
 	end
 
 MtChimney_EventScript_Tabitha:: @ 822F06E
-	trainerbattle_single TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat
+	trainerbattle_double TRAINER_TABITHA_MT_CHIMNEY, MtChimney_Text_TabithaIntro, MtChimney_Text_TabithaDefeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Grunt2:: @ 822F085
-	trainerbattle_single TRAINER_GRUNT_MT_CHIMNEY_2, MtChimney_Text_Grunt2Intro, MtChimney_Text_Grunt2Defeat
+	trainerbattle_double TRAINER_GRUNT_MT_CHIMNEY_2, MtChimney_Text_Grunt2Intro, MtChimney_Text_Grunt2Defeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_Grunt2PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -489,7 +496,7 @@ MtChimney_EventScript_RouteSign:: @ 822F141
 	end
 
 MtChimney_EventScript_Shelby:: @ 822F14A
-	trainerbattle_single TRAINER_SHELBY_1, MtChimney_Text_ShelbyIntro, MtChimney_Text_ShelbyDefeat, MtChimney_EventScript_DefeatedShelby
+	trainerbattle_double TRAINER_SHELBY_1, MtChimney_Text_ShelbyIntro, MtChimney_Text_ShelbyDefeat, MtChimney_EventScript_DefeatedShelby, Doubles_Text_NotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq MtChimney_EventScript_RematchShelby
@@ -511,27 +518,27 @@ MtChimney_EventScript_RematchShelby:: @ 822F195
 	end
 
 MtChimney_EventScript_Melissa:: @ 822F1AC
-	trainerbattle_single TRAINER_MELISSA, MtChimney_Text_MelissaIntro, MtChimney_Text_MelissaDefeat
+	trainerbattle_double TRAINER_MELISSA, MtChimney_Text_MelissaIntro, MtChimney_Text_MelissaDefeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_MelissaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Sheila:: @ 822F1C3
-	trainerbattle_single TRAINER_SHEILA, MtChimney_Text_SheilaIntro, MtChimney_Text_SheilaDefeat
+	trainerbattle_double TRAINER_SHEILA, MtChimney_Text_SheilaIntro, MtChimney_Text_SheilaDefeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_SheilaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Shirley:: @ 822F1DA
-	trainerbattle_single TRAINER_SHIRLEY, MtChimney_Text_ShirleyIntro, MtChimney_Text_ShirleyDefeat
+	trainerbattle_double TRAINER_SHIRLEY, MtChimney_Text_ShirleyIntro, MtChimney_Text_ShirleyDefeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_ShirleyPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Grunt1:: @ 822F1F1
-	trainerbattle_single TRAINER_GRUNT_MT_CHIMNEY_1, MtChimney_Text_Grunt1Intro, MtChimney_Text_Grunt1Defeat
+	trainerbattle_double TRAINER_GRUNT_MT_CHIMNEY_1, MtChimney_Text_Grunt1Intro, MtChimney_Text_Grunt1Defeat, Doubles_Text_NotEnoughMons
 	msgbox MtChimney_Text_Grunt1PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MtChimney_EventScript_Sawyer:: @ 822F208
-	trainerbattle_single TRAINER_SAWYER_1, MtChimney_Text_SawyerIntro, MtChimney_Text_SawyerDefeat, MtChimney_EventScript_SawyerDefeated
+	trainerbattle_double TRAINER_SAWYER_1, MtChimney_Text_SawyerIntro, MtChimney_Text_SawyerDefeat, MtChimney_EventScript_SawyerDefeated, Doubles_Text_NotEnoughMons
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq MtChimney_EventScript_SawyerRematch

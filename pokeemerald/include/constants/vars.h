@@ -235,8 +235,8 @@
 #define VAR_SOOTOPOLIS_WALLACE_STATE         0x40D8
 #define VAR_HAS_TALKED_TO_SEAFLOOR_CAVERN_ENTRANCE_GRUNT 0x40D9
 #define VAR_REGISTER_BIRCH_STATE             0x40DA
-#define VAR_UNUSED_0x40DB                    0x40DB // Unused Var
-#define VAR_UNUSED_0x40DC                    0x40DC // Unused Var
+#define VAR_NOTENOUGHMONSMAGMAHIDEOUT1       0x40DB // Unused Var - Check for the Maxie fight in Magma Hideout
+#define VAR_NOTENOUGHMONSMAGMAHIDEOUT2       0x40DC // Unused Var - Check for the Maxie fight in Magma Hideout
 #define VAR_EVENT_PICHU_SLOT                 0x40DD
 #define VAR_NEVER_READ_0x40DE                0x40DE // Var is written to, but never read
 #define VAR_NEVER_READ_0x40DF                0x40DF // Var is written to, but never read
@@ -269,8 +269,8 @@
 #define VAR_NOTENOUGHMONS_PETALBURGWOODS	 0x40FA // Unused Var
 #define VAR_NOTENOUGHMONSCHECK               0x40FB // Unused Var
 #define VAR_NOTENOUGHMONSR119                0x40FC // Unused Var - Check for Bridge after Weather Institute for Rival Fight
-#define VAR_NOTENOUGHMONSMTPYRE              0x40FD // Unused Var - Check for Mt. Pyre doubles fight for Doubles
-#define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
+#define VAR_NOTENOUGHMONSMTPYRE              0x40FD // Unused Var - Check for Mt. Pyre doubles fight
+#define VAR_NOTENOUGHMONSMTCHIMNEY           0x40FE // Unused Var - Check for Mt. Chimney doubles fight
 #define VAR_UNUSED_0x40FF                    0x40FF // Unused Var
 
 #define VARS_END                             0x40FF

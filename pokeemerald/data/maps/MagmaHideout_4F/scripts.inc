@@ -1,6 +1,20 @@
 MagmaHideout_4F_MapScripts:: @ 823A55F
 	.byte 0
 
+MagmaHideout_4F_Trigger_CheckPlayerPartyRight::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsRightDanger
+	releaseall
+	end	
+
+MagmaHideout_4F_Trigger_CheckPlayerPartyLeft::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsLeftDanger
+	releaseall
+	end	
+
 MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	lockall
 	playbgm MUS_MGM0, 0
@@ -52,9 +66,8 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	delay 30
 	applymovement 6, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox MagmaHideout_4F_Text_MaxieOhItWasYou, MSGBOX_DEFAULT
-	closemessage
-	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
+	trainerbattle_double TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieOhItWasYou, MagmaHideout_4F_Text_MaxieDefeat, Doubles_Text_NotEnoughMons
+	setvar VAR_NOTENOUGHMONSMAGMAHIDEOUT2, 1
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage
 	clearflag FLAG_HIDE_SLATEPORT_CITY_CAPTAIN_STERN
@@ -106,23 +119,24 @@ MagmaHideout_4F_Movement_MaxieLookAround: @ 823A680
 	step_end
 
 MagmaHideout_4F_EventScript_Grunt11:: @ 823A68C
-	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_11, MagmaHideout_4F_Text_Grunt11Intro, MagmaHideout_4F_Text_Grunt11Defeat
+	trainerbattle_double TRAINER_GRUNT_MAGMA_HIDEOUT_11, MagmaHideout_4F_Text_Grunt11Intro, MagmaHideout_4F_Text_Grunt11Defeat, Doubles_Text_NotEnoughMons
 	msgbox MagmaHideout_4F_Text_Grunt11PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MagmaHideout_4F_EventScript_Grunt12:: @ 823A6A3
-	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_12, MagmaHideout_4F_Text_Grunt12Intro, MagmaHideout_4F_Text_Grunt12Defeat
+	trainerbattle_double TRAINER_GRUNT_MAGMA_HIDEOUT_12, MagmaHideout_4F_Text_Grunt12Intro, MagmaHideout_4F_Text_Grunt12Defeat, Doubles_Text_NotEnoughMons
 	msgbox MagmaHideout_4F_Text_Grunt12PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MagmaHideout_4F_EventScript_Grunt13:: @ 823A6BA
-	trainerbattle_single TRAINER_GRUNT_MAGMA_HIDEOUT_13, MagmaHideout_4F_Text_Grunt13Intro, MagmaHideout_4F_Text_Grunt13Defeat
+	trainerbattle_double TRAINER_GRUNT_MAGMA_HIDEOUT_13, MagmaHideout_4F_Text_Grunt13Intro, MagmaHideout_4F_Text_Grunt13Defeat, Doubles_Text_NotEnoughMons
 	msgbox MagmaHideout_4F_Text_Grunt13PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 MagmaHideout_4F_EventScript_Tabitha:: @ 823A6D1
-	trainerbattle_single TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat
+	trainerbattle_double TRAINER_TABITHA_MAGMA_HIDEOUT, MagmaHideout_4F_Text_TabithaIntro, MagmaHideout_4F_Text_TabithaDefeat, Doubles_Text_NotEnoughMons
 	msgbox MagmaHideout_4F_Text_TabithaPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_NOTENOUGHMONSMAGMAHIDEOUT1, 1
 	end
 
 MagmaHideout_4F_Text_Grunt11Intro: @ 823A6E8

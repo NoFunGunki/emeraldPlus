@@ -664,6 +664,10 @@ MagmaHideout_3F_2R_EventScript_ItemPPMax:: @ 8291512
 MagmaHideout_4F_EventScript_MaxRevive:: @ 829151F
 	finditem_std ITEM_MAX_REVIVE
 	end
+	
+MagmaHideout_4F_EventScript_MaxRevive2:: @ 829151F
+	finditem_std ITEM_MAX_REVIVE
+	end	
 
 MagmaHideout_3F_3R_EventScript_ItemEscapeRope:: @ 829152C
 	finditem_std ITEM_ESCAPE_ROPE

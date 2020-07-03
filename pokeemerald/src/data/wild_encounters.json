@@ -1988,7 +1988,7 @@
                             {
                                 "max_level": 21,
                                 "min_level": 21,
-                                "species": "SPECIES_NUMEL"
+                                "species": "SPECIES_SALANDIT"
                             },
                             {
                                 "max_level": 21,
@@ -2008,27 +2008,27 @@
                             {
                                 "max_level": 20,
                                 "min_level": 20,
-                                "species": "SPECIES_MACHOP"
+                                "species": "SPECIES_ALOLAN_GEODUDE"
                             },
                             {
                                 "max_level": 21,
                                 "min_level": 21,
-                                "species": "SPECIES_SPOINK"
+                                "species": "SPECIES_PONYTA"
                             },
                             {
                                 "max_level": 22,
                                 "min_level": 22,
-                                "species": "SPECIES_MACHOP"
+                                "species": "SPECIES_PONYTA"
                             },
                             {
                                 "max_level": 22,
                                 "min_level": 22,
-                                "species": "SPECIES_NUMEL"
+                                "species": "SPECIES_HOUNDOUR"
                             },
                             {
                                 "max_level": 22,
                                 "min_level": 22,
-                                "species": "SPECIES_SPOINK"
+                                "species": "SPECIES_HOUNDOUR"
                             },
                             {
                                 "max_level": 22,
@@ -2139,64 +2139,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
+                                "max_level": 32,
                                 "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
-                                "max_level": 28,
+                                "max_level": 32,
                                 "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
+                                "species": "SPECIES_NUMEL"
                             },
                             {
-                                "max_level": 28,
+                                "max_level": 33,
                                 "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
+                                "species": "SPECIES_SHIELDON"
                             },
                             {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
+                                "max_level": 35,
+                                "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
                             },
                             {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
+                                "max_level": 35,
                                 "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
                             },
                             {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
                                 "max_level": 30,
                                 "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 30,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 30,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
                             },
                             {
                                 "max_level": 31,
                                 "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
+                                "species": "SPECIES_DWEBBLE"
                             },
                             {
-                                "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_CRUSTLE"
                             },
                             {
-                                "max_level": 33,
-                                "min_level": 33,
-                                "species": "SPECIES_GRAVELER"
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_CRUSTLE"
                             }
                         ]
                     },
@@ -2208,64 +2208,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
                                 "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
                                 "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_CRUSTLE"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2277,64 +2277,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
                                 "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
                                 "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_CRUSTLE"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2346,64 +2346,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_SALANDIT"
                             },
                             {
                                 "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_CRANIDOS"
+                            },
+                            {
+                                "max_level": 35,
                                 "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_RAMPARDOS"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_BASTIODON"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2415,64 +2415,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
                                 "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
                                 "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_RAMPARDOS"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_BASTIODON"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2484,64 +2484,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
                                 "max_level": 33,
-                                "min_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_KROKOROK"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_CRUSTLE"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_CRUSTLE"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2553,64 +2553,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_NUMEL"
                             },
                             {
                                 "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_CRANIDOS"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
                                 "min_level": 33,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_SALANDIT"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_RAMPARDOS"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_BASTIODON"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TORKOAL"
                             }
                         ]
                     },
@@ -2622,64 +2622,64 @@
                         "encounter_rate": 10,
                         "mons": [
                             {
-                                "max_level": 27,
-                                "min_level": 27,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 28,
-                                "min_level": 28,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_TORKOAL"
-                            },
-                            {
-                                "max_level": 29,
-                                "min_level": 29,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GEODUDE"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 30,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
-                                "max_level": 31,
-                                "min_level": 31,
-                                "species": "SPECIES_GRAVELER"
-                            },
-                            {
                                 "max_level": 32,
-                                "min_level": 32,
-                                "species": "SPECIES_GRAVELER"
+                                "min_level": 27,
+                                "species": "SPECIES_CRANIDOS"
                             },
                             {
                                 "max_level": 33,
-                                "min_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_NUMEL"
+                            },
+                            {
+                                "max_level": 33,
+                                "min_level": 28,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_SALAZZLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
                                 "species": "SPECIES_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_ALOLAN_GRAVELER"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_DWEBBLE"
+                            },
+                            {
+                                "max_level": 35,
+                                "min_level": 30,
+                                "species": "SPECIES_RAMPARDOS"
+                            },
+                            {
+                                "max_level": 36,
+                                "min_level": 31,
+                                "species": "SPECIES_SHIELDON"
+                            },
+                            {
+                                "max_level": 37,
+                                "min_level": 34,
+                                "species": "SPECIES_TURTONATOR"
+                            },
+                            {
+                                "max_level": 38,
+                                "min_level": 35,
+                                "species": "SPECIES_TURTONATOR"
                             }
                         ]
                     },

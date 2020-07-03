@@ -97,12 +97,12 @@ JaggedPass_EventScript_GuardDefeated:: @ 8230766
 	end
 
 JaggedPass_EventScript_Eric:: @ 8230785
-	trainerbattle_single TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat
+	trainerbattle_double TRAINER_ERIC, JaggedPass_Text_EricIntro, JaggedPass_Text_EricDefeat, Doubles_Text_NotEnoughMons
 	msgbox JaggedPass_Text_EricPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 JaggedPass_EventScript_Diana:: @ 823079C
-	trainerbattle_single TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat, JaggedPass_EventScript_RegisterDiana
+	trainerbattle_double TRAINER_DIANA_1, JaggedPass_Text_DianaIntro, JaggedPass_Text_DianaDefeat, Doubles_Text_NotEnoughMons, JaggedPass_EventScript_RegisterDiana
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, 1
 	goto_if_eq JaggedPass_EventScript_DianaRematch
@@ -123,7 +123,7 @@ JaggedPass_EventScript_DianaRematch:: @ 82307E4
 	end
 
 JaggedPass_EventScript_Ethan:: @ 82307FB
-	trainerbattle_single TRAINER_ETHAN_1, JaggedPass_Text_EthanIntro, JaggedPass_Text_EthanDefeat, JaggedPass_EventScript_RegisterEthan
+	trainerbattle_double TRAINER_ETHAN_1, JaggedPass_Text_EthanIntro, JaggedPass_Text_EthanDefeat, Doubles_Text_NotEnoughMons, JaggedPass_EventScript_RegisterEthan
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, 1
 	goto_if_eq JaggedPass_EventScript_EthanRematch
@@ -144,12 +144,12 @@ JaggedPass_EventScript_EthanRematch:: @ 8230843
 	end
 
 JaggedPass_EventScript_Julio:: @ 823085A
-	trainerbattle_single TRAINER_JULIO, JaggedPass_Text_JulioIntro, JaggedPass_Text_JulioDefeat
+	trainerbattle_double TRAINER_JULIO, JaggedPass_Text_JulioIntro, JaggedPass_Text_JulioDefeat, Doubles_Text_NotEnoughMons
 	msgbox JaggedPass_Text_JulioPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 JaggedPass_EventScript_Autumn:: @ 8230871
-	trainerbattle_single TRAINER_AUTUMN, JaggedPass_Text_AutumnIntro, JaggedPass_Text_AutumnDefeat
+	trainerbattle_double TRAINER_AUTUMN, JaggedPass_Text_AutumnIntro, JaggedPass_Text_AutumnDefeat, Doubles_Text_NotEnoughMons
 	msgbox JaggedPass_Text_AutumnPostBattle, MSGBOX_AUTOCLOSE
 	end
 
