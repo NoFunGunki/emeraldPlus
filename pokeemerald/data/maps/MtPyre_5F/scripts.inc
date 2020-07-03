@@ -4,7 +4,7 @@ MtPyre_5F_MapScripts:: @ 8231C6D
 @ Seems like the scripts for the 4F and 5F were swapped
 
 MtPyre_4F_EventScript_Tasha:: @ 8231C6E
-	trainerbattle_single TRAINER_TASHA, MtPyre_4F_Text_TashaIntro, MtPyre_4F_Text_TashaDefeat
+	trainerbattle_double TRAINER_TASHA, MtPyre_4F_Text_TashaIntro, MtPyre_4F_Text_TashaDefeat, Doubles_Text_NotEnoughMons
 	msgbox MtPyre_4F_Text_TashaPostBattle, MSGBOX_AUTOCLOSE
 	end
 

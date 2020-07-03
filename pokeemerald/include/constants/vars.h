@@ -269,7 +269,7 @@
 #define VAR_NOTENOUGHMONS_PETALBURGWOODS	 0x40FA // Unused Var
 #define VAR_NOTENOUGHMONSCHECK               0x40FB // Unused Var
 #define VAR_NOTENOUGHMONSR119                0x40FC // Unused Var - Check for Bridge after Weather Institute for Rival Fight
-#define VAR_UNUSED_0x40FD                    0x40FD // Unused Var
+#define VAR_NOTENOUGHMONSMTPYRE              0x40FD // Unused Var - Check for Mt. Pyre doubles fight for Doubles
 #define VAR_UNUSED_0x40FE                    0x40FE // Unused Var
 #define VAR_UNUSED_0x40FF                    0x40FF // Unused Var
 
