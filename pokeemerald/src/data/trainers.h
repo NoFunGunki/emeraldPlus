@@ -9522,7 +9522,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_KIM_AND_IRIS] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_SR_AND_JR,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_TWINS,
         .trainerPic = TRAINER_PIC_SR_AND_JR,
@@ -9531,7 +9531,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_KimAndIris),
-        .party = {.NoItemCustomMoves = sParty_KimAndIris},
+        .party = {.NoItemDefaultMoves = sParty_KimAndIris},
     },
 
     [TRAINER_TYRA_AND_IVY] =
