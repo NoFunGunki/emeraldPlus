@@ -53,20 +53,21 @@ MossdeepCity_SpaceCenter_2F_Movement_PlayerExit: @ 8223E07
 	step_end
 
 MossdeepCity_SpaceCenter_2F_EventScript_BattleThreeMagmaGrunts:: @ 8223E09
-	msgbox MossdeepCity_SpaceCenter_2F_Text_Grunt5Intro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_SPACE_CENTER_5, MossdeepCity_SpaceCenter_2F_Text_Grunt5Defeat
+	special HealPlayerParty
+	trainerbattle_double TRAINER_GRUNT_SPACE_CENTER_5, MossdeepCity_SpaceCenter_2F_Text_Grunt5Intro, MossdeepCity_SpaceCenter_2F_Text_Grunt5Defeat, Doubles_Text_NotEnoughMons
 	applymovement 6, MossdeepCity_SpaceCenter_2F_Movement_Grunt5Defeated
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestLeft
 	waitmovement 0
-	msgbox MossdeepCity_SpaceCenter_2F_Text_Grunt6Intro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_SPACE_CENTER_6, MossdeepCity_SpaceCenter_2F_Text_Grunt6Defeat
+	special HealPlayerParty
+	trainerbattle_double TRAINER_GRUNT_SPACE_CENTER_6, MossdeepCity_SpaceCenter_2F_Text_Grunt6Intro, MossdeepCity_SpaceCenter_2F_Text_Grunt6Defeat, Doubles_Text_NotEnoughMons
 	applymovement 5, MossdeepCity_SpaceCenter_2F_Movement_Grunt6Defeated
 	waitmovement 0
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
-	msgbox MossdeepCity_SpaceCenter_2F_Text_Grunt7Intro, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GRUNT_SPACE_CENTER_7, MossdeepCity_SpaceCenter_2F_Text_Grunt7Defeat
+	special HealPlayerParty
+	trainerbattle_double TRAINER_GRUNT_SPACE_CENTER_7, MossdeepCity_SpaceCenter_2F_Text_Grunt7Intro, MossdeepCity_SpaceCenter_2F_Text_Grunt7Defeat, Doubles_Text_NotEnoughMons
+	special HealPlayerParty
 	applymovement 7, MossdeepCity_SpaceCenter_2F_Movement_Grunt7Defeated
 	waitmovement 0
 	setvar VAR_MOSSDEEP_SPACE_CENTER_STATE, 2
@@ -407,7 +408,13 @@ MossdeepCity_SpaceCenter_2F_Text_GoodAnswer: @ 82243FE
 
 MossdeepCity_SpaceCenter_2F_Text_Grunt5Intro: @ 822442D
 	.string "A reckless go-getter, are you?\n"
-	.string "Okay, I'll go first!$"
+	.string "Okay, I'll go first!\p"
+	.string "...but between us, we need to put\n"
+	.string "up a good fight for the boss to\l"
+	.string "notice us, so we'll be healing your\l"
+	.string "POKéMON between our fights, so give us\l"
+	.string "your best, alright!?$"
+	
 
 MossdeepCity_SpaceCenter_2F_Text_Grunt5Defeat: @ 8224461
 	.string "I lost!\n"

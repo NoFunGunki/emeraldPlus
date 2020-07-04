@@ -249,8 +249,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntMuseum2[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter1[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_NUMEL,
+    .lvl = 40,
+    .species = SPECIES_CAMERUPT,
+    },
+	{
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_CROBAT,
     }
 };
 
@@ -1610,18 +1615,13 @@ static const struct TrainerMonItemCustomMoves sParty_Daphne[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter2[] = {
     {
     .iv = 0,
-    .lvl = 26,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 42,
+    .species = SPECIES_RAPIDASH,
     },
     {
     .iv = 0,
-    .lvl = 28,
-    .species = SPECIES_MIGHTYENA,
-    },
-    {
-    .iv = 0,
-    .lvl = 30,
-    .species = SPECIES_NUMEL,
+    .lvl = 41,
+    .species = SPECIES_TALONFLAME,
     }
 };
 
@@ -3298,7 +3298,7 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Samantha[] = {
 	{
     .iv = 100,
     .lvl = 40,
-    .species = SPECIES_SANDYGHAST,
+    .species = SPECIES_SANDYGAST,
     }
 };
 
@@ -3939,7 +3939,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     .iv = 250,
     .lvl = 44,
     .species = SPECIES_BRONZONG,
-    .heldItem = ITEM_SITRUS_NONE,
+    .heldItem = ITEM_NONE,
 	.evs = {100, 0, 0, 0, 0, 0},
 	.abilityNums = 0, //ABILITY_LEVITATE,
     .moves = MOVE_TRICK_ROOM, MOVE_GYRO_BALL, MOVE_EARTHQUAKE, MOVE_EXPLOSION
@@ -3948,7 +3948,7 @@ static const struct TrainerMonItemCustomMoves sParty_TateAndLiza1[] = {
     .iv = 250,
     .lvl = 44,
     .species = SPECIES_SLOWKING,
-    .heldItem = ITEM_SITRUS_NONE,
+    .heldItem = ITEM_NONE,
 	.evs = {0, 0, 50, 0, 0, 50},
 	.abilityNums = 0, //ABILITY_LEVITATE,
     .moves = MOVE_TRICK_ROOM, MOVE_NASTY_PLOT, MOVE_SCALD, MOVE_PSYCHIC
@@ -7322,18 +7322,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Hector[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_TabithaMossdeep[] = {
     {
     .iv = 100,
-    .lvl = 36,
-    .species = SPECIES_CAMERUPT,
+    .lvl = 41,
+    .species = SPECIES_NINETALES,
     },
     {
     .iv = 100,
-    .lvl = 38,
-    .species = SPECIES_MIGHTYENA,
+    .lvl = 43,
+    .species = SPECIES_SAWSBUCK,
     },
     {
     .iv = 100,
-    .lvl = 40,
-    .species = SPECIES_GOLBAT,
+    .lvl = 45,
+    .species = SPECIES_TORKOAL,
     }
 };
 
@@ -8453,45 +8453,65 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Nicholas[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter3[] = {
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_ZUBAT,
+    .lvl = 40,
+    .species = SPECIES_ABSOL,
     },
     {
     .iv = 0,
-    .lvl = 31,
-    .species = SPECIES_POOCHYENA,
+    .lvl = 41,
+    .species = SPECIES_MIGHTYENA,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter4[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_BALTOY,
+    .lvl = 41,
+    .species = SPECIES_CLAYDOL,
+    },
+	{
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_SALAZZLE,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter5[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_ZUBAT,
+    .lvl = 41,
+    .species = SPECIES_CRUSTLE,
+    },
+	{
+    .iv = 0,
+    .lvl = 42,
+    .species = SPECIES_RAPIDASH,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter6[] = {
     {
     .iv = 0,
-    .lvl = 32,
+    .lvl = 41,
     .species = SPECIES_MIGHTYENA,
+    },
+	{
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_ARCANINE,
     }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_GruntSpaceCenter7[] = {
     {
     .iv = 0,
-    .lvl = 32,
-    .species = SPECIES_BALTOY,
+    .lvl = 40,
+    .species = SPECIES_CAMERUPT,
+    },
+	{
+    .iv = 0,
+    .lvl = 40,
+    .species = SPECIES_CROBAT,
     }
 };
 
@@ -10663,18 +10683,18 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Darcy[] = {
 static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMossdeep[] = {//Maxie3
     {
     .iv = 150,
-    .lvl = 42,
-    .species = SPECIES_MIGHTYENA,
-    },
-    {
-    .iv = 150,
-    .lvl = 43,
-    .species = SPECIES_CROBAT,
-    },
-    {
-    .iv = 150,
     .lvl = 44,
-    .species = SPECIES_CAMERUPT,
+    .species = SPECIES_EXEGGUTOR,
+    },
+    {
+    .iv = 150,
+    .lvl = 45,
+    .species = SPECIES_TALONFLAME,
+    },
+    {
+    .iv = 150,
+    .lvl = 47,
+    .species = SPECIES_TURTONATOR,
     }
 };
 
