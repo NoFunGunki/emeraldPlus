@@ -580,6 +580,10 @@ ShoalCave_LowTideIceRoom_EventScript_ItemNeverMeltIce:: @ 82913F4
 SeafloorCavern_Room9_EventScript_ItemTM26:: @ 8291401
 	finditem_std ITEM_TM26
 	end
+	
+SeafloorCavern_Room9_EventScript_MaxRevive:: @ 8291401
+	finditem_std ITEM_MAX_REVIVE
+	end	
 
 Route110_TrickHousePuzzle1_EventScript_ItemOrangeMail:: @ 829140E
 	finditem_std ITEM_ORANGE_MAIL

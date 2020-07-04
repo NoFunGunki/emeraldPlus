@@ -1,5 +1,12 @@
 SeafloorCavern_Room9_MapScripts:: @ 8234DC8
 	.byte 0
+	
+SeafloorCavern_Room9_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsUpDanger
+	releaseall
+	end		
 
 SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre:: @ 8234DC9
 	lockall
@@ -25,9 +32,9 @@ SeafloorCavern_Room9_EventScript_ArchieAwakenKyogre:: @ 8234DC9
 	msgbox SeafloorCavern_Room9_Text_ArchieBeholdKyogre, MSGBOX_DEFAULT
 	applymovement VAR_0x8004, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox SeafloorCavern_Room9_Text_ArchieYouMustDisappear, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieDefeat
+	trainerbattle_double TRAINER_ARCHIE, SeafloorCavern_Room9_Text_ArchieYouMustDisappear, SeafloorCavern_Room9_Text_ArchieDefeat, Doubles_Text_NotEnoughMons
 	msgbox SeafloorCavern_Room9_Text_ArchieWithThisRedOrb, MSGBOX_DEFAULT
+	setvar VAR_NOTENOUGHMONSSEAFLOOR2, 1
 	setweather WEATHER_NONE
 	doweather
 	special Script_FadeOutMapMusic

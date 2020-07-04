@@ -1,13 +1,21 @@
 SeafloorCavern_Room3_MapScripts:: @ 8234937
 	.byte 0
 
+SeafloorCavern_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end	
+
 SeafloorCavern_Room3_EventScript_Shelly:: @ 8234938
-	trainerbattle_single TRAINER_SHELLY_SEAFLOOR_CAVERN, SeafloorCavern_Room3_Text_ShellyIntro, SeafloorCavern_Room3_Text_ShellyDefeat
+	trainerbattle_double TRAINER_SHELLY_SEAFLOOR_CAVERN, SeafloorCavern_Room3_Text_ShellyIntro, SeafloorCavern_Room3_Text_ShellyDefeat, Doubles_Text_NotEnoughMons
 	msgbox SeafloorCavern_Room3_Text_ShellyPostBattle, MSGBOX_AUTOCLOSE
+	setvar VAR_NOTENOUGHMONSSEAFLOOR1, 1
 	end
 
 SeafloorCavern_Room3_EventScript_Grunt5:: @ 823494F
-	trainerbattle_single TRAINER_GRUNT_SEAFLOOR_CAVERN_5, SeafloorCavern_Room3_Text_Grunt5Intro, SeafloorCavern_Room3_Text_Grunt5Defeat
+	trainerbattle_double TRAINER_GRUNT_SEAFLOOR_CAVERN_5, SeafloorCavern_Room3_Text_Grunt5Intro, SeafloorCavern_Room3_Text_Grunt5Defeat, Doubles_Text_NotEnoughMons
 	msgbox SeafloorCavern_Room3_Text_Grunt5PostBattle, MSGBOX_AUTOCLOSE
 	end
 
