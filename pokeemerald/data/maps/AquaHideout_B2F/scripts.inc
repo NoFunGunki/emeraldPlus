@@ -6,6 +6,13 @@ AquaHideout_B2F_OnTransition: @ 8233DD5
 	call_if_set FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, AquaHideout_B2F_EventScript_PreventMattNoticing
 	end
 
+AquaHideout_B2F__Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsRightDanger
+	releaseall
+	end	
+
 AquaHideout_B2F_EventScript_PreventMattNoticing:: @ 8233DDF
 	setvar VAR_TEMP_1, 1
 	return
@@ -23,8 +30,9 @@ AquaHideout_B2F_EventScript_MattNoticePlayer:: @ 8233DE5
 	end
 
 AquaHideout_B2F_EventScript_Matt:: @ 8233E09
-	trainerbattle_single TRAINER_MATT, AquaHideout_B2F_Text_MattIntro, AquaHideout_B2F_Text_MattDefeat, AquaHideout_B2F_EventScript_SubmarineEscape
+	trainerbattle_double TRAINER_MATT, AquaHideout_B2F_Text_MattIntro, AquaHideout_B2F_Text_MattDefeat, Doubles_Text_NotEnoughMons, AquaHideout_B2F_EventScript_SubmarineEscape
 	msgbox AquaHideout_B2F_Text_MattPostBattle, MSGBOX_DEFAULT
+	setvar VAR_NOTENOUGHMONSAQUAHIDEOUT, 1
 	release
 	end
 
@@ -67,7 +75,7 @@ AquaHideout_B2F_Movement_SumbarineDepartRight: @ 8233E85
 	step_end
 
 AquaHideout_B2F_EventScript_Grunt4:: @ 8233E8A
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_4, AquaHideout_B2F_Text_Grunt4Intro, AquaHideout_B2F_Text_Grunt4Defeat, AquaHideout_B2F_EventScript_Grunt4Defeated
+	trainerbattle_double TRAINER_GRUNT_AQUA_HIDEOUT_4, AquaHideout_B2F_Text_Grunt4Intro, AquaHideout_B2F_Text_Grunt4Defeat, Doubles_Text_NotEnoughMons, AquaHideout_B2F_EventScript_Grunt4Defeated
 	msgbox AquaHideout_B2F_Text_Grunt4PostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -77,12 +85,12 @@ AquaHideout_B2F_EventScript_Grunt4Defeated:: @ 8233EA5
 	end
 
 AquaHideout_B2F_EventScript_Grunt6:: @ 8233EAF
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_6, AquaHideout_B2F_Text_Grunt6Intro, AquaHideout_B2F_Text_Grunt6Defeat
+	trainerbattle_double TRAINER_GRUNT_AQUA_HIDEOUT_6, AquaHideout_B2F_Text_Grunt6Intro, AquaHideout_B2F_Text_Grunt6Defeat, Doubles_Text_NotEnoughMons
 	msgbox AquaHideout_B2F_Text_Grunt6PostBattle, MSGBOX_AUTOCLOSE
 	end
 
 AquaHideout_B2F_EventScript_Grunt8:: @ 8233EC6
-	trainerbattle_single TRAINER_GRUNT_AQUA_HIDEOUT_8, AquaHideout_B2F_Text_Grunt8Intro, AquaHideout_B2F_Text_Grunt8Defeat
+	trainerbattle_double TRAINER_GRUNT_AQUA_HIDEOUT_8, AquaHideout_B2F_Text_Grunt8Intro, AquaHideout_B2F_Text_Grunt8Defeat, Doubles_Text_NotEnoughMons
 	msgbox AquaHideout_B2F_Text_Grunt8PostBattle, MSGBOX_AUTOCLOSE
 	end
 

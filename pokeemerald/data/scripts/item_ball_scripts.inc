@@ -537,6 +537,10 @@ AquaHideout_B2F_EventScript_ItemNestBall:: @ 829137F
 	finditem_std ITEM_NEST_BALL
 	end
 
+AquaHideout_B2F_EventScript_ItemMaxRevive::
+	finditem_std ITEM_MAX_REVIVE
+	end
+
 AquaHideout_B2F_EventScript_ItemMasterBall:: @ 829138C
 	finditem_std ITEM_MASTER_BALL      // Unused
 	end

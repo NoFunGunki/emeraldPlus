@@ -1236,7 +1236,7 @@
 #define FLAG_GRANITE_CAVE_GIVEHERACROSS                             0x498 // Unused Flag
 #define FLAG_MAUVILLE_GIVESTONE                                     0x499 // Unused Flag
 #define FLAG_ITEM_MAGMA_HIDEOUT_4F_MAX_REVIVE2                      0x49A // Unused Flag
-#define FLAG_UNUSED_0x49B                                           0x49B // Unused Flag
+#define FLAG_ITEM_AQUA_HIDEOUT_B2F_MAX_REVIVE                       0x49B // Unused Flag
 #define FLAG_UNUSED_0x49C                                           0x49C // Unused Flag
 #define FLAG_UNUSED_0x49D                                           0x49D // Unused Flag
 #define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
