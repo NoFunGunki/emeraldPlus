@@ -11095,22 +11095,22 @@
                             {
                                 "max_level": 35,
                                 "min_level": 30,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_SEAKING"
                             },
                             {
                                 "max_level": 25,
                                 "min_level": 20,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_STARMIE"
                             },
                             {
                                 "max_level": 40,
                                 "min_level": 35,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_WAILORD"
                             },
                             {
                                 "max_level": 45,
                                 "min_level": 40,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_WAILORD"
                             }
                         ]
                     },
@@ -11126,17 +11126,17 @@
                             {
                                 "max_level": 30,
                                 "min_level": 10,
-                                "species": "SPECIES_WINGULL"
+                                "species": "SPECIES_BASCULIN"
                             },
                             {
                                 "max_level": 25,
                                 "min_level": 15,
-                                "species": "SPECIES_WINGULL"
+                                "species": "SPECIES_GOLDEEN"
                             },
                             {
                                 "max_level": 30,
                                 "min_level": 25,
-                                "species": "SPECIES_PELIPPER"
+                                "species": "SPECIES_CLAUNCHER"
                             },
                             {
                                 "max_level": 30,

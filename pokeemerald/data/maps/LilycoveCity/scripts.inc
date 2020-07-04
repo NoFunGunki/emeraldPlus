@@ -15,6 +15,14 @@ LilycoveCity_OnLoad: @ 81E2B61
 	call_if_unset FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, LilycoveCity_EventScript_SetWailmerMetatiles
 	end
 
+
+LilycoveCity_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end	
+
 LilycoveCity_EventScript_SetWailmerMetatiles:: @ 81E2B6B
 	setmetatile 76, 12, METATILE_Lilycove_Wailmer0, 1
 	setmetatile 77, 12, METATILE_Lilycove_Wailmer1, 1
@@ -326,6 +334,7 @@ LilycoveCity_EventScript_BattleBrendanMudkip:: @ 81E2F2E
 	end
 
 LilycoveCity_EventScript_DefeatedMay:: @ 81E2F3E
+	setvar VAR_NOTENOUGHMONSLILYCOVECITY, 1
 	msgbox LilycoveCity_Text_MayGoingBackToLittleroot, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FALSE
 	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
@@ -360,6 +369,7 @@ LilycoveCity_EventScript_MayBattleFrontier:: @ 81E2FA1
 	return
 
 LilycoveCity_EventScript_DefeatedBrendan:: @ 81E2FAA
+	setvar VAR_NOTENOUGHMONSLILYCOVECITY, 1
 	msgbox LilycoveCity_Text_BrendanGoingBackToLittleroot, MSGBOX_DEFAULT
 	setvar VAR_RESULT, FALSE
 	call_if_set FLAG_BADGE06_GET, LilycoveCity_EventScript_CheckFinalBadge
