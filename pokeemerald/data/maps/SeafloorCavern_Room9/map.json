@@ -20,7 +20,7 @@
             "elevation": 0,
             "script": "SeafloorCavern_Room9_Trigger_CheckPlayerParty",
             "type": "trigger",
-            "var": "VAR_TEMP_0",
+            "var": "VAR_NOTENOUGHMONSSEAFLOOR2",
             "var_value": "0",
             "x": 7,
             "y": 29
@@ -29,7 +29,7 @@
             "elevation": 0,
             "script": "SeafloorCavern_Room9_Trigger_CheckPlayerParty",
             "type": "trigger",
-            "var": "VAR_TEMP_0",
+            "var": "VAR_NOTENOUGHMONSSEAFLOOR2",
             "var_value": "0",
             "x": 8,
             "y": 29
@@ -38,7 +38,7 @@
             "elevation": 0,
             "script": "SeafloorCavern_Room9_Trigger_CheckPlayerParty",
             "type": "trigger",
-            "var": "VAR_TEMP_0",
+            "var": "VAR_NOTENOUGHMONSSEAFLOOR2",
             "var_value": "0",
             "x": 9,
             "y": 29

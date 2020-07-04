@@ -7,42 +7,42 @@ Route126_OnTransition: @ 81F68CC
 	end
 
 Route126_EventScript_Barry:: @ 81F68D6
-	trainerbattle_single TRAINER_BARRY, Route126_Text_BarryIntro, Route126_Text_BarryDefeat
+	trainerbattle_double TRAINER_BARRY, Route126_Text_BarryIntro, Route126_Text_BarryDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_BarryPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Dean:: @ 81F68ED
-	trainerbattle_single TRAINER_DEAN, Route126_Text_DeanIntro, Route126_Text_DeanDefeat
+	trainerbattle_double TRAINER_DEAN, Route126_Text_DeanIntro, Route126_Text_DeanDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_DeanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Nikki:: @ 81F6904
-	trainerbattle_single TRAINER_NIKKI, Route126_Text_NikkiIntro, Route126_Text_NikkiDefeat
+	trainerbattle_double TRAINER_NIKKI, Route126_Text_NikkiIntro, Route126_Text_NikkiDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_NikkiPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Brenda:: @ 81F691B
-	trainerbattle_single TRAINER_BRENDA, Route126_Text_BrendaIntro, Route126_Text_BrendaDefeat
+	trainerbattle_double TRAINER_BRENDA, Route126_Text_BrendaIntro, Route126_Text_BrendaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_BrendaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Leonardo:: @ 81F6932
-	trainerbattle_single TRAINER_LEONARDO, Route126_Text_LeonardoIntro, Route126_Text_LeonardoDefeat
+	trainerbattle_double TRAINER_LEONARDO, Route126_Text_LeonardoIntro, Route126_Text_LeonardoDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_LeonardoPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Isobel:: @ 81F6949
-	trainerbattle_single TRAINER_ISOBEL, Route126_Text_IsobelIntro, Route126_Text_IsobelDefeat
+	trainerbattle_double TRAINER_ISOBEL, Route126_Text_IsobelIntro, Route126_Text_IsobelDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_IsobelPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Sienna:: @ 81F6960
-	trainerbattle_single TRAINER_SIENNA, Route126_Text_SiennaIntro, Route126_Text_SiennaDefeat
+	trainerbattle_double TRAINER_SIENNA, Route126_Text_SiennaIntro, Route126_Text_SiennaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route126_Text_SiennaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route126_EventScript_Pablo:: @ 81F6977
-	trainerbattle_single TRAINER_PABLO_1, Route126_Text_PabloIntro, Route126_Text_PabloDefeat, Route126_EventScript_RegisterPablo
+	trainerbattle_double TRAINER_PABLO_1, Route126_Text_PabloIntro, Route126_Text_PabloDefeat, Doubles_Text_NotEnoughMons, Route126_EventScript_RegisterPablo
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq Route126_EventScript_RematchPablo

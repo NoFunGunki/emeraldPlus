@@ -17,22 +17,22 @@ Route131_EventScript_CheckSetAbnormalWeather:: @ 81F741F
 	return
 
 Route131_EventScript_Richard:: @ 81F7429
-	trainerbattle_single TRAINER_RICHARD, Route131_Text_RichardIntro, Route131_Text_RichardDefeat
+	trainerbattle_double TRAINER_RICHARD, Route131_Text_RichardIntro, Route131_Text_RichardDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_RichardPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route131_EventScript_Herman:: @ 81F7440
-	trainerbattle_single TRAINER_HERMAN, Route131_Text_HermanIntro, Route131_Text_HermanDefeat
+	trainerbattle_double TRAINER_HERMAN, Route131_Text_HermanIntro, Route131_Text_HermanDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_HermanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route131_EventScript_Susie:: @ 81F7457
-	trainerbattle_single TRAINER_SUSIE, Route131_Text_SusieIntro, Route131_Text_SusieDefeat
+	trainerbattle_double TRAINER_SUSIE, Route131_Text_SusieIntro, Route131_Text_SusieDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_SusiePostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route131_EventScript_Kara:: @ 81F746E
-	trainerbattle_single TRAINER_KARA, Route131_Text_KaraIntro, Route131_Text_KaraDefeat
+	trainerbattle_double TRAINER_KARA, Route131_Text_KaraIntro, Route131_Text_KaraDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_KaraPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -47,12 +47,12 @@ Route131_EventScript_Ian:: @ 81F74A0
 	end
 
 Route131_EventScript_Talia:: @ 81F74BB
-	trainerbattle_single TRAINER_TALIA, Route131_Text_TaliaIntro, Route131_Text_TaliaDefeat
+	trainerbattle_double TRAINER_TALIA, Route131_Text_TaliaIntro, Route131_Text_TaliaDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_TaliaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route131_EventScript_Kevin:: @ 81F74D2
-	trainerbattle_single TRAINER_KEVIN, Route131_Text_KevinIntro, Route131_Text_KevinDefeat
+	trainerbattle_double TRAINER_KEVIN, Route131_Text_KevinIntro, Route131_Text_KevinDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route131_Text_KevinPostBattle, MSGBOX_AUTOCLOSE
 	end
 
