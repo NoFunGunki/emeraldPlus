@@ -1611,7 +1611,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_DAPHNE] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_LADY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_LADY,
@@ -1620,7 +1620,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Daphne),
-        .party = {.ItemCustomMoves = sParty_Daphne},
+        .party = {.NoItemDefaultMoves = sParty_Daphne},
     },
 
     [TRAINER_GRUNT_SPACE_CENTER_2] =
@@ -1821,7 +1821,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_OLIVIA] =
     {
-        .partyFlags = F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_BEAUTY,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
         .trainerPic = TRAINER_PIC_BEAUTY,
@@ -1830,7 +1830,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Olivia),
-        .party = {.NoItemCustomMoves = sParty_Olivia},
+        .party = {.NoItemDefaultMoves = sParty_Olivia},
     },
 
     [TRAINER_TIFFANY] =
@@ -7029,7 +7029,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ANNIKA] =
     {
-        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .partyFlags = 0,
         .trainerClass = TRAINER_CLASS_POKEFAN,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_TWINS,
         .trainerPic = TRAINER_PIC_POKEFAN_F,
@@ -7038,7 +7038,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = TRUE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Annika),
-        .party = {.ItemCustomMoves = sParty_Annika},
+        .party = {.NoItemDefaultMoves = sParty_Annika},
     },
 
     [TRAINER_JAZMYN] =

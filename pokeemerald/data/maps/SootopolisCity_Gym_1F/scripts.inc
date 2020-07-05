@@ -83,7 +83,7 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce: @ 8224F42
 	step_end
 
 SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
-	trainerbattle_single TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreBattle, SootopolisCity_Gym_1F_Text_JuanDefeat, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	trainerbattle_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreBattle, SootopolisCity_Gym_1F_Text_JuanDefeat, Doubles_Text_NotEnoughMons, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq SootopolisCity_Gym_1F_EventScript_JuanRematch
