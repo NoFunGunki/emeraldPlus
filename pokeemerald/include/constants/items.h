@@ -30,6 +30,7 @@
 #define ITEM_DREAM_BALL 25
 #define ITEM_BEAST_BALL 26
 #define ITEM_PREMIER_BALL 27
+
 // Pokemon Items
 #define ITEM_POTION 28
 #define ITEM_ANTIDOTE 29
@@ -699,8 +700,9 @@
 // Emerald
 #define ITEM_MAGMA_EMBLEM 614
 #define ITEM_OLD_SEA_MAP 615
+#define ITEM_INVISI_BALL 616
 
-#define ITEMS_COUNT 616
+#define ITEMS_COUNT 617
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 #define FIRST_BERRY_INDEX             ITEM_CHERI_BERRY

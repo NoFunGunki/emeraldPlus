@@ -391,6 +391,20 @@ const struct Item gItems[] =
         .battleUseFunc = ItemUseInBattle_PokeBall,
         .secondaryId = 26, // To Do
     },
+	
+	[ITEM_INVISI_BALL] =
+    {
+        .name = _("Invisi Ball"),
+        .itemId = ITEM_INVISI_BALL,
+        .price = 10,
+        .description = sMasterBallDesc,
+        .pocket = POCKET_POKE_BALLS,
+        .type = 11,
+        .fieldUseFunc = NULL,
+        .battleUsage = 2,
+        .battleUseFunc = ItemUseInBattle_PokeBall,
+        .secondaryId = 26, // To Do
+    },
 
 // Medicine
 

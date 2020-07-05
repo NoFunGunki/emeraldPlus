@@ -131,6 +131,7 @@ static const struct BallCaptureSuccessStarData sBallCaptureSuccessStarData[] =
 #define TAG_PARTICLES_PARKBALL    65054
 #define TAG_PARTICLES_DREAMBALL   65065
 #define TAG_PARTICLES_BEASTBALL   65056
+#define TAG_PARTICLES_INVISIBALL  65057
 
 static const u32 sNewParticlesGfx[] = INCBIN_U32("graphics/interface/ball/particles2.4bpp.lz");
 static const u32 sNewParticlesPal[] = INCBIN_U32("graphics/interface/ball/particles2.gbapal.lz");
@@ -164,6 +165,7 @@ const struct CompressedSpriteSheet gBallParticleSpritesheets[] =
     [BALL_PARK] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_PARKBALL},
     [BALL_DREAM] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_DREAMBALL},
     [BALL_BEAST] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_BEASTBALL},
+	[BALL_INVISI] = {gBattleAnimSpriteGfx_Particles, 0x100, TAG_PARTICLES_INVISIBALL},
 };
 
 const struct CompressedSpritePalette gBallParticlePalettes[] =
@@ -195,6 +197,7 @@ const struct CompressedSpritePalette gBallParticlePalettes[] =
     [BALL_PARK] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_PARKBALL},
     [BALL_DREAM] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_DREAMBALL},
     [BALL_BEAST] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_BEASTBALL},
+	[BALL_INVISI] = {gBattleAnimSpritePal_CircleImpact, TAG_PARTICLES_INVISIBALL},
 };
 
 const union AnimCmd gAnim_RegularBall[] =
@@ -279,6 +282,7 @@ const u8 gBallParticleAnimNums[] =
     [BALL_PARK] = 5,
     [BALL_DREAM] = 5,
     [BALL_BEAST] = 5,
+	[BALL_INVISI] = 1,
 };
 
 const TaskFunc gBallParticleAnimationFuncs[] =
@@ -311,7 +315,8 @@ const TaskFunc gBallParticleAnimationFuncs[] =
     [BALL_CHERISH] = MasterBallOpenParticleAnimation,
     [BALL_PARK] = UltraBallOpenParticleAnimation,
     [BALL_DREAM] = UltraBallOpenParticleAnimation,
-    [BALL_BEAST] = UltraBallOpenParticleAnimation
+    [BALL_BEAST] = UltraBallOpenParticleAnimation,
+	[BALL_INVISI] = MasterBallOpenParticleAnimation
 };
 
 const struct SpriteTemplate gBallParticlesSpriteTemplates[] =
@@ -559,6 +564,15 @@ const struct SpriteTemplate gBallParticlesSpriteTemplates[] =
         .affineAnims = gDummySpriteAffineAnimTable,
         .callback = SpriteCallbackDummy,
     },
+	{
+        .tileTag = TAG_PARTICLES_INVISIBALL,
+        .paletteTag = TAG_PARTICLES_INVISIBALL,
+        .oam = &gOamData_AffineOff_ObjNormal_8x8,
+        .anims = gAnims_BallParticles,
+        .images = NULL,
+        .affineAnims = gDummySpriteAffineAnimTable,
+        .callback = SpriteCallbackDummy,
+    },
 };
 
 const u16 gBallOpenFadeColors[] =
@@ -575,6 +589,7 @@ const u16 gBallOpenFadeColors[] =
     [BALL_TIMER] = RGB(29, 30, 30),
     [BALL_LUXURY] = RGB(31, 17, 10),
     [BALL_PREMIER] = RGB(31, 9, 10),
+	[BALL_INVISI] = RGB(0, 0, 0),
 
     // Todo, assign different colors
     [BALL_LEVEL] = RGB(24, 4, 4),
@@ -979,6 +994,8 @@ u8 ItemIdToBallId(u16 ballItem)
         return BALL_DREAM;
     case ITEM_BEAST_BALL:
         return BALL_BEAST;
+	case ITEM_INVISI_BALL:
+		return BALL_INVISI;
     default:
         return BALL_POKE;
     }
