@@ -49,7 +49,8 @@ SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
 	playmoncry SPECIES_RAYQUAZA, 2
 	delay 40
 	waitmoncry
-	setwildbattle SPECIES_RAYQUAZA, 70, ITEM_NONE
+	//setwildbattle SPECIES_RAYQUAZA, 70, ITEM_NONE
+	trainerbattle_double TRAINER_LEGENDARY_RAYQUAZA, SkyPillar_Top_Text_RayIntro, SkyPillar_Top_Text_RayDefeat, Doubles_Text_NotEnoughMons
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -184,4 +185,13 @@ SkyPillar_Top_Movement_CameraPanDown: @ 823985C
 
 SkyPillar_Top_Text_RayquazaFlewOff: @ 8239860
 	.string "The awakened RAYQUAZA flew off…$"
+	
+SkyPillar_Top_Text_RayIntro:
+	.string "The POKéMON of the Sky Pillar\n"
+	.string "are protecting Rayquaza!$"
+
+SkyPillar_Top_Text_RayDefeat:
+	.string "The mighty Rayquaza has been\n"
+	.string "defeated!$"
+	
 

@@ -13916,6 +13916,35 @@ static const struct TrainerMonItemCustomMoves sParty_InvisDhelmiseBoss[] = {
 	.evs = {0, 0, 0, 0, 0, 0},
 	.abilityNums = 0, //ABILITY_SWARM,
 	.moves = MOVE_CURSE, MOVE_PAIN_SPLIT, MOVE_WILL_O_WISP, MOVE_SHADOW_PUNCH
-    }
+    }	
 };
+static const struct TrainerMonItemCustomMoves sParty_LegendaryRayquaza[] = {
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_HYDREIGON,
+	.heldItem = ITEM_DREAD,
+	.evs = {128, 0, 0, 128, 252, 0},
+	.abilityNums = 0, //ABILITY_LEVITATE,
+	.moves = MOVE_DARK_PULSE, MOVE_TAILWIND, MOVE_EARTH_POWER, MOVE_FIRE_BLAST
+    },
+    {
+    .iv = 100,
+    .lvl = 65,
+    .species = SPECIES_ALTARIA,
+	.heldItem = ITEM_YACHE,
+	.evs = {252, 0, 252, 0, 0, 4},
+	.abilityNums = 0, //ABILITY_NATURAL_CURE,
+	.moves = MOVE_HEAL_BELL, MOVE_HAZE, MOVE_ROOST, MOVE_DRAGON_BREATH
+    },
+	{
+    .iv = 100,
+    .lvl = 70,
+    .species = SPECIES_RAYQUAZA,
+	.heldItem = ITEM_YACHE,
+	.evs = {252, 128, 0, 128, 0, 0},
+	.abilityNums = 0, //ABILITY_AIR_LOCK,
+	.moves = MOVE_DRAGON_ASCENT, MOVE_DRACO_METEOR, MOVE_EARTHQUAKE, MOVE_EXTREME_SPEED
+    }
+};	
 
