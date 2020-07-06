@@ -51,6 +51,14 @@ SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
 	waitmoncry
 	//setwildbattle SPECIES_RAYQUAZA, 70, ITEM_NONE
 	trainerbattle_double TRAINER_LEGENDARY_RAYQUAZA, SkyPillar_Top_Text_RayIntro, SkyPillar_Top_Text_RayDefeat, Doubles_Text_NotEnoughMons
+	msgbox SkyPillar_Top_Text_TakeRayquaza, MSGBOX_DEFAULT
+	getpartysize
+	compare VAR_RESULT, 6
+	goto_if_eq SkyPillar_Top_EventScript_RayquazaFullParty
+	givemon SPECIES_RAYQUAZA, 70, ITEM_NONE
+	playfanfare MUS_FANFA4
+	msgbox SkyPillar_Top_Text_ReceivedRayquaza, MSGBOX_DEFAULT
+	waitfanfare
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
 	special BattleSetup_StartLegendaryBattle
 	waitstate
@@ -65,6 +73,28 @@ SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
 	setflag FLAG_DEFEATED_RAYQUAZA
 	releaseall
 	end
+
+SkyPillar_Top_EventScript_RayquazaFullParty::
+	msgbox SkyPillar_Top_Text_PlayerFullParty, MSGBOX_DEFAULT
+	givemon SPECIES_RAYQUAZA, 70, ITEM_NONE
+	playfanfare MUS_FANFA4
+	msgbox SkyPillar_Top_Text_ReceivedRayquazaFullParty, MSGBOX_DEFAULT
+	waitfanfare
+	setflag FLAG_SYS_CTRL_OBJ_DELETE
+	special BattleSetup_StartLegendaryBattle
+	waitstate
+	clearflag FLAG_SYS_CTRL_OBJ_DELETE
+	specialvar VAR_RESULT, GetBattleOutcome
+	compare VAR_RESULT, B_OUTCOME_WON
+	goto_if_eq SkyPillar_Top_EventScript_DefeatedRayquaza
+	compare VAR_RESULT, B_OUTCOME_RAN
+	goto_if_eq SkyPillar_Top_EventScript_RanFromRayquaza
+	compare VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED
+	goto_if_eq SkyPillar_Top_EventScript_RanFromRayquaza
+	setflag FLAG_DEFEATED_RAYQUAZA
+	releaseall
+	end
+
 
 SkyPillar_Top_EventScript_DefeatedRayquaza:: @ 8239768
 	setflag FLAG_DEFEATED_RAYQUAZA
@@ -194,4 +224,15 @@ SkyPillar_Top_Text_RayDefeat:
 	.string "The mighty Rayquaza has been\n"
 	.string "defeated!$"
 	
+SkyPillar_Top_Text_ReceivedRayquaza:
+	.string "{PLAYER} received RAYQUAZA!$"
+	
+SkyPillar_Top_Text_TakeRayquaza:
+	.string "It seems like RAYQUAZA wants\n"
+	.string "to go with you!$"
 
+SkyPillar_Top_Text_PlayerFullParty:
+	.string "Your party is full.$"
+
+SkyPillar_Top_Text_ReceivedRayquazaFullParty:
+	.string "RAYQUAZA has been sent to the PC!$"
