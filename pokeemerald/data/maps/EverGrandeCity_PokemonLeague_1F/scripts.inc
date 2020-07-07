@@ -9,6 +9,20 @@ EverGrandeCity_PokemonLeague_1F_OnTransition: @ 82295DD
 	call_if_unset FLAG_ENTERED_ELITE_FOUR, EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor
 	end
 
+
+EverGrandeCity_PokemonLeague_1F_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end	
+
+EverGrandeCity_PokemonLeague_1F_EventScript_NotEnoughMons::
+	playse SE_HAZURE
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_NotEnoughMons, MSGBOX_DEFAULT
+	releaseall
+	end
+
 EverGrandeCity_PokemonLeague_1F_EventScript_GuardsBlockDoor:: @ 82295ED
 	setobjectxyperm 3, 9, 2
 	setobjectxyperm 4, 10, 2
@@ -21,13 +35,6 @@ EverGrandeCity_PokemonLeague_1F_EventScript_Nurse:: @ 82295FC
 	waitmessage
 	waitbuttonpress
 	release
-	end
-	
-EverGrandeCity_PokemonLeague_1F_Trigger_CheckPlayerParty::
-	special HasEnoughMonsForDoubleBattle
-	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
-	goto_if_ne EventScript_NotEnoughMonsDown
-	releaseall
 	end
 	
 EverGrandeCity_PokemonLeague_1F_EventScript_Clerk:: @ 822960A
@@ -85,12 +92,7 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard:: @ 8229636
 	setflag FLAG_ENTERED_ELITE_FOUR
 	releaseall
 	end
-
-EverGrandeCity_PokemonLeague_1F_EventScript_NotEnoughMons:
-	playse SE_HAZURE
-	msgbox EverGrandeCity_PokemonLeague_1F_Text_NotEnoughMons, MSGBOX_DEFAULT
-	releaseall
-	end
+	
 
 EverGrandeCity_PokemonLeague_1F_EventScript_PlayerMoveToFrontFromRight:: @ 8229698
 	applymovement EVENT_OBJ_ID_PLAYER, EverGrandeCity_PokemonLeague_1F_Movement_MoveToFrontFromRight

@@ -7,7 +7,7 @@ PetalburgWoods_Trigger_CheckPlayerParty::
 	goto_if_ne EventScript_NotEnoughMonsDownDanger
 	releaseall
 	end
-	
+
 PetalburgWoods_EventScript_DevonResearcherLeft:: @ 822DFD7
 	lockall
 	call PetalburgWoods_EventScript_DevonResearcherIntro

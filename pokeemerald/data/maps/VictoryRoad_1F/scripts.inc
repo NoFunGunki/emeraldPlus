@@ -37,7 +37,7 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger2:: @ 8235DC8
 	goto VictoryRoad_1F_EventScript_WallyEntranceBattle
 	end
 	
-VictoryRoad_1F_EventScript_TriggerCheckParty::
+VictoryRoad_1F_EventScript_TriggerCheckParty:: 
 	special HasEnoughMonsForDoubleBattle
 	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
 	goto_if_ne EventScript_NotEnoughMonsRightDanger
