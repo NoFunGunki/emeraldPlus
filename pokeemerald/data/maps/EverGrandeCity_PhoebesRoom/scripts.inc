@@ -42,8 +42,7 @@ EverGrandeCity_PhoebesRoom_EventScript_Phoebe:: @ 82281CB
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_PHOEBE, EverGrandeCity_PhoebesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	msgbox EverGrandeCity_PhoebesRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_Defeat
+	trainerbattle_ TRAINER_PHOEBE, EverGrandeCity_PhoebesRoom_Text_PreBattleSpeech, EverGrandeCity_PhoebesRoom_Text_Defeat, Doubles_Text_NotEnoughMons
 	goto EverGrandeCity_PhoebesRoom_EventScript_Defeated
 	end
 
@@ -72,7 +71,10 @@ EverGrandeCity_PhoebesRoom_Text_PreBattleSpeech: @ 822820E
 
 EverGrandeCity_PhoebesRoom_Text_Defeat: @ 8228325
 	.string "Oh, darn.\n"
-	.string "I've gone and lost.$"
+	.string "I've gone and lost.\p"
+	.string "If you think you can't conitnue with the\n"
+	.string "challenge, you can use that teleporter\l"
+	.string "down there to quit.$"
 
 EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech: @ 8228343
 	.string "There's a definite bond between you\n"
@@ -81,5 +83,7 @@ EverGrandeCity_PhoebesRoom_Text_PostBattleSpeech: @ 8228343
 	.string "natural that I lost.\p"
 	.string "Yup, I'd like to see how far your bond\n"
 	.string "will carry you.\p"
-	.string "Go ahead, move on to the next room.$"
-
+	.string "Go ahead, move on to the next room.\p"
+	.string "If you think you can't conitnue with the\n"
+	.string "challenge, you can use that teleporter\l"
+	.string "down there to quit.$"

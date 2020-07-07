@@ -48,8 +48,7 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney:: @ 8227F64
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	msgbox EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
+	trainerbattle_double TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, EverGrandeCity_SidneysRoom_Text_Defeat, Doubles_Text_NotEnoughMons
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
@@ -77,12 +76,15 @@ EverGrandeCity_SidneysRoom_Text_PreBattleSpeech: @ 8227FA7
 
 EverGrandeCity_SidneysRoom_Text_Defeat: @ 82280A2
 	.string "Well, how do you like that? I lost!\n"
-	.string "Eh, it was fun, so it doesn't matter.$"
+	.string "Eh, it was fun, so it doesn't matter.\p"
+	.string "If you think you can't go on, you can\n"
+	.string "use that teleporter there to quit.$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "Well, listen to what this loser has\n"
 	.string "to say.\p"
 	.string "You've got what it takes to go far.\n"
 	.string "Now, go on to the next room and enjoy\l"
-	.string "your next battle!$"
-
+	.string "your next battle!\p"
+	.string "If you think you can't go on, you can\n"
+	.string "use that teleporter there to quit.$"

@@ -12094,4 +12094,17 @@ const struct Trainer gTrainers[] = {
         .partySize = ARRAY_COUNT(sParty_LegendaryRayquaza),
         .party = {.ItemCustomMoves = sParty_LegendaryRayquaza},
     },
+	[TRAINER_STEVEN_CHAMPION] =
+    {
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_CHAMPION,
+        .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
+        .trainerPic = TRAINER_PIC_STEVEN,
+        .trainerName = _("STEVEN"),
+        .items = {ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE, ITEM_FULL_RESTORE},
+        .doubleBattle = TRUE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE | AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
+        .partySize = ARRAY_COUNT(sParty_StevenChampion),
+        .party = {.ItemCustomMoves = sParty_StevenChampion},
+    },
 };

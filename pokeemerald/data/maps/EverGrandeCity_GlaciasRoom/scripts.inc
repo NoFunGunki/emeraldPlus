@@ -42,8 +42,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia:: @ 8228469
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	msgbox EverGrandeCity_GlaciasRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_Defeat
+	trainerbattle_double TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_PreBattleSpeech, EverGrandeCity_GlaciasRoom_Text_Defeat, Doubles_Text_NotEnoughMons
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 
@@ -75,10 +74,13 @@ EverGrandeCity_GlaciasRoom_Text_Defeat: @ 82285B4
 	.string "How hot your spirits burn!\p"
 	.string "The all-consuming heat overwhelms.\p"
 	.string "It's no surprise that my icy skills\n"
-	.string "failed to harm you.$"
+	.string "failed to harm you.\p"
+	.string "If you need to quit the challenge,\n"
+	.string "feel free to use that teleporter.$"
 
 EverGrandeCity_GlaciasRoom_Text_PostBattleSpeech: @ 8228640
 	.string "Advance to the next room.\p"
 	.string "And there, confirm the truly fearsome\n"
-	.string "side of the POKéMON LEAGUE.$"
-
+	.string "side of the POKéMON LEAGUE, or, if\l"
+	.string "you need to quit the challenge,\l"
+	.string "feel free to use that teleporter.$"

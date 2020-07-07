@@ -865,7 +865,8 @@
 #define TRAINER_GRANITE_CAVE_BOSS           861
 #define TRAINER_INVIS_DHELMISE              862
 #define TRAINER_LEGENDARY_RAYQUAZA          863
+#define TRAINER_STEVEN_CHAMPION             864
 
-#define TRAINERS_COUNT                      864
+#define TRAINERS_COUNT                      865
 
 #endif  // GUARD_CONSTANTS_OPPONENTS_H

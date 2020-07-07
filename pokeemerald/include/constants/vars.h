@@ -116,10 +116,10 @@
 #define VAR_NOTENOUGHMONSSEAFLOOR1           0x4061 // Unused Var - Check for Doubles for Seafloor Shelly
 #define VAR_NOTENOUGHMONSSEAFLOOR2           0x4062 // Unused Var - Check for Doubles for Seafloor Archie
 #define VAR_ROUTE104_STATE                   0x4063
-#define VAR_ROUTE105_STATE                   0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                   0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                   0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                   0x4067 // Unused Var
+#define VAR_NOTENOUGHMONSWALLY               0x4064 // Unused Var - Check for Doubles for Wally Fight in Victory Road 1F
+#define VAR_POKEMONLEAGUE_1F                 0x4065 // Unused Var
+#define VAR_POKEMONLEAGUE_HALL4              0x4066 // Unused Var
+#define VAR_VICTORYROAD                      0x4067 // Unused Var
 #define VAR_ROUTE109_STATE                   0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                   0x4069
 #define VAR_ROUTE111_STATE                   0x406A // Unused Var

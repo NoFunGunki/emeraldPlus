@@ -6,8 +6,8 @@ PetalburgWoods_Trigger_CheckPlayerParty::
 	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
 	goto_if_ne EventScript_NotEnoughMonsDownDanger
 	releaseall
-	end		
-
+	end
+	
 PetalburgWoods_EventScript_DevonResearcherLeft:: @ 822DFD7
 	lockall
 	call PetalburgWoods_EventScript_DevonResearcherIntro

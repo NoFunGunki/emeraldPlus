@@ -22,7 +22,14 @@ EverGrandeCity_PokemonLeague_1F_EventScript_Nurse:: @ 82295FC
 	waitbuttonpress
 	release
 	end
-
+	
+EverGrandeCity_PokemonLeague_1F_Trigger_CheckPlayerParty::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDown
+	releaseall
+	end
+	
 EverGrandeCity_PokemonLeague_1F_EventScript_Clerk:: @ 822960A
 	lock
 	faceplayer
@@ -59,6 +66,9 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard:: @ 8229636
 	message EverGrandeCity_PokemonLeague_1F_Text_MustHaveAllGymBadges
 	waitmessage
 	delay 120
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EverGrandeCity_PokemonLeague_1F_EventScript_NotEnoughMons
 	goto_if_unset FLAG_BADGE06_GET, EverGrandeCity_PokemonLeague_1F_EventScript_NotAllBadges
 	closemessage
 	applymovement 3, EverGrandeCity_PokemonLeague_1F_Movement_LeftGuardOutOfWay
@@ -73,6 +83,12 @@ EverGrandeCity_PokemonLeague_1F_EventScript_DoorGuard:: @ 8229636
 	copyobjectxytoperm 3
 	copyobjectxytoperm 4
 	setflag FLAG_ENTERED_ELITE_FOUR
+	releaseall
+	end
+
+EverGrandeCity_PokemonLeague_1F_EventScript_NotEnoughMons:
+	playse SE_HAZURE
+	msgbox EverGrandeCity_PokemonLeague_1F_Text_NotEnoughMons, MSGBOX_DEFAULT
 	releaseall
 	end
 
@@ -139,4 +155,10 @@ EverGrandeCity_PokemonLeague_1F_Text_HaventObtainedAllBadges: @ 8229787
 EverGrandeCity_PokemonLeague_1F_Text_GoForth: @ 82297EF
 	.string "TRAINER! Believe in yourself and your\n"
 	.string "POKéMON, and go forth!$"
+	
+EverGrandeCity_PokemonLeague_1F_Text_NotEnoughMons:
+	.string "You don't have enough healthy POKéMON\n"
+	.string "to take on the LEAGUE.\p"
+	.string "Heal up and come back with at least\n"
+	.string "two strong POKéMON.$"
 
