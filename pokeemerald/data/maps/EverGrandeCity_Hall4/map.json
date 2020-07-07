@@ -7,6 +7,15 @@
     ],
     "connections": null,
     "coord_events": [
+        {
+            "elevation": 0,
+            "script": "EverGrandeCity_Hall4_Trigger_CheckPlayerParty",
+            "type": "trigger",
+            "var": "VAR_POKEMONLEAGUE_HALL4",
+            "var_value": "0",
+            "x": 5,
+            "y": 3
+        }
     ],
     "id": "MAP_EVER_GRANDE_CITY_HALL4",
     "layout": "LAYOUT_EVER_GRANDE_CITY_HALL4",
