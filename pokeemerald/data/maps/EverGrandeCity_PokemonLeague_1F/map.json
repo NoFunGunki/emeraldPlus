@@ -7,6 +7,15 @@
     ],
     "connections": null,
     "coord_events": [
+        {
+            "elevation": 0,
+            "script": "EverGrandeCity_PokemonLeague_1F_Trigger_CheckPlayerParty",
+            "type": "trigger",
+            "var": "VAR_POKEMONLEAGUE_1F",
+            "var_value": "0",
+            "x": 6,
+            "y": 6
+        }
     ],
     "id": "MAP_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F",
     "layout": "LAYOUT_EVER_GRANDE_CITY_POKEMON_LEAGUE_1F",

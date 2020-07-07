@@ -232,8 +232,8 @@ EverGrandeCity_ChampionsRoom_Text_PreBattleSpeech: @ 8228C4C
 	.string "I was looking forward to seeing you\n"
 	.string "here one day.\p"
 	.string "You...What did you see on your\n"
-	.string journey with POKéMON?\p"
-	.string "What did you feel, meeting so many\n"
+	.string "journey with POKéMON?\p"
+	.string "What did you feel, meeting so many\p"
 	.string "other TRAINERS like you?\p"
 	.string "What has awoken in you?\n"
 	.string "I want you to hit me with it all!\p"
@@ -329,3 +329,6 @@ EverGrandeCity_ChampionsRoom_Text_BrendanCongratulations: @ 82294F5
 	.string "It can't be helped if that's the rule.\p"
 	.string "{PLAYER}, way to go!\n"
 	.string "Congratulations!$"
+
+
+
