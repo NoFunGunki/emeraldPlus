@@ -5025,9 +5025,9 @@ static const struct LevelUpMove sCelebiLevelUpLearnset[] = {
 static const struct LevelUpMove sTreeckoLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
-    LEVEL_UP_MOVE( 6, MOVE_ABSORB),
+    LEVEL_UP_MOVE( 6, MOVE_MEGA_DRAIN),
     LEVEL_UP_MOVE( 9, MOVE_QUICK_ATTACK),
-    LEVEL_UP_MOVE(13, MOVE_MEGA_DRAIN),
+    LEVEL_UP_MOVE(13, MOVE_FURY_CUTTER),
     LEVEL_UP_MOVE(17, MOVE_PURSUIT),
     LEVEL_UP_MOVE(21, MOVE_GIGA_DRAIN),
     LEVEL_UP_MOVE(25, MOVE_AGILITY),
@@ -5041,8 +5041,8 @@ static const struct LevelUpMove sTreeckoLevelUpLearnset[] = {
 };
 
 static const struct LevelUpMove sGrovyleLevelUpLearnset[] = {
-    LEVEL_UP_MOVE( 0, MOVE_FURY_CUTTER),
-    LEVEL_UP_MOVE( 1, MOVE_FURY_CUTTER),
+    LEVEL_UP_MOVE( 0, MOVE_RAZOR_LEAF),
+    LEVEL_UP_MOVE( 1, MOVE_RAZOR_LEAF),
     LEVEL_UP_MOVE( 1, MOVE_POUND),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 1, MOVE_ABSORB),

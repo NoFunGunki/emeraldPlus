@@ -8729,7 +8729,7 @@
                 {
                     "base_label": "gRusturfTunnel30",
                     "land_mons": {
-                        "encounter_rate": 0,
+                        "encounter_rate": 10,
                         "mons": [
                             {
                                 "max_level": 10,
