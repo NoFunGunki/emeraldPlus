@@ -11,6 +11,23 @@ MauvilleCity_OnTransition: @ 81DF38B
 	setvar VAR_MAUVILLE_GYM_STATE, 0
 	call_if_set FLAG_GOT_TM24_FROM_WATTSON, MauvilleCity_EventScript_MoveWattsonBackToGym
 	end
+	
+
+MauvilleCity_Trigger_CheckPlayerPartyDown::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsDownDanger
+	releaseall
+	end
+	
+	
+MauvilleCity_Trigger_CheckPlayerPartyLeft::
+	special HasEnoughMonsForDoubleBattle
+	compare VAR_RESULT, PLAYER_HAS_TWO_USABLE_MONS
+	goto_if_ne EventScript_NotEnoughMonsLeftDanger
+	releaseall
+	end
+	
 
 MauvilleCity_EventScript_MoveWattsonBackToGym:: @ 81DF3A9
 	clearflag FLAG_HIDE_MAUVILLE_GYM_WATTSON
@@ -422,6 +439,7 @@ MauvilleCity_EventScript_ScottExitEast:: @ 81DF628
 MauvilleCity_EventScript_BattleWally:: @ 81DF63A
 	msgbox MauvilleCity_Text_WallyHereICome, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_WALLY_MAUVILLE, MauvilleCity_Text_WallyDefeat
+	setvar VAR_NOTENOUGHMONSWALLYMAUVILLE, 1
 	applymovement 6, Common_Movement_WalkInPlaceFastestRight
 	waitmovement 0
 	msgbox MauvilleCity_Text_WallyIllGoBackToVerdanturf, MSGBOX_DEFAULT
