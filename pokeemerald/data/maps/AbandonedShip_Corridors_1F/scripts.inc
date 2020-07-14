@@ -5,6 +5,7 @@ AbandonedShip_Corridors_1F_EventScript_DuskullDoll::
 	msgbox AbandonedShip_Rooms_1F_Text_DuskullDoll_3, MSGBOX_NPC
 	addvar VAR_ABANDONEDSHIP_DUSKULLDOLL, 1
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_3
 	fadescreen 0
 	end

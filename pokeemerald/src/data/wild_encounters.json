@@ -1584,16 +1584,16 @@
                             {
                                 "max_level": 16,
                                 "min_level": 16,
-                                "species": "SPECIES_ALOLAN_GEODUDE"
-                            },
-                            {
-                                "max_level": 14,
-                                "min_level": 14,
                                 "species": "SPECIES_TORKOAL"
                             },
                             {
-                                "max_level": 14,
-                                "min_level": 14,
+                                "max_level": 17,
+                                "min_level": 15,
+                                "species": "SPECIES_TORKOAL"
+                            },
+                            {
+                                "max_level": 17,
+                                "min_level": 15,
                                 "species": "SPECIES_GRIMER"
                             }
                         ]
@@ -5883,7 +5883,7 @@
                                 "species": "SPECIES_DRILBUR"
                             },
                             {
-                                "max_level": 19,
+                                "max_level": 22,
                                 "min_level": 19,
                                 "species": "SPECIES_BALTOY"
                             },

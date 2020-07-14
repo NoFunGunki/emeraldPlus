@@ -66,7 +66,9 @@ MagmaHideout_4F_EventScript_Maxie:: @ 823A560
 	delay 30
 	applymovement 6, Common_Movement_FacePlayer
 	waitmovement 0
-	trainerbattle_double TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieOhItWasYou, MagmaHideout_4F_Text_MaxieDefeat, Doubles_Text_NotEnoughMons
+	msgbox MagmaHideout_4F_Text_MaxieOhItWasYou, MSGBOX_DEFAULT
+	closemessage
+	trainerbattle_no_intro TRAINER_MAXIE_MAGMA_HIDEOUT, MagmaHideout_4F_Text_MaxieDefeat
 	setvar VAR_NOTENOUGHMONSMAGMAHIDEOUT2, 1
 	msgbox MagmaHideout_4F_Text_MaxieImGoingAfterGroudon, MSGBOX_DEFAULT
 	closemessage

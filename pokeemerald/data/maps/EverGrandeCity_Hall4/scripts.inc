@@ -34,3 +34,5 @@ EverGrandeCity_Hall4_Text_NotEnoughMons:
 	.string "continue the challenge!\p"
 	.string "Use items to heal up or use the\n"
 	.string "teleporter to the left to quit.$"
+	
+

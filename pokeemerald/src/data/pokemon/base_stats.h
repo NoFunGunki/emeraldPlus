@@ -2612,8 +2612,8 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_SLOW,
         .eggGroup1 = EGG_GROUP_GRASS,
         .eggGroup2 = EGG_GROUP_GRASS,
-        .abilities = {ABILITY_CHLOROPHYLL, ABILITY_NONE},
-        .abilityHidden = ABILITY_HARVEST,
+        .abilities = {ABILITY_CHLOROPHYLL, ABILITY_HARVEST},
+        .abilityHidden = ABILITY_NONE,
         .bodyColor = BODY_COLOR_YELLOW,
     },
 
@@ -16982,7 +16982,7 @@ const struct BaseStats gBaseStats[] =
         .eggGroup1 = EGG_GROUP_FLYING,
         .eggGroup2 = EGG_GROUP_FLYING,
         .abilities = {ABILITY_GALE_WINGS, ABILITY_FLAME_BODY},
-        .abilityHidden = ABILITY_GALE_WINGS,
+        .abilityHidden = ABILITY_NONE,
         .bodyColor = BODY_COLOR_RED,
     },
 

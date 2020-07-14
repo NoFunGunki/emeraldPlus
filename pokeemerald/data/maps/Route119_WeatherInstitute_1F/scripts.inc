@@ -140,7 +140,6 @@ Route119_WeatherInstitute_1F_Text_TakeRestInBed: @ 826FEFC
 	.string "Let's take a rest.$"
 	
 Route119_WeatherInstitute_1F_Text_HealParty:
-	.string "Hey, you're here to help us, right?\p"
 	.string "There's a bed and a PC over there\n"
-	.string "if you need to heal up.\p"
+	.string "if you need to heal up.$"
 

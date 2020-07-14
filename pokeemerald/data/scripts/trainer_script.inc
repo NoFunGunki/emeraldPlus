@@ -100,11 +100,11 @@ Movement_PushPlayerRight::
 	step_end	
 	
 Movement_PushPlayerLeft::
-	walk_right
+	walk_left
 	step_end		
 
 Movement_PushPlayerUp::
-	walk_right
+	walk_up
 	step_end	
 	
 	

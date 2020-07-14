@@ -4,13 +4,19 @@ AbandonedShip_Rooms_B1F_MapScripts:: @ 8237FB7
 	.byte 0
 
 AbandonedShip_Rooms_B1F_OnLoad::
+	removeobject 3
+	setflag FLAG_DUSKULLDOLL_5
 	compare VAR_ABANDONEDSHIP_DUSKULLDOLL, 4
 	goto_if_ge AbandonedShip_Rooms_B1F_DhelmiseAppears
-	setflag FLAG_DUSKULLDOLL_5
 	end
 
 AbandonedShip_Rooms_B1F_DhelmiseAppears::
+	goto_if_set FLAG_DHELMISEBOSSDEFEATED, AbandonedShip_Rooms_B1F_DhelmiseAlreadyDefeated
 	clearflag FLAG_DUSKULLDOLL_5
+	showobjectat 3, MAP_ABANDONED_SHIP_ROOMS_B1F
+	end
+	
+AbandonedShip_Rooms_B1F_DhelmiseAlreadyDefeated::
 	end
 
 AbandonedShip_Rooms_B1F_DhelmiseRiddleYesNo::
@@ -37,7 +43,7 @@ AbandonedShip_Rooms_B1F_DhelmiseRiddleYesNo::
 	
 AbandonedShip_EventScript_Coffin::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
-	msgbox AbandonedShip_Text_DhelmiseDefeat, MSGBOX_DEFAULT
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -46,6 +52,7 @@ AbandonedShip_EventScript_Coffin::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -53,6 +60,7 @@ AbandonedShip_EventScript_Coffin::
 	
 AbandonedShip_EventScript_Creation::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -61,6 +69,7 @@ AbandonedShip_EventScript_Creation::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -68,6 +77,7 @@ AbandonedShip_EventScript_Creation::
 
 AbandonedShip_EventScript_Word::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -76,6 +86,7 @@ AbandonedShip_EventScript_Word::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -83,6 +94,7 @@ AbandonedShip_EventScript_Word::
 	
 AbandonedShip_EventScript_Zebra::
 	msgbox AbandonedShip_Text_CorrectAnswer, MSGBOX_DEFAULT
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -91,6 +103,7 @@ AbandonedShip_EventScript_Zebra::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -98,6 +111,7 @@ AbandonedShip_EventScript_Zebra::
 
 AbandonedShip_EventScript_End::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -106,6 +120,7 @@ AbandonedShip_EventScript_End::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -113,6 +128,7 @@ AbandonedShip_EventScript_End::
 	
 AbandonedShip_EventScript_Beginning::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_WrongAnswer, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -121,6 +137,7 @@ AbandonedShip_EventScript_Beginning::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -128,6 +145,7 @@ AbandonedShip_EventScript_Beginning::
 
 AbandonedShip_EventScript_GiveUp::
 	trainerbattle_double TRAINER_INVIS_DHELMISE, AbandonedShip_Text_GiveUp, AbandonedShip_Text_DhelmiseDefeat, Doubles_Text_NotEnoughMonsDanger
+	setflag FLAG_DHELMISEBOSSDEFEATED
 	getpartysize
 	compare VAR_RESULT, 6
 	goto_if_eq AbandonedShip_EventScript_PlayerHasFullParty
@@ -136,6 +154,7 @@ AbandonedShip_EventScript_GiveUp::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -152,6 +171,7 @@ AbandonedShip_EventScript_PlayerHasFullParty::
 	msgbox AbandonedShip_Text_ReceivedDhelmise, MSGBOX_DEFAULT
 	waitfanfare
 	fadescreen 1
+	removeobject 3
 	setflag FLAG_DUSKULLDOLL_5
 	fadescreen 0
 	releaseall
@@ -193,7 +213,7 @@ AbandonedShip_Text_WrongAnswer:
 AbandonedShip_Text_DhelmiseDefeat:
 	.string "Hmph...\p"
 	.string "You're stronger than I thought.\p"
-	.string "I conceded, {PLAYER}.\p"
+	.string "I concede, {PLAYER}.\p"
 	.string "I will not eat you and instead I\n"
 	.string "wish to follow you on your journey.\p"
 	.string "You have proven your strength.$"
@@ -217,7 +237,7 @@ AbandonedShip_Text_ReceivedDhelmise:
 AbandonedShip_Text_GiveUp:
 	.string "Giving up?!\p"
 	.string "Don't think you'll be able to\n"
-	.string "escape from us just like that!\p"
+	.string "escape from us just like that!$"
 	
 AbandonedShip_Text_RunAway:
 	.string "Scared, {PLAYER}?\p"

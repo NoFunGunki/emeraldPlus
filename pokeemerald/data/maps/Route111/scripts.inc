@@ -513,7 +513,7 @@ Route111_EventScript_Irene:: @ 81F12D9
 	end
 
 Route111_EventScript_Daisuke:: @ 81F12F0
-	trainerbattle_single TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat
+	trainerbattle_double TRAINER_DAISUKE, Route111_Text_DaisukeIntro, Route111_Text_DaisukeDefeat, Doubles_Text_NotEnoughMons
 	msgbox Route111_Text_DaisukePostBattle, MSGBOX_AUTOCLOSE
 	end
 
