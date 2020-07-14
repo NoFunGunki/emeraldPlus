@@ -50,7 +50,8 @@ SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
 	delay 40
 	waitmoncry
 	//setwildbattle SPECIES_RAYQUAZA, 70, ITEM_NONE
-	trainerbattle_double TRAINER_LEGENDARY_RAYQUAZA, SkyPillar_Top_Text_RayIntro, SkyPillar_Top_Text_RayDefeat, Doubles_Text_NotEnoughMons
+	msgbox SkyPillar_Top_Text_RayIntro, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_LEGENDARY_RAYQUAZA, SkyPillar_Top_Text_RayDefeat
 	msgbox SkyPillar_Top_Text_TakeRayquaza, MSGBOX_DEFAULT
 	getpartysize
 	compare VAR_RESULT, 6
@@ -59,9 +60,10 @@ SkyPillar_Top_EventScript_Rayquaza:: @ 8239722
 	playfanfare MUS_FANFA4
 	msgbox SkyPillar_Top_Text_ReceivedRayquaza, MSGBOX_DEFAULT
 	waitfanfare
+	closemessage
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
-	waitstate
+	//special BattleSetup_StartLegendaryBattle
+	//waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
@@ -80,9 +82,10 @@ SkyPillar_Top_EventScript_RayquazaFullParty::
 	playfanfare MUS_FANFA4
 	msgbox SkyPillar_Top_Text_ReceivedRayquazaFullParty, MSGBOX_DEFAULT
 	waitfanfare
+	closemessage
 	setflag FLAG_SYS_CTRL_OBJ_DELETE
-	special BattleSetup_StartLegendaryBattle
-	waitstate
+	//special BattleSetup_StartLegendaryBattle
+	//waitstate
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
 	compare VAR_RESULT, B_OUTCOME_WON
@@ -236,3 +239,4 @@ SkyPillar_Top_Text_PlayerFullParty:
 
 SkyPillar_Top_Text_ReceivedRayquazaFullParty:
 	.string "RAYQUAZA has been sent to the PC!$"
+
