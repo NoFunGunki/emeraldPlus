@@ -1,7 +1,17 @@
 gText_Birch_Welcome:: @ 82C897B
-	.string "Demo 4 goes all the way up to\n"
-	.string "the 5th gym in Petalburg\p"
-	.string "$"
+	.string "Hello, welcome to my hack!\p"
+	.string "Currently, the entire main game\n"
+	.string "has been converted to Double battles,\l"
+	.string "new POKéMON have been placed in every\l"
+	.string "route, and many Quality of Life\l"
+	.string "features have been implemented.\p"
+	.string "However, there are some bugs.\p"
+	.string "Do NOT fight any rematch battles\n"
+	.string "as they have not been re-done and\l"
+	.string "it could potentially bug out the game\l"
+	.string "and excuse the lack of animations for\l"
+	.string "new moves as they haven't been finished.\p"
+	.string "Enjoy and let me know what you think.$"
 
 gText_Birch_Pokemon:: @ 82C89FB
 	.string "This is one of the new “POKéMON.”\p"
