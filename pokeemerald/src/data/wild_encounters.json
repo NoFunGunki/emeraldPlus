@@ -1450,17 +1450,12 @@
                             {
                                 "max_level": 10,
                                 "min_level": 5,
-                                "species": "SPECIES_MAGIKARP"
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 10,
                                 "min_level": 5,
-                                "species": "SPECIES_TENTACOOL"
-                            },
-                            {
-                                "max_level": 30,
-                                "min_level": 10,
-                                "species": "SPECIES_MAGIKARP"
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 30,
@@ -1470,7 +1465,12 @@
                             {
                                 "max_level": 30,
                                 "min_level": 10,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_LUVDISC"
+                            },
+                            {
+                                "max_level": 30,
+                                "min_level": 10,
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 35,
@@ -1480,22 +1480,22 @@
                             {
                                 "max_level": 35,
                                 "min_level": 30,
-                                "species": "SPECIES_WAILMER"
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 35,
                                 "min_level": 30,
-                                "species": "SPECIES_CORSOLA"
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 40,
                                 "min_level": 35,
-                                "species": "SPECIES_WAILORD"
+                                "species": "SPECIES_LUVDISC"
                             },
                             {
                                 "max_level": 45,
                                 "min_level": 40,
-                                "species": "SPECIES_WAILORD"
+                                "species": "SPECIES_LUVDISC"
                             }
                         ]
                     },

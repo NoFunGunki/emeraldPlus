@@ -11,6 +11,7 @@ EverGrandeCity_SidneysRoom_OnTransition: @ 8227F16
 	end
 
 EverGrandeCity_SidneysRoom_OnLoad: @ 8227F1D
+	opendoor 6 13
 	call_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom
 	compare VAR_ELITE_4_STATE, 1
 	call_if_eq EverGrandeCity_SidneysRoom_EventScript_CloseDoor

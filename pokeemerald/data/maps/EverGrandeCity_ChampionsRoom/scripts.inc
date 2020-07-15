@@ -40,7 +40,7 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace: @ 8228A42
 EverGrandeCity_ChampionsRoom_EventScript_Wallace:: @ 8228A45
 	playbgm MUS_DAIGO, 0
 	msgbox EverGrandeCity_ChampionsRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
-	trainerbattle_double TRAINER_STEVEN_CHAMPION, EverGrandeCity_ChampionsRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_ChampionsRoom_EventScript_Defeated
+	trainerbattle_no_intro TRAINER_STEVEN_CHAMPION, EverGrandeCity_ChampionsRoom_Text_Defeat
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
 
@@ -226,7 +226,7 @@ EverGrandeCity_ChampionsRoom_Movement_BirchArrives: @ 8228C43
 	step_end
 
 EverGrandeCity_ChampionsRoom_Text_PreBattleSpeech: @ 8228C4C
-	.string "STEVEM: Welcome, {PLAYER}{KUN}.\p"
+	.string "STEVEN: Welcome, {PLAYER}{KUN}.\p"
 	.string "You thought it'd be Wallace,\n"
 	.string	"but it was me, STEVEN!\p"
 	.string "I was looking forward to seeing you\n"
@@ -246,7 +246,7 @@ EverGrandeCity_ChampionsRoom_Text_Defeat: @ 8228EAC
 	.string "TRAINER!$"
 
 EverGrandeCity_ChampionsRoom_Text_PostBattleSpeech: @ 8228F66
-	.string "STEVEM: Congratulations!\p"
+	.string "STEVEN: Congratulations!\p"
 	.string "The feelings you have for your\n"
 	.string "POKéMON...\p"
 	.string "And the POKéMON that responded to\n"

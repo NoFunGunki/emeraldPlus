@@ -25,7 +25,7 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger1:: @ 8235DAF
 	addobject 4
 	applymovement 4, VictoryRoad_1F_Movement_WallyApproachPlayer1
 	waitmovement 0
-	goto VictoryRoad_1F_EventScript_WallyEntranceBattle
+	goto VictoryRoad_1F_EventScript_WallyEntranceBattle1
 	end
 
 VictoryRoad_1F_EventScript_WallyBattleTrigger2:: @ 8235DC8
@@ -34,7 +34,7 @@ VictoryRoad_1F_EventScript_WallyBattleTrigger2:: @ 8235DC8
 	addobject 4
 	applymovement 4, VictoryRoad_1F_Movement_WallyApproachPlayer2
 	waitmovement 0
-	goto VictoryRoad_1F_EventScript_WallyEntranceBattle
+	goto VictoryRoad_1F_EventScript_WallyEntranceBattle2
 	end
 	
 VictoryRoad_1F_EventScript_TriggerCheckParty:: 
@@ -44,18 +44,33 @@ VictoryRoad_1F_EventScript_TriggerCheckParty::
 	releaseall
 	end
 	
-VictoryRoad_1F_EventScript_WallyEntranceBattle:: @ 8235DE1
+VictoryRoad_1F_EventScript_WallyEntranceBattle1:: @ 8235DE1
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
 	msgbox VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, MSGBOX_DEFAULT
 	trainerbattle_no_intro TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat
 	setvar VAR_NOTENOUGHMONSWALLY, 1
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
+	goto_if_unset FLAG_STARTERMEGA, VictoryRoad_1F_EventScript_CheckPlayerMegas
 	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
 	copyobjectxytoperm 4
 	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
-	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
+	copyvar VAR_VICTORY_ROAD_1F_STATE, 1
+	releaseall
+	end
+	
+VictoryRoad_1F_EventScript_WallyEntranceBattle2:: @ 8235DE1
+	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
+	waitmovement 0
+	msgbox VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat
+	setvar VAR_NOTENOUGHMONSWALLY, 1
+	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
 	goto_if_unset FLAG_STARTERMEGA, VictoryRoad_1F_EventScript_CheckPlayerMegas
+	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
+	copyobjectxytoperm 4
+	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	copyvar VAR_VICTORY_ROAD_1F_STATE, 2
 	releaseall
 	end
 	
@@ -75,6 +90,10 @@ VictoryRoad_1F_EventScript_MegaEvoSceptile::
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneSceptile, MSGBOX_DEFAULT
 	setflag FLAG_STARTERMEGA
+	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
+	copyobjectxytoperm 4
+	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
 	releaseall
 	end
 
@@ -84,6 +103,10 @@ VictoryRoad_1F_EventScript_MegaEvoBlaziken::
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneBlaziken, MSGBOX_DEFAULT
 	setflag FLAG_STARTERMEGA
+	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
+	copyobjectxytoperm 4
+	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
 	releaseall
 	end
 
@@ -93,6 +116,10 @@ VictoryRoad_1F_EventScript_MegaEvoSwampert::
 	goto_if_eq Common_EventScript_BagIsFull
 	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneSwampert, MSGBOX_DEFAULT
 	setflag FLAG_STARTERMEGA
+	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
+	copyobjectxytoperm 4
+	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
+	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
 	releaseall
 	end
 
