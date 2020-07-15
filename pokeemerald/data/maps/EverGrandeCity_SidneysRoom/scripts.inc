@@ -48,7 +48,7 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney:: @ 8227F64
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	trainerbattle_double TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, EverGrandeCity_SidneysRoom_Text_Defeat, Doubles_Text_NotEnoughMons
+	trainerbattle_double TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, EverGrandeCity_SidneysRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_SidneysRoom_EventScript_Defeated
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 

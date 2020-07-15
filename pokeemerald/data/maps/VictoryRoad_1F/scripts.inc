@@ -47,15 +47,55 @@ VictoryRoad_1F_EventScript_TriggerCheckParty::
 VictoryRoad_1F_EventScript_WallyEntranceBattle:: @ 8235DE1
 	applymovement EVENT_OBJ_ID_PLAYER, Common_Movement_WalkInPlaceFastestDown
 	waitmovement 0
-	trainerbattle_double TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, VictoryRoad_1F_Text_WallyEntranceDefeat, Doubles_Text_NotEnoughMons
+	msgbox VictoryRoad_1F_Text_WallyNotGoingToLoseAnymore, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_WALLY_VR_1, VictoryRoad_1F_Text_WallyEntranceDefeat
 	setvar VAR_NOTENOUGHMONSWALLY, 1
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_VICTORY_ROAD_ENTRANCE_WALLY
 	copyobjectxytoperm 4
 	setflag FLAG_DEFEATED_WALLY_VICTORY_ROAD
 	copyvar VAR_VICTORY_ROAD_1F_STATE, VAR_0x8008
+	goto_if_unset FLAG_STARTERMEGA, VictoryRoad_1F_EventScript_CheckPlayerMegas
 	releaseall
 	end
+	
+VictoryRoad_1F_EventScript_CheckPlayerMegas::
+	compare VAR_STARTER_MON, 0
+	goto_if_eq VictoryRoad_1F_EventScript_MegaEvoSceptile
+	compare VAR_STARTER_MON, 1
+	goto_if_eq VictoryRoad_1F_EventScript_MegaEvoBlaziken
+	compare VAR_STARTER_MON, 2
+	goto_if_eq VictoryRoad_1F_EventScript_MegaEvoSwampert
+	releaseall
+	end
+	
+VictoryRoad_1F_EventScript_MegaEvoSceptile::
+	giveitem_std ITEM_SCEPTILITE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_BagIsFull
+	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneSceptile, MSGBOX_DEFAULT
+	setflag FLAG_STARTERMEGA
+	releaseall
+	end
+
+VictoryRoad_1F_EventScript_MegaEvoBlaziken::
+	giveitem_std ITEM_BLAZIKENITE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_BagIsFull
+	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneBlaziken, MSGBOX_DEFAULT
+	setflag FLAG_STARTERMEGA
+	releaseall
+	end
+
+VictoryRoad_1F_EventScript_MegaEvoSwampert::
+	giveitem_std ITEM_SWAMPERTITE, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_BagIsFull
+	msgbox VictoryRoad_1F_Text_ReceivedMegaStoneSwampert, MSGBOX_DEFAULT
+	setflag FLAG_STARTERMEGA
+	releaseall
+	end
+
 
 VictoryRoad_1F_Movement_WallyApproachPlayer1: @ 8235E15
 	walk_left
@@ -87,6 +127,7 @@ VictoryRoad_1F_Movement_WallyApproachPlayer2: @ 8235E21
 @ This Wally appears near the entrance once his battle is triggered and remains there until the Hall of Fame is entered
 VictoryRoad_1F_EventScript_EntranceWally:: @ 8235E2C
 	msgbox VictoryRoad_1F_Text_WallyPostEntranceBattle, MSGBOX_NPC
+	goto_if_unset FLAG_STARTERMEGA, VictoryRoad_1F_EventScript_CheckPlayerMegas
 	end
 
 @ This Wally appears and remains at the exit after the Hall of Fame is entered 
@@ -147,7 +188,11 @@ VictoryRoad_1F_Text_WallyEntranceDefeat: @ 8235FFC
 VictoryRoad_1F_Text_WallyPostEntranceBattle: @ 8236020
 	.string "WALLY: I couldn't beat you today,\n"
 	.string "{PLAYER}, but one of these days, I'll\l"
-	.string "catch up to you!$"
+	.string "catch up to you!\p"
+	.string "...until then, I think you should have\n"
+	.string "this stone.\p"
+	.string "I hope it brings you good luck when you\n"
+	.string "challenge the POKéMON LEAGUE.$"
 
 VictoryRoad_1F_Text_WallyIntro: @ 8236073
 	.string "WALLY: Hi! {PLAYER}!\p"
@@ -164,6 +209,21 @@ VictoryRoad_1F_Text_WallyPostBattle: @ 82360FE
 	.string "too… But one of these days, {PLAYER},\l"
 	.string "I'm going to catch up to you…\p"
 	.string "And challenge the POKéMON LEAGUE!$"
+	
+VictoryRoad_1F_Text_ReceivedMegaStoneSceptile:
+	.string "Equip it to a Sceptile, then press\n"
+	.string "START while you have the MEGA BRACELET\l"
+	.string "and...$"
+
+VictoryRoad_1F_Text_ReceivedMegaStoneBlaziken:
+	.string "Equip it to a Blaziken, then press\n"
+	.string "START while you have the MEGA BRACELET\l"
+	.string "and...$"
+
+VictoryRoad_1F_Text_ReceivedMegaStoneSwampert:
+	.string "Equip it to a Swampert, then press\n"
+	.string "START while you have the MEGA BRACELET\l"
+	.string "and...$"
 
 VictoryRoad_1F_Text_EdgarIntro: @ 8236184
 	.string "I've made it this far a couple times,\n"

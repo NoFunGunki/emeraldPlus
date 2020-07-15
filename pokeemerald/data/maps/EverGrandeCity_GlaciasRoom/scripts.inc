@@ -42,7 +42,7 @@ EverGrandeCity_GlaciasRoom_EventScript_Glacia:: @ 8228469
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_GLACIA, EverGrandeCity_GlaciasRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	trainerbattle_double TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_PreBattleSpeech, EverGrandeCity_GlaciasRoom_Text_Defeat, Doubles_Text_NotEnoughMons
+	trainerbattle_double TRAINER_GLACIA, EverGrandeCity_GlaciasRoom_Text_PreBattleSpeech, EverGrandeCity_GlaciasRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	goto EverGrandeCity_GlaciasRoom_EventScript_Defeated
 	end
 

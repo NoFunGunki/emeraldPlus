@@ -84,6 +84,7 @@ SootopolisCity_Gym_1F_Movement_FallThroughIce: @ 8224F42
 
 SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
 	trainerbattle_double TRAINER_JUAN_1, SootopolisCity_Gym_1F_Text_JuanPreBattle, SootopolisCity_Gym_1F_Text_JuanDefeat, Doubles_Text_NotEnoughMons, SootopolisCity_Gym_1F_EventScript_JuanDefeated, NO_MUSIC
+	goto_if_unset FLAG_RECEIVEDMEGABRACELET SootopolisCity_Gym_1F_EventScript_JuanGivesBracelet
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	compare VAR_RESULT, TRUE
 	goto_if_eq SootopolisCity_Gym_1F_EventScript_JuanRematch
@@ -92,6 +93,7 @@ SootopolisCity_Gym_1F_EventScript_Juan:: @ 8224F44
 	msgbox SootopolisCity_Gym_1F_Text_JuanPostBattle, MSGBOX_DEFAULT
 	release
 	end
+	
 
 SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	message SootopolisCity_Gym_1F_Text_ReceivedRainBadge
@@ -116,6 +118,22 @@ SootopolisCity_Gym_1F_EventScript_JuanDefeated:: @ 8224F82
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_JUAN_MATCH_CALL
+	msgbox SootopolisCity_Gym_1F_Text_GiveMegaBracelet, MSGBOX_DEFAULT
+	giveitem_std ITEM_MEGA_BRACELET, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	msgbox SootopolisCity_Gym_1F_Text_ReceivedMegaBracelet
+	setflag FLAG_RECEIVEDMEGABRACELET
+	release
+	end
+	
+SootopolisCity_Gym_1F_EventScript_JuanGivesBracelet::
+	msgbox SootopolisCity_Gym_1F_Text_GiveMegaBracelet, MSGBOX_DEFAULT
+	giveitem_std ITEM_MEGA_BRACELET, 1
+	compare VAR_RESULT, 0
+	goto_if_eq Common_EventScript_ShowBagIsFull
+	msgbox SootopolisCity_Gym_1F_Text_ReceivedMegaBracelet
+	setflag FLAG_RECEIVEDMEGABRACELET
 	release
 	end
 
@@ -251,6 +269,21 @@ SootopolisCity_Gym_1F_Text_ExplainRainBadgeTakeThis: @ 82255BE
 	.string "walls of cascading water.\p"
 	.string "And, so that you never forget the\n"
 	.string "battle we shared, take this…$"
+
+SootopolisCity_Gym_1F_Text_GiveMegaBracelet:
+	.string "Ah, before I forget...\n"
+	.string "My former student, Wallace, asked me\l"
+	.string "to give you this bracelet.\p"
+	.string "I'm not sure what it's for, but he\n"
+	.string "said it might be useful for you.$"
+	
+SootopolisCity_Gym_1F_Text_ReceivedMegaBracelet:
+	.string "There's a note on the bracelet:\n"
+	.string "'To use the bracelet, equip your POKéMON\l"
+	.string "with the correct item, then press START\l"
+	.string "while in battle to activate.'\p"
+	.string "You have no idea what they mean by\n"
+	.string "pressing START...$"
 
 SootopolisCity_Gym_1F_Text_ExplainWaterPulse: @ 82256C1
 	.string "The TECHNICAL MACHINE I handed you\n"

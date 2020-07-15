@@ -43,7 +43,7 @@ EverGrandeCity_DrakesRoom_EventScript_Drake:: @ 82286F3
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	trainerbattle_double TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_PreBattleSpeech, EverGrandeCity_DrakesRoom_Text_Defeat, Doubles_Text_NotEnoughMons
+	trainerbattle_double TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_PreBattleSpeech, EverGrandeCity_DrakesRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_DrakesRoom_EventScript_Defeated
 	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
 	end
 

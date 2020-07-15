@@ -122,7 +122,7 @@
 #define VAR_VICTORYROAD                      0x4067 // Unused Var
 #define VAR_NOTENOUGHMONSWALLYMAUVILLE       0x4068 // Unused Var - Check for Doubles for Wally Fight in Mauville City
 #define VAR_ROUTE110_STATE                   0x4069
-#define VAR_ROUTE111_STATE                   0x406A // Unused Var
+#define VAR_RECEIVEDMEGABRACELET             0x406A // Unused Var - Unused again
 #define VAR_ROUTE112_STATE                   0x406B // Unused Var
 #define VAR_ROUTE113_STATE                   0x406C // Unused Var
 #define VAR_ROUTE114_STATE                   0x406D // Unused Var

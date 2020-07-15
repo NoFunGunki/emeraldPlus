@@ -45,7 +45,7 @@
 #define FLAG_DUSKULLDOLL_4   0x23 // Unused Flag
 #define FLAG_DUSKULLDOLL_5   0x24 // Unused Flag
 #define FLAG_WEATHERRIVAL    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
+#define FLAG_STARTERMEGA     0x26 // Unused Flag
 #define FLAG_UNUSED_0x027    0x27 // Unused Flag
 #define FLAG_UNUSED_0x028    0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
@@ -1239,7 +1239,7 @@
 #define FLAG_ITEM_AQUA_HIDEOUT_B2F_MAX_REVIVE                       0x49B // Unused Flag
 #define FLAG_ITEM_SEAFLOOR_CAVERN_ROOM_9_MAX_REVIVE                 0x49C // Unused Flag
 #define FLAG_DHELMISEBOSSDEFEATED                                   0x49D // Unused Flag
-#define FLAG_UNUSED_0x49E                                           0x49E // Unused Flag
+#define FLAG_RECEIVEDMEGABRACELET                                   0x49E // Unused Flag
 #define FLAG_UNUSED_0x49F                                           0x49F // Unused Flag
 #define FLAG_UNUSED_0x4A0                                           0x4A0 // Unused Flag
 #define FLAG_UNUSED_0x4A1                                           0x4A1 // Unused Flag

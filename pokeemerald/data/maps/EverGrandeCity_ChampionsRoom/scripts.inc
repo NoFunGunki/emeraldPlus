@@ -40,7 +40,7 @@ EverGrandeCity_ChampionsRoom_Movement_PlayerApproachWallace: @ 8228A42
 EverGrandeCity_ChampionsRoom_EventScript_Wallace:: @ 8228A45
 	playbgm MUS_DAIGO, 0
 	msgbox EverGrandeCity_ChampionsRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
-	trainerbattle_no_intro TRAINER_WALLACE, EverGrandeCity_ChampionsRoom_Text_Defeat
+	trainerbattle_double TRAINER_STEVEN_CHAMPION, EverGrandeCity_ChampionsRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	goto EverGrandeCity_ChampionsRoom_EventScript_Defeated
 	end
 
