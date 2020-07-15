@@ -15950,8 +15950,8 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_MINERAL,
         .eggGroup2 = EGG_GROUP_MINERAL,
-        .abilities = {ABILITY_IRON_FIST, ABILITY_KLUTZ},
-        .abilityHidden = ABILITY_NO_GUARD,
+        .abilities = {ABILITY_IRON_FIST, ABILITY_NO_GUARD},
+        .abilityHidden = ABILITY_KLUTZ,
         .bodyColor = BODY_COLOR_GREEN,
     },
 

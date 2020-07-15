@@ -43,7 +43,8 @@ EverGrandeCity_DrakesRoom_EventScript_Drake:: @ 82286F3
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_DRAKE, EverGrandeCity_DrakesRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	trainerbattle_double TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_PreBattleSpeech, EverGrandeCity_DrakesRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_DrakesRoom_EventScript_Defeated
+	msgbox EverGrandeCity_DrakesRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_DRAKE, EverGrandeCity_DrakesRoom_Text_Defeat
 	goto EverGrandeCity_DrakesRoom_EventScript_Defeated
 	end
 
@@ -77,8 +78,8 @@ EverGrandeCity_DrakesRoom_Text_PreBattleSpeech: @ 822873E
 EverGrandeCity_DrakesRoom_Text_Defeat: @ 8228895
 	.string "Superb, it should be said.\p"
 	.string "If you feel you can't continue the\n"
-	.string "challenge, feel free to use that\l"
-	.string "teleporter down there.$"
+	.string "challenge, feel free to use the\l"
+	.string "teleporter in the next room.$"
 
 EverGrandeCity_DrakesRoom_Text_PostBattleSpeech: @ 82288B0
 	.string "You deserve every credit for coming\n"
@@ -93,6 +94,6 @@ EverGrandeCity_DrakesRoom_Text_PostBattleSpeech: @ 82288B0
 	.string "Go! Go onwards!\n"
 	.string "The CHAMPION is waiting!\p"
 	.string "Unless you feel you can't continue the\n"
-	.string "challenge, then feel free to use that\l"
-	.string "teleporter down there.$"
+	.string "challenge, then feel free to use the\l"
+	.string "teleporter in the next room.$"
 

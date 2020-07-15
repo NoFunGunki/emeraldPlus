@@ -17,20 +17,6 @@ EverGrandeCity_SidneysRoom_OnLoad: @ 8227F1D
 	call_if_eq EverGrandeCity_SidneysRoom_EventScript_CloseDoor
 	end
 	
-EverGrandeCity_SidneysRoom_EventScript_FieldWhiteOut::
-	msgbox EverGrandeCity_SidneysRoom_Text_WhiteOut, MSGBOX_DEFAULT
-	waitmessage
-	waitbuttonpress
-	clearflag FLAG_DEFEATED_ELITE_4_SIDNEY
-	clearflag FLAG_DEFEATED_ELITE_4_PHOEBE
-	clearflag FLAG_DEFEATED_ELITE_4_GLACIA
-	clearflag FLAG_DEFEATED_ELITE_4_DRAKE
-	special Script_FadeOutMapMusic
-	waitstate
-	fadescreen FADE_TO_BLACK
-	special SetCB2WhiteOut
-	waitstate
-	end
 
 EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom:: @ 8227F32
 	call PokemonLeague_EliteFour_EventScript_ResetAdvanceToNextRoom
@@ -64,7 +50,8 @@ EverGrandeCity_SidneysRoom_EventScript_Sidney:: @ 8227F64
 	faceplayer
 	goto_if_set FLAG_DEFEATED_ELITE_4_SIDNEY, EverGrandeCity_SidneysRoom_EventScript_PostBattleSpeech
 	playbgm MUS_SITENNOU, 0
-	trainerbattle_double TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, EverGrandeCity_SidneysRoom_Text_Defeat, Doubles_Text_NotEnoughMons, EverGrandeCity_SidneysRoom_EventScript_Defeated
+	msgbox EverGrandeCity_SidneysRoom_Text_PreBattleSpeech, MSGBOX_DEFAULT
+	trainerbattle_no_intro TRAINER_SIDNEY, EverGrandeCity_SidneysRoom_Text_Defeat
 	goto EverGrandeCity_SidneysRoom_EventScript_Defeated
 	end
 
@@ -80,12 +67,6 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated:: @ 8227F95
 	release
 	end
 
-EverGrandeCity_SidneysRoom_Text_WhiteOut:
-	.string "{PLAYER} has forfeited the\n"
-	.string "challenge!\p"
-	.string "This will be treated as a\n"
-	.string "white-out!$"
-
 EverGrandeCity_SidneysRoom_Text_PreBattleSpeech: @ 8227FA7
 	.string "Welcome, challenger!\n"
 	.string "I'm SIDNEY of the ELITE FOUR.\p"
@@ -100,7 +81,7 @@ EverGrandeCity_SidneysRoom_Text_Defeat: @ 82280A2
 	.string "Well, how do you like that? I lost!\n"
 	.string "Eh, it was fun, so it doesn't matter.\p"
 	.string "If you think you can't go on, you can\n"
-	.string "use that teleporter there to quit.$"
+	.string "use the teleporter in the hall to quit.$"
 
 EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "Well, listen to what this loser has\n"
@@ -109,4 +90,4 @@ EverGrandeCity_SidneysRoom_Text_PostBattleSpeech: @ 82280EC
 	.string "Now, go on to the next room and enjoy\l"
 	.string "your next battle!\p"
 	.string "If you think you can't go on, you can\n"
-	.string "use that teleporter there to quit.$"
+	.string "use the teleporter in the hall to quit.$"
