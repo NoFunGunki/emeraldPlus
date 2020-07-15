@@ -16,6 +16,21 @@ EverGrandeCity_SidneysRoom_OnLoad: @ 8227F1D
 	compare VAR_ELITE_4_STATE, 1
 	call_if_eq EverGrandeCity_SidneysRoom_EventScript_CloseDoor
 	end
+	
+EverGrandeCity_SidneysRoom_EventScript_FieldWhiteOut::
+	msgbox EverGrandeCity_SidneysRoom_Text_WhiteOut, MSGBOX_DEFAULT
+	waitmessage
+	waitbuttonpress
+	clearflag FLAG_DEFEATED_ELITE_4_SIDNEY
+	clearflag FLAG_DEFEATED_ELITE_4_PHOEBE
+	clearflag FLAG_DEFEATED_ELITE_4_GLACIA
+	clearflag FLAG_DEFEATED_ELITE_4_DRAKE
+	special Script_FadeOutMapMusic
+	waitstate
+	fadescreen FADE_TO_BLACK
+	special SetCB2WhiteOut
+	waitstate
+	end
 
 EverGrandeCity_SidneysRoom_EventScript_ResetAdvanceToNextRoom:: @ 8227F32
 	call PokemonLeague_EliteFour_EventScript_ResetAdvanceToNextRoom
@@ -64,6 +79,12 @@ EverGrandeCity_SidneysRoom_EventScript_Defeated:: @ 8227F95
 	msgbox EverGrandeCity_SidneysRoom_Text_PostBattleSpeech, MSGBOX_DEFAULT
 	release
 	end
+
+EverGrandeCity_SidneysRoom_Text_WhiteOut:
+	.string "{PLAYER} has forfeited the\n"
+	.string "challenge!\p"
+	.string "This will be treated as a\n"
+	.string "white-out!$"
 
 EverGrandeCity_SidneysRoom_Text_PreBattleSpeech: @ 8227FA7
 	.string "Welcome, challenger!\n"
